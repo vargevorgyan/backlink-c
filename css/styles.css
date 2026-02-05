@@ -1,0 +1,609 @@
+/* ==========================================================================
+   CASINO TEMPLATE - Main Stylesheet
+   Easy to customize: Change CSS variables below to retheme the entire site
+   ========================================================================== */
+
+/* ==========================================================================
+   CSS VARIABLES - Change these to customize colors and styling
+   ========================================================================== */
+:root {
+  /* Primary Colors - Green */
+  --color-primary: #3ed984; /* Green accent - buttons, links, highlights */
+  --color-primary-hover: #34c978; /* Green hover state */
+  --color-primary-dark: #2a9d5e; /* Green 3D shadow */
+  --color-primary-darker: #238050; /* Green darker shadow for hover */
+
+  /* Secondary Colors - Yellow/Gold */
+  --color-secondary: #f4c752; /* Yellow/Gold accent - CTAs */
+  --color-secondary-hover: #e5b844; /* Yellow hover state */
+  --color-secondary-dark: #c9983a; /* Yellow 3D shadow */
+  --color-secondary-darker: #a87e30; /* Yellow darker shadow for hover */
+
+  /* Background Colors */
+  --color-background: #0a0a0a; /* Main page background */
+  --color-surface: #141414; /* Cards, sections background */
+  --color-surface-light: #1f1f1f; /* Lighter surface for contrast */
+
+  /* Text Colors */
+  --color-text: #ffffff; /* Primary text */
+  --color-text-muted: rgba(255, 255, 255, 0.7); /* Secondary text */
+  --color-text-dim: rgba(255, 255, 255, 0.5); /* Dimmed text */
+
+  /* Border Colors */
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-light: #333333;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+
+  /* Container */
+  --container-width: 1040px;
+  --container-padding: 20px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-family: 'Rubik', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ==========================================================================
+   BUTTONS - 3D raised style with bottom shadow
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: 12px 32px;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+/* Primary Button - Green with 3D effect */
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  box-shadow: 0 4px 0 0 var(--color-primary-dark);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 4px 0 0 var(--color-primary-darker);
+  transform: translateY(-1px);
+}
+
+.btn--primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 var(--color-primary-dark);
+}
+
+/* Secondary Button - Yellow with 3D effect */
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  box-shadow: 0 4px 0 0 var(--color-secondary-dark);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-secondary-hover);
+  box-shadow: 0 4px 0 0 var(--color-secondary-darker);
+  transform: translateY(-1px);
+}
+
+.btn--secondary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 var(--color-secondary-dark);
+}
+
+/* Outline Button - for alternative styling */
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  box-shadow: none;
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header {
+  background-color: var(--color-background);
+  padding: var(--spacing-sm) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__logo img {
+  height: 32px;
+  width: auto;
+}
+
+.header__nav {
+  flex-grow: 1;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.header__nav-link {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.header__nav-link:hover,
+.header__nav-link--active {
+  color: var(--color-text);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+  position: relative;
+  margin: var(--spacing-md) 0;
+}
+
+.hero__banner {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  min-height: 437px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.hero__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   SUB-NAVIGATION
+   ========================================================================== */
+.subnav {
+  padding: var(--spacing-lg) 0;
+}
+
+.subnav__title {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.subnav__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Ghost Button - Outlined style */
+.btn--ghost {
+  background-color: transparent;
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
+  padding: 8px 20px;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  box-shadow: none;
+  width: fit-content;
+}
+
+.btn--ghost:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.subnav__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: 0;
+}
+
+.subnav__link {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.subnav__link:hover {
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   CONTENT SECTIONS
+   ========================================================================== */
+.section {
+  padding: var(--spacing-lg) 0;
+}
+
+.section__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.section__title--h1 {
+  font-size: var(--font-size-2xl);
+}
+
+.section__title--h2 {
+  font-size: var(--font-size-xl);
+}
+
+.section__title--h3 {
+  font-size: var(--font-size-lg);
+}
+
+.section__text {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+}
+
+/* ==========================================================================
+   TABLE - Left border style
+   ========================================================================== */
+.table-wrapper {
+  overflow-x: auto;
+  margin: var(--spacing-md) 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.table tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table tr:last-child {
+  border-bottom: none;
+}
+
+.table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  color: var(--color-text-muted);
+}
+
+.table td:first-child {
+  width: 150px;
+  padding-left: var(--spacing-lg);
+}
+
+.table td:nth-child(2) {
+  border-left: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   ICON BUTTONS GRID
+   ========================================================================== */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg) 0;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  min-height: 120px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.icon-btn:hover {
+  border-color: var(--color-border-light);
+  background-color: var(--color-surface-light);
+}
+
+.icon-btn img {
+  width: 48px;
+  height: 48px;
+  opacity: 0.4;
+  transition: opacity var(--transition-fast);
+}
+
+.icon-btn:hover img {
+  opacity: 0.6;
+}
+
+/* ==========================================================================
+   CONTENT IMAGE - Full width promo box
+   ========================================================================== */
+.content-image {
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.content-image img {
+  width: 100%;
+  height: 342px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   PARTNERS / LOGO RUNNER - Full width
+   ========================================================================== */
+.partners {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  overflow: hidden;
+}
+
+.partners__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.partners__logo {
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.partners__logo:hover {
+  opacity: 0.8;
+}
+
+.partners__logo img {
+  height: auto;
+  width: auto;
+}
+
+/* Individual logo widths */
+.partners__logo:nth-child(1) img {
+  width: 52px;
+}
+.partners__logo:nth-child(2) img {
+  width: 78px;
+}
+.partners__logo:nth-child(3) img {
+  width: 80px;
+}
+.partners__logo:nth-child(4) img {
+  width: 80px;
+}
+.partners__logo:nth-child(5) img {
+  width: 120px;
+}
+.partners__logo:nth-child(6) img {
+  width: 140px;
+}
+.partners__logo:nth-child(7) img {
+  width: 134px;
+}
+.partners__logo:nth-child(8) img {
+  width: 134px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  background-color: var(--color-background);
+  padding: var(--spacing-lg) 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__logo img {
+  height: 36px;
+  width: auto;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.footer__link {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.footer__link:hover {
+  color: var(--color-text);
+}
+
+.footer__copyright {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-dim);
+}
+
+/* ==========================================================================
+   HELPER CLASSES FOR EASY IMAGE SWAPPING
+   ========================================================================== */
+/* 
+   To change images, simply update the src attribute in HTML.
+   All images are in the img/ folder:
+   
+   - img/logo.png         : Main site logo
+   - img/hero.png         : Hero banner background
+   - img/ace.svg          : Ace icon
+   - img/club.svg         : Club icon
+   - img/diamond.svg      : Diamond icon
+   - img/heart.svg        : Heart icon
+   - img/dice.svg         : Dice icon
+   - img/poker.svg        : Poker/target icon
+   - img/runner/logo.svg  : Partner logo 1
+   - img/runner/logo2.svg : Partner logo 2
+   - ... etc
+*/
