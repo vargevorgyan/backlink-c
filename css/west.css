@@ -248,6 +248,7 @@ body {
 .hero__content {
   background-color: #000000cc;
   border-radius: var(--radius-lg);
+  max-width: 420px;
 }
 
 .header__nav-link {

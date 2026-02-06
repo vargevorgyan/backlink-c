@@ -150,7 +150,7 @@ body {
 }
 
 .hero__banner .hero__image {
-  object-position: center calc(50% + 100px);
+  object-position: center;
 }
 
 /* Gradient overlay from top */

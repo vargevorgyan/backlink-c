@@ -393,7 +393,8 @@ button {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: var(--spacing-xl);
+  padding: 30px;
+  width: 100%;
 }
 
 .hero__title {

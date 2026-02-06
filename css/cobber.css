@@ -206,8 +206,7 @@ body {
 }
 
 .hero__content {
-  background-color: rgba(139, 152, 99, 0.85);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(8px);
   padding: var(--spacing-xl) var(--spacing-2xl);
   border-radius: var(--radius-xl);
