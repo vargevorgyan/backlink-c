@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Cobber</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Cobber Theme -->
+    <link rel="stylesheet" href="css/cobber.css" />
+
+    <style>
+      /* 404 Page Specific Styles */
+      .error-page {
+        min-height: calc(100vh - 200px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: var(--spacing-2xl) var(--spacing-lg);
+      }
+
+      .error-code {
+        font-size: 156px;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 0;
+        background: linear-gradient(180deg, #ffb031 0%, #ffe390 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .error-message {
+        font-size: 30px;
+        font-weight: 500;
+        color: #333333;
+        margin-bottom: 20px;
+      }
+
+      .error-page .btn {
+        text-transform: uppercase;
+      }
+
+      .footer {
+        margin-top: auto;
+        padding-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="#" class="header__logo">
+            <img src="img/cobber/logo.png" alt="Cobber Logo" />
+          </a>
+
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a href="#" class="header__nav-link header__nav-link--active"
+                  >Menu</a
+                >
+              </li>
+              <li><a href="#" class="header__nav-link">Menu</a></li>
+              <li><a href="#" class="header__nav-link">Menu</a></li>
+              <li><a href="#" class="header__nav-link">Menu</a></li>
+              <li><a href="#" class="header__nav-link">Menu</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__actions">
+            <a href="#" class="btn btn--primary">Log In</a>
+            <a href="#" class="btn btn--secondary">Registration</a>
+          </div>
+
+          <button
+            class="header__menu-toggle"
+            aria-label="Open menu"
+            onclick="openMobileMenu()"
+          >
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__header">
+        <a href="#" class="mobile-menu__logo">
+          <img src="img/cobber/logo.png" alt="Cobber Logo" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu__actions">
+        <a href="#" class="btn btn--primary">Log In</a>
+        <a href="#" class="btn btn--secondary">Registration</a>
+      </div>
+      <nav class="mobile-menu__nav">
+        <a href="#" class="mobile-menu__link">Menu</a>
+        <a href="#" class="mobile-menu__link">Menu</a>
+        <a href="#" class="mobile-menu__link">Menu</a>
+        <a href="#" class="mobile-menu__link">Menu</a>
+        <a href="#" class="mobile-menu__link">Menu</a>
+      </nav>
+    </div>
+
+    <script>
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('is-open')
+        document.body.style.overflow = 'hidden'
+      }
+      function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('is-open')
+        document.body.style.overflow = ''
+      }
+    </script>
+
+    <!-- 404 Content -->
+    <main class="error-page">
+      <h1 class="error-code">404</h1>
+      <p class="error-message">Page not found</p>
+      <a href="#" class="btn btn--primary">Return to Homepage</a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="#" class="footer__logo">
+            <img src="img/cobber/logo.png" alt="Cobber Logo" />
+          </a>
+          <nav class="footer__links">
+            <a href="#" class="footer__link">Terms and Conditions</a>
+            <a href="#" class="footer__link">Privacy Policy</a>
+          </nav>
+        </div>
+        <p class="footer__copyright">
+          Copyright © 2026 Ozwin Casino. All rights reserved. You must be at
+          least 18 years of age to play.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
