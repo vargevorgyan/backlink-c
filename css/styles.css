@@ -36,7 +36,7 @@
   /* Spacing */
   --spacing-xs: 8px;
   --spacing-sm: 16px;
-  --spacing-md: 24px;
+  --spacing-md: 20px;
   --spacing-lg: 32px;
   --spacing-xl: 48px;
   --spacing-2xl: 64px;
@@ -58,8 +58,8 @@
   --font-size-sm: 14px;
   --font-size-base: 16px;
   --font-size-lg: 18px;
-  --font-size-xl: 24px;
-  --font-size-2xl: 32px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 22px;
   --font-size-3xl: 40px;
 
   /* Transitions */
@@ -214,7 +214,7 @@ button {
    HEADER
    ========================================================================== */
 .header {
-  background-color: var(--color-background);
+  background-color: #1a1a1a;
   padding: var(--spacing-sm) 0;
   position: sticky;
   top: 0;
@@ -267,6 +267,101 @@ button {
   gap: var(--spacing-sm);
 }
 
+/* Mobile menu toggle - hidden on desktop */
+.header__menu-toggle {
+  display: none;
+}
+
+/* Mobile action buttons - hidden on desktop */
+.mobile-actions {
+  display: none;
+}
+
+/* ==========================================================================
+   MOBILE MENU OVERLAY
+   ========================================================================== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.mobile-menu__logo img {
+  height: 32px;
+  width: auto;
+}
+
+.mobile-menu__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.mobile-menu__close:hover {
+  opacity: 0.7;
+}
+
+.mobile-menu__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.mobile-menu__actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+}
+
+.mobile-menu__link {
+  display: block;
+  padding: var(--spacing-md) 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  transition: color var(--transition-fast);
+}
+
+.mobile-menu__link:hover {
+  color: var(--color-text-muted);
+}
+
 /* ==========================================================================
    HERO SECTION
    ========================================================================== */
@@ -305,7 +400,6 @@ button {
   font-size: var(--font-size-2xl);
   font-weight: 600;
   margin-bottom: var(--spacing-md);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* ==========================================================================
@@ -524,27 +618,35 @@ button {
 /* Individual logo widths */
 .partners__logo:nth-child(1) img {
   width: 52px;
+  height: 44px;
 }
 .partners__logo:nth-child(2) img {
   width: 78px;
+  height: 30px;
 }
 .partners__logo:nth-child(3) img {
   width: 80px;
+  height: 80px;
 }
 .partners__logo:nth-child(4) img {
   width: 80px;
+  height: 80px;
 }
 .partners__logo:nth-child(5) img {
   width: 120px;
+  height: 30px;
 }
 .partners__logo:nth-child(6) img {
   width: 140px;
+  height: 30px;
 }
 .partners__logo:nth-child(7) img {
   width: 134px;
+  height: 34px;
 }
 .partners__logo:nth-child(8) img {
   width: 134px;
+  height: 51px;
 }
 
 /* ==========================================================================
@@ -593,17 +695,243 @@ button {
    ========================================================================== */
 /* 
    To change images, simply update the src attribute in HTML.
-   All images are in the img/ folder:
+   All images are in the img/ozwin/ folder:
    
-   - img/logo.png         : Main site logo
-   - img/hero.png         : Hero banner background
-   - img/ace.svg          : Ace icon
-   - img/club.svg         : Club icon
-   - img/diamond.svg      : Diamond icon
-   - img/heart.svg        : Heart icon
-   - img/dice.svg         : Dice icon
-   - img/poker.svg        : Poker/target icon
-   - img/runner/logo.svg  : Partner logo 1
-   - img/runner/logo2.svg : Partner logo 2
+   - img/ozwin/logo.png         : Main site logo
+   - img/ozwin/hero.png         : Hero banner background
+   - img/ozwin/ace.svg          : Ace icon
+   - img/ozwin/club.svg         : Club icon
+   - img/ozwin/diamond.svg      : Diamond icon
+   - img/ozwin/heart.svg        : Heart icon
+   - img/ozwin/dice.svg         : Dice icon
+   - img/ozwin/poker.svg        : Poker/target icon
+   - img/ozwin/runner/logo.svg  : Partner logo 1
+   - img/ozwin/runner/logo2.svg : Partner logo 2
    - ... etc
 */
+
+/* ==========================================================================
+   MOBILE RESPONSIVE STYLES
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* Container */
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  /* Header - Mobile */
+  .header {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__actions {
+    display: none;
+  }
+
+  .header__menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .header__menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #00c071;
+    position: relative;
+  }
+
+  .header__menu-toggle span::before,
+  .header__menu-toggle span::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #00c071;
+    left: 0;
+  }
+
+  .header__menu-toggle span::before {
+    top: -7px;
+  }
+
+  .header__menu-toggle span::after {
+    top: 7px;
+  }
+
+  /* Mobile Actions - Show on mobile */
+  .mobile-actions {
+    display: block;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .mobile-actions__buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+
+  .mobile-actions__buttons .btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  /* Hero - Mobile */
+  .hero {
+    margin: var(--spacing-sm) 0;
+  }
+
+  .hero__banner {
+    min-height: 200px;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero__content {
+    padding: var(--spacing-md);
+  }
+
+  /* Sub-navigation - Mobile */
+  .subnav {
+    padding: var(--spacing-md) 0;
+  }
+
+  .subnav__title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .subnav__menu {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+
+  .subnav__link {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Content Sections - Mobile */
+  .section {
+    padding: var(--spacing-md) 0;
+  }
+
+  .section__title--h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  .section__title--h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .section__title--h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .section__text {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Table - Mobile */
+  .table td:first-child {
+    width: 80px;
+    padding-left: var(--spacing-sm);
+  }
+
+  .table td {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+
+  /* Icon Grid - Mobile: 3 columns */
+  .icon-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md) 0;
+  }
+
+  .icon-btn {
+    min-height: 80px;
+  }
+
+  .icon-btn img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Content Image - Mobile */
+  .content-image {
+    margin: var(--spacing-md) 0;
+    border-radius: var(--radius-lg);
+  }
+
+  /* Partners - Mobile: horizontal scroll */
+  .partners {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .partners__grid {
+    justify-content: flex-start;
+    gap: var(--spacing-lg);
+    overflow-x: hidden;
+    padding-bottom: var(--spacing-sm);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .partners__logo img {
+    height: 40px;
+    width: auto !important;
+  }
+
+  /* Footer - Mobile */
+  .footer {
+    padding: var(--spacing-md) 0;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .footer__links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .footer__copyright {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  .hero__banner {
+    min-height: 160px;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .subnav__menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

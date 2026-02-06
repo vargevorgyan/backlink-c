@@ -1,0 +1,444 @@
+/* ==========================================================================
+   PARAMAX THEME - Override styles for Paramax brand
+   ========================================================================== */
+
+/* ==========================================================================
+   THEME COLORS - Blue theme
+   ========================================================================== */
+:root {
+  /* Primary Colors - Blue */
+  --color-primary: #3b82f6; /* Blue accent */
+  --color-primary-hover: #2563eb; /* Blue hover state */
+  --color-primary-dark: #1d4ed8; /* Blue 3D shadow */
+  --color-primary-darker: #1e40af; /* Blue darker shadow */
+
+  /* Secondary Colors - Yellow/Gold (same) */
+  --color-secondary: #f4c752;
+  --color-secondary-hover: #e5b844;
+  --color-secondary-dark: #c9983a;
+  --color-secondary-darker: #a87e30;
+
+  /* Background Colors */
+  --color-background: #0a0f1a; /* Darker blue-tinted background */
+  --color-surface: #111827; /* Dark blue surface */
+  --color-surface-light: #1f2937; /* Lighter blue surface */
+
+  /* Border Colors */
+  --color-border: rgba(59, 130, 246, 0.2);
+  --color-border-light: rgba(59, 130, 246, 0.3);
+
+  /* Typography */
+  --font-family: Arial, sans-serif;
+}
+
+/* ==========================================================================
+   BACKGROUND IMAGE
+   ========================================================================== */
+body {
+  background-image: url('../img/paramax/bg.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 0;
+}
+
+/* Hide mobile actions on paramax - buttons are in header */
+.mobile-actions {
+  display: none;
+}
+
+/* ==========================================================================
+   BUTTONS - Paramax style (blue gradient, no shadow)
+   ========================================================================== */
+.btn {
+  border-radius: var(--radius-full);
+  padding: 14px 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: none;
+  border: none;
+}
+
+/* Secondary Button - Gradient blue (Registration) */
+.btn--secondary {
+  background: linear-gradient(180deg, #2f94e7 0%, #1a5381 100%);
+  color: #ffffff;
+}
+
+.btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn--secondary:hover {
+  background: linear-gradient(180deg, #2f94e7 0%, #1a5381 100%);
+  color: #ffffff;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--secondary:active {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Primary Button - Gradient blue (Log In) */
+.btn--primary {
+  background: linear-gradient(180deg, #2f94e7 0%, #1a5381 100%);
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background: linear-gradient(180deg, #2f94e7 0%, #1a5381 100%);
+  color: #ffffff;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--primary:active {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Ghost Button */
+.btn--ghost {
+  background: transparent;
+  border: 1px solid #2f94e7;
+  color: #2f94e7;
+}
+
+.btn--ghost:hover {
+  background: rgba(47, 148, 231, 0.1);
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   HEADER - Paramax adjustments (transparent, floating)
+   ========================================================================== */
+.header {
+  background-color: transparent;
+  border-bottom: none;
+  position: absolute;
+  width: 100%;
+}
+
+.header__nav-link:hover,
+.header__nav-link--active {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   HERO - Paramax style (full width, no container)
+   ========================================================================== */
+.hero {
+  margin: 0;
+  padding: 0;
+}
+
+.hero > .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.hero__banner {
+  border: none;
+  border-radius: 0;
+  min-height: 668px;
+  position: relative;
+}
+
+.hero__banner .hero__image {
+  object-position: center calc(50% + 100px);
+}
+
+/* Gradient overlay from top */
+.hero__banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(180deg, #001b39 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero__content {
+  background-color: #000000cc;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  z-index: 2;
+}
+
+.hero__title {
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   CONTENT WRAPPER - Nav, Main, Footer container
+   ========================================================================== */
+.content-wrapper {
+  background-color: #001b39;
+  max-width: 938px;
+  padding: 40px;
+  position: relative;
+  margin: 40px auto;
+  z-index: 3;
+}
+
+/* Remove padding/margin from content inside wrapper */
+.content-wrapper .container {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.content-wrapper .subnav,
+.content-wrapper .section,
+.content-wrapper .footer-wrapper,
+.content-wrapper .partners,
+.content-wrapper .footer {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.content-wrapper .footer-wrapper .container {
+  padding: 0;
+}
+
+/* ==========================================================================
+   SUB-NAVIGATION
+   ========================================================================== */
+.subnav__title {
+  border-bottom-color: var(--color-border-light);
+}
+
+.subnav__link:hover {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   TABLE
+   ========================================================================== */
+.table {
+  border-color: var(--color-border);
+}
+
+.table td:nth-child(2) {
+  border-left-color: var(--color-border);
+}
+
+/* ==========================================================================
+   ICON BUTTONS
+   ========================================================================== */
+.icon-btn {
+  background-color: rgba(17, 24, 39, 0.8);
+  border-color: var(--color-border);
+}
+
+.icon-btn:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* ==========================================================================
+   CONTENT IMAGE
+   ========================================================================== */
+.content-image {
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+.content-image img {
+  object-position: center calc(50% + 100px);
+}
+
+/* ==========================================================================
+   FOOTER WRAPPER - Partners + Footer combined
+   ========================================================================== */
+.footer-wrapper {
+  background-color: transparent;
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+/* ==========================================================================
+   PARTNERS - Grid layout inside footer wrapper
+   ========================================================================== */
+.partners {
+  background-color: transparent;
+  border: none;
+  padding: 0 0 var(--spacing-xl);
+}
+
+.partners__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl) var(--spacing-lg);
+  justify-items: center;
+  align-items: center;
+  max-width: unset;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.partners__logo img {
+  height: auto;
+  width: auto;
+  max-height: 40px;
+}
+
+/* Reset individual logo widths for grid layout */
+.partners__logo:nth-child(1) img,
+.partners__logo:nth-child(2) img,
+.partners__logo:nth-child(3) img,
+.partners__logo:nth-child(4) img,
+.partners__logo:nth-child(5) img,
+.partners__logo:nth-child(6) img,
+.partners__logo:nth-child(7) img,
+.partners__logo:nth-child(8) img,
+.partners__logo:nth-child(9) img {
+  width: auto;
+  max-width: 120px;
+}
+
+/* ==========================================================================
+   FOOTER - Inside footer wrapper
+   ========================================================================== */
+.footer {
+  background-color: transparent;
+  padding: var(--spacing-lg) 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__inner {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__link:hover {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   MOBILE MENU
+   ========================================================================== */
+.mobile-menu {
+  background-color: var(--color-background);
+  background-image: url('../img/paramax/bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.mobile-menu__link:hover {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   SCROLLBAR - Blue theme
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-hover);
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE - Paramax overrides
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* Remove background image on mobile */
+  body {
+    background-image: none;
+    background-color: #001b39;
+  }
+
+  .hero__banner .hero__image {
+    object-position: 74% center;
+  }
+
+  /* Content wrapper - no margin on mobile */
+  .content-wrapper {
+    margin: 0;
+    padding: 20px;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  /* Burger menu colors - white */
+  .header__menu-toggle span,
+  .header__menu-toggle span::before,
+  .header__menu-toggle span::after {
+    background-color: #ffffff;
+  }
+
+  /* Mobile menu styling */
+  .mobile-menu {
+    background-color: #001b39;
+    background-image: none;
+  }
+
+  /* Show mobile actions on Paramax mobile */
+  .mobile-actions {
+    display: block;
+    padding: var(--spacing-sm);
+    background-color: #001b39;
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .mobile-actions__buttons {
+    gap: var(--spacing-sm);
+  }
+
+  .mobile-actions__buttons .btn {
+    padding: 10px 24px;
+    font-size: var(--font-size-base);
+  }
+
+  /* Hero adjustments for mobile */
+  .hero__banner {
+    min-height: 432px;
+    height: 432px;
+  }
+
+  .hero__content {
+    padding: var(--spacing-md) var(--spacing-lg);
+    max-width: 316px;
+    font-size: 18px;
+    margin-top: 200px;
+  }
+
+  .content-image img {
+    object-position: center;
+  }
+
+  .subnav {
+    padding-top: 10px;
+  }
+
+  .partners__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-wrapper {
+    margin-top: 0;
+  }
+}

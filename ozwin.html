@@ -24,7 +24,7 @@
       <div class="header__inner">
         <!-- Logo - Change src to swap logo -->
         <a href="#" class="header__logo">
-          <img src="img/logo.png" alt="Ozwin Logo">
+          <img src="img/ozwin/logo.png" alt="Ozwin Logo">
         </a>
 
         <!-- Navigation - Edit links and text as needed -->
@@ -44,9 +44,67 @@
           <a href="#" class="btn btn--secondary">Registration</a>
           <a href="#" class="btn btn--primary">Log In</a>
         </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="header__menu-toggle" aria-label="Open menu" onclick="openMobileMenu()">
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- ========================================================================
+       MOBILE MENU OVERLAY
+       ======================================================================== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__header">
+      <a href="#" class="mobile-menu__logo">
+        <img src="img/ozwin/logo.png" alt="Ozwin Logo">
+      </a>
+      <button class="mobile-menu__close" aria-label="Close menu" onclick="closeMobileMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="mobile-menu__actions">
+      <a href="#" class="btn btn--secondary">Registration</a>
+      <a href="#" class="btn btn--primary">Log In</a>
+    </div>
+    
+    <nav class="mobile-menu__nav">
+      <a href="#" class="mobile-menu__link">Menu</a>
+      <a href="#" class="mobile-menu__link">Menu</a>
+      <a href="#" class="mobile-menu__link">Menu</a>
+      <a href="#" class="mobile-menu__link">Menu</a>
+      <a href="#" class="mobile-menu__link">Menu</a>
+    </nav>
+  </div>
+
+  <script>
+    function openMobileMenu() {
+      document.getElementById('mobileMenu').classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+  <!-- ========================================================================
+       MOBILE BUTTONS - Shown only on mobile above hero
+       ======================================================================== -->
+  <div class="mobile-actions">
+    <div class="container">
+      <div class="mobile-actions__buttons">
+        <a href="#" class="btn btn--secondary">Registration</a>
+        <a href="#" class="btn btn--primary">Log In</a>
+      </div>
+    </div>
+  </div>
 
   <!-- ========================================================================
        HERO SECTION
@@ -56,7 +114,7 @@
     <div class="container">
       <div class="hero__banner">
         <!-- Hero Image - Change src to swap banner -->
-        <img src="img/hero.png" alt="Welcome Banner" class="hero__image">
+        <img src="img/ozwin/hero.png" alt="Welcome Banner" class="hero__image">
         
         <div class="hero__content">
           <h1 class="hero__title">Welcome to The World of Ozwin</h1>
@@ -170,28 +228,37 @@
         <!-- Icon Buttons Grid - Change img src to swap icons -->
         <div class="icon-grid">
           <button class="icon-btn" aria-label="Club">
-            <img src="img/club.svg" alt="Club">
+            <img src="img/ozwin/club.svg" alt="Club">
           </button>
           <button class="icon-btn" aria-label="Diamond">
-            <img src="img/diamond.svg" alt="Diamond">
+            <img src="img/ozwin/diamond.svg" alt="Diamond">
           </button>
           <button class="icon-btn" aria-label="Ace">
-            <img src="img/ace.svg" alt="Ace">
+            <img src="img/ozwin/ace.svg" alt="Ace">
           </button>
           <button class="icon-btn" aria-label="Heart">
-            <img src="img/heart.svg" alt="Heart">
+            <img src="img/ozwin/heart.svg" alt="Heart">
           </button>
           <button class="icon-btn" aria-label="Poker">
-            <img src="img/poker.svg" alt="Poker">
+            <img src="img/ozwin/poker.svg" alt="Poker">
           </button>
           <button class="icon-btn" aria-label="Dice">
-            <img src="img/dice.svg" alt="Dice">
+            <img src="img/ozwin/dice.svg" alt="Dice">
           </button>
         </div>
       </div>
     </section>
 
-    <!-- Section: Title H3 with Image -->
+    <!-- Promobox Image -->
+    <section class="section">
+      <div class="container">
+        <div class="content-image">
+          <img src="img/ozwin/promobox.png" alt="Featured Content">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Title H3 -->
     <section class="section">
       <div class="container">
         <h2 class="section__title section__title--h3">Title H3</h2>
@@ -208,11 +275,6 @@
           So go on - only, make every spin count, and watch your legacy grow with each Season.<br>
           The world of Ozwin isn't just a game. It's a living saga and every Season tells a new tale. Could this be you?
         </p>
-
-        <!-- Content Image - Change src to swap image -->
-        <div class="content-image">
-          <img src="img/promobox.png" alt="Featured Content">
-        </div>
       </div>
     </section>
   </main>
@@ -224,28 +286,28 @@
   <section class="partners">
     <div class="partners__grid">
       <a href="#" class="partners__logo">
-        <img src="img/runner/logo.svg" alt="Partner 1">
+        <img src="img/ozwin/runner/logo.svg" alt="Partner 1">
       </a>
       <a href="#" class="partners__logo">
-        <img src="img/runner/logo2.svg" alt="Partner 2">
+        <img src="img/ozwin/runner/logo2.svg" alt="Partner 2">
       </a>
       <a href="#" class="partners__logo">
-        <img src="img/runner/logo3.svg" alt="Partner 3">
+        <img src="img/ozwin/runner/logo3.svg" alt="Partner 3">
       </a>
       <a href="#" class="partners__logo">
-        <img src="img/runner/logo4.svg" alt="Partner 4">
+        <img src="img/ozwin/runner/logo4.svg" alt="Partner 4">
       </a>
       <a href="#" class="partners__logo">
-        <img src="img/runner/logo5.svg" alt="Partner 5">
+        <img src="img/ozwin/runner/logo5.svg" alt="Partner 5">
       </a>
       <a href="#" class="partners__logo">
-        <img src="img/runner/logo6.svg" alt="Partner 6">
+        <img src="img/ozwin/runner/logo6.svg" alt="Partner 6">
       </a>
       <a href="#" class="partners__logo">
-        <img src="img/runner/logo7.svg" alt="Partner 7">
+        <img src="img/ozwin/runner/logo7.svg" alt="Partner 7">
       </a>
       <a href="#" class="partners__logo">
-        <img src="img/runner/logo8.svg" alt="Partner 8">
+        <img src="img/ozwin/runner/logo8.svg" alt="Partner 8">
       </a>
     </div>
   </section>
@@ -258,7 +320,7 @@
     <div class="container">
       <div class="footer__inner">
         <a href="#" class="footer__logo">
-          <img src="img/logo.png" alt="Ozwin Logo">
+          <img src="img/ozwin/logo.png" alt="Ozwin Logo">
         </a>
         <nav class="footer__links">
           <a href="#" class="footer__link">Terms and Conditions</a>

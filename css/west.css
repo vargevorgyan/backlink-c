@@ -1,0 +1,576 @@
+/* ==========================================================================
+   WEST THEME - Override styles for West brand
+   ========================================================================== */
+
+/* ==========================================================================
+   THEME COLORS - Navy/Gold theme
+   ========================================================================== */
+:root {
+  /* Primary Colors - Navy Blue */
+  --color-primary: #1e2a78; /* Navy accent */
+  --color-primary-hover: #2a3a8f; /* Navy hover state */
+  --color-primary-dark: #141d5c; /* Navy dark */
+  --color-primary-darker: #0d1340; /* Navy darker */
+
+  /* Secondary Colors - Gold */
+  --color-secondary: #c9a227;
+  --color-secondary-hover: #d4b23a;
+  --color-secondary-dark: #a68820;
+  --color-secondary-darker: #8a7018;
+
+  /* Background Colors */
+  --color-background: #0a0e2e; /* Dark navy background */
+  --color-surface: #111640; /* Navy surface */
+  --color-surface-light: #1a2050; /* Lighter navy surface */
+
+  /* Border Colors */
+  --color-border: #48637d;
+  --color-border-light: #48637d;
+
+  /* Typography */
+  --font-family: Arial, sans-serif;
+}
+
+/* ==========================================================================
+   BACKGROUND IMAGE
+   ========================================================================== */
+body {
+  background-image: url('../img/west/bg.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 0;
+}
+
+/* ==========================================================================
+   BUTTONS - West style (navy fill, gold border)
+   ========================================================================== */
+.btn {
+  border-radius: var(--radius-full);
+  padding: 14px 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+/* Secondary Button - Navy with gold border (Registration) */
+.btn--secondary {
+  background-color: #1e2a78;
+  color: #ffffff;
+  border: 2px solid #c9a227;
+}
+
+.btn--secondary:hover {
+  background-color: #1e2a78;
+  color: #ffffff;
+  border: 2px solid #c9a227;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--secondary:active {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Primary Button - Navy with gold border (Log In) */
+.btn--primary {
+  background-color: #1e2a78;
+  color: #ffffff;
+  border: 2px solid #c9a227;
+}
+
+.btn--primary:hover {
+  background-color: #1e2a78;
+  color: #ffffff;
+  border: 2px solid #c9a227;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--primary:active {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Ghost Button */
+.btn--ghost {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--ghost:hover {
+  background: rgba(201, 162, 39, 0.1);
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   HEADER - West adjustments (transparent, floating)
+   ========================================================================== */
+.header {
+  background-color: transparent;
+  border-bottom: none;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 16px 0;
+  transition: background-color 0.3s ease;
+}
+
+.header.is-scrolled {
+  background-color: rgba(10, 14, 46, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header .container {
+  max-width: 840px;
+  padding: 0;
+}
+
+.header__inner {
+  gap: 0;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__nav {
+  margin-right: var(--spacing-md);
+}
+
+.header__nav-list {
+  gap: var(--spacing-sm);
+}
+
+.header__nav-link {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.header__nav-link:hover {
+  color: #c9a227;
+}
+
+.header__nav-link--active {
+  color: #ffffff;
+}
+
+.header__actions .btn {
+  padding: 10px 30px;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   HERO - West style (similar to Ozwin)
+   ========================================================================== */
+.hero {
+  margin: var(--spacing-md) 0;
+}
+
+.hero .container {
+  max-width: 840px;
+}
+
+.hero__banner {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   CONTENT BLOCKS - West layout structure
+   ========================================================================== */
+.content-block {
+  background-color: rgba(255, 255, 255, 0.012);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 840px;
+  margin: 0 auto 40px;
+  padding: 40px;
+  border-radius: var(--radius-xl);
+}
+
+.content-block .container {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.content-block .subnav,
+.content-block .section,
+.content-block .partners {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Promobox Block */
+.promobox-block {
+  max-width: 840px;
+  margin: 0 auto 40px;
+}
+
+.promobox-block .container {
+  padding: 0;
+}
+
+.promobox-block .content-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   CONTENT WRAPPER - Nav, Main container (no footer)
+   ========================================================================== */
+
+/* ==========================================================================
+   SUB-NAVIGATION
+   ========================================================================== */
+.subnav__title {
+  border-bottom-color: var(--color-border-light);
+}
+
+.subnav__link:hover {
+  color: #c9a227;
+}
+
+.hero__content {
+  background-color: #000000cc;
+  border-radius: var(--radius-lg);
+}
+
+.header__nav-link {
+  padding: 0;
+}
+
+.header__nav-list {
+  gap: 20px;
+}
+
+.hero .container {
+  padding: 0;
+}
+/* ==========================================================================
+   TABLE
+   ========================================================================== */
+.table {
+  border-color: var(--color-border);
+}
+
+.table td:nth-child(2) {
+  border-left-color: var(--color-border);
+}
+
+/* ==========================================================================
+   ICON BUTTONS
+   ========================================================================== */
+.icon-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(74px);
+  -webkit-backdrop-filter: blur(74px);
+  border: none;
+  aspect-ratio: unset;
+  width: 100%;
+  min-height: 156px;
+}
+
+.icon-btn:hover {
+  border-color: #c9a227;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* ==========================================================================
+   CONTENT IMAGE
+   ========================================================================== */
+.content-image {
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+.content-image img {
+  object-position: center calc(50% + 100px);
+}
+
+/* ==========================================================================
+   PARTNERS - Inside content block
+   ========================================================================== */
+.partners {
+  background-color: transparent;
+  border: none;
+  padding: var(--spacing-xl) 0 0;
+}
+
+.partners__grid {
+  display: flex;
+  overflow: hidden;
+  gap: var(--spacing-xl) var(--spacing-lg);
+  justify-items: center;
+  align-items: center;
+  max-width: 100%;
+  margin: 0;
+  overflow: visible;
+}
+
+.partners__logo img {
+  height: auto;
+  width: auto;
+  max-height: 40px;
+}
+
+/* Reset individual logo widths for grid layout */
+.partners__logo:nth-child(1) img,
+.partners__logo:nth-child(2) img,
+.partners__logo:nth-child(3) img,
+.partners__logo:nth-child(4) img,
+.partners__logo:nth-child(5) img,
+.partners__logo:nth-child(6) img,
+.partners__logo:nth-child(7) img,
+.partners__logo:nth-child(8) img,
+.partners__logo:nth-child(9) img {
+  width: auto;
+  max-width: 120px;
+}
+
+/* ==========================================================================
+   FOOTER - No margin, no background
+   ========================================================================== */
+.footer {
+  background-color: transparent;
+  padding: var(--spacing-lg) 0;
+  margin: 0;
+  border-top: none;
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer .container {
+  padding: 0;
+}
+
+.footer__link:hover {
+  color: #c9a227;
+}
+
+/* ==========================================================================
+   MOBILE MENU
+   ========================================================================== */
+.mobile-menu {
+  background-color: #0a0e2e;
+  background-image: url('../img/west/bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.mobile-menu__link:hover {
+  color: #c9a227;
+}
+
+/* ==========================================================================
+   SCROLLBAR - Gold theme
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a227;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4b23a;
+}
+
+/* Hide mobile actions on desktop */
+.mobile-actions {
+  display: none;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE - West overrides
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* Remove background image on mobile */
+  body {
+    background-image: none;
+    background-color: #0a0e2e;
+  }
+
+  /* Container padding on mobile */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Header padding on mobile */
+  .header {
+    padding: 12px 0;
+  }
+
+  .header .container {
+    padding: 0 16px;
+  }
+
+  /* Hero padding on mobile */
+  .hero {
+    margin: 12px 0;
+  }
+
+  .hero .container {
+    padding: 0 16px;
+  }
+
+  .hero__content {
+    padding: 16px 20px;
+  }
+
+  /* Content blocks on mobile */
+  .content-block {
+    margin: 0 0 20px;
+    padding: 20px 16px;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .promobox-block {
+    margin: 0 0 20px;
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .promobox-block .content-image {
+    border-radius: var(--radius-lg);
+  }
+
+  /* Section padding on mobile */
+  .section {
+    padding: 16px 0;
+  }
+
+  .section .container {
+    padding: 0;
+  }
+
+  /* Subnav padding on mobile */
+  .subnav {
+    padding: 16px 0;
+  }
+
+  .subnav .container {
+    padding: 0;
+  }
+
+  /* Table padding on mobile */
+  .table td {
+    padding: 12px 16px;
+  }
+
+  /* Icon grid on mobile */
+  .icon-grid {
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .icon-btn {
+    min-height: 100px;
+    padding: 16px;
+  }
+
+  /* Partners padding on mobile */
+  .partners {
+    padding: 20px 0 0;
+  }
+
+  .partners__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 16px;
+  }
+
+  /* Footer padding on mobile */
+  .footer {
+    padding: 20px 16px;
+  }
+
+  .footer .container {
+    padding: 0;
+  }
+
+  /* Burger menu colors - white */
+  .header__menu-toggle span,
+  .header__menu-toggle span::before,
+  .header__menu-toggle span::after {
+    background-color: #ffffff;
+  }
+
+  /* Mobile menu styling */
+  .mobile-menu {
+    background-color: #0a0e2e;
+    background-image: none;
+    padding: 20px;
+  }
+
+  .mobile-menu__header {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .mobile-menu__actions {
+    padding: 0;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .mobile-menu__actions .btn {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 14px;
+    min-width: 0;
+  }
+
+  .mobile-menu__nav {
+    padding: 0;
+  }
+
+  /* Show mobile actions on mobile */
+  .mobile-actions {
+    display: block;
+    padding: 20px 16px;
+    background-color: #0a0e2e;
+  }
+
+  .mobile-actions__buttons {
+    gap: var(--spacing-sm);
+  }
+
+  .mobile-actions__buttons .btn {
+    padding: 10px 24px;
+    font-size: var(--font-size-base);
+  }
+
+  .content-image img {
+    object-position: center;
+  }
+
+  .hero__banner {
+    min-height: 342px;
+  }
+
+  .hero__content {
+    margin-top: 100px;
+  }
+}

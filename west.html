@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>West - Welcome to The World of Ozwin</title>
+
+    <!-- Google Fonts - Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- West Theme Override -->
+    <link rel="stylesheet" href="css/west.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
+       HEADER
+       To change: Update logo src, nav links text, button text
+       ======================================================================== -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- Logo - Change src to swap logo -->
+          <a href="#" class="header__logo">
+            <img src="img/west/west.png" alt="West Logo" />
+          </a>
+
+          <!-- Navigation - Edit links and text as needed -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a href="#" class="header__nav-link header__nav-link--active"
+                  >Menu</a
+                >
+              </li>
+              <li><a href="#" class="header__nav-link">Menu</a></li>
+              <li><a href="#" class="header__nav-link">Menu</a></li>
+              <li><a href="#" class="header__nav-link">Veny</a></li>
+              <li><a href="#" class="header__nav-link">Menu</a></li>
+            </ul>
+          </nav>
+
+          <!-- Action Buttons - Change text and colors via CSS variables -->
+          <div class="header__actions">
+            <a href="#" class="btn btn--secondary">Registration</a>
+            <a href="#" class="btn btn--primary">Log In</a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="header__menu-toggle"
+            aria-label="Open menu"
+            onclick="openMobileMenu()"
+          >
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE MENU OVERLAY
+       ======================================================================== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__header">
+        <a href="#" class="mobile-menu__logo">
+          <img src="img/west/west.png" alt="West Logo" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="#" class="btn btn--secondary">Registration</a>
+        <a href="#" class="btn btn--primary">Log In</a>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="#" class="mobile-menu__link">Menu</a>
+        <a href="#" class="mobile-menu__link">Menu</a>
+        <a href="#" class="mobile-menu__link">Menu</a>
+        <a href="#" class="mobile-menu__link">Menu</a>
+        <a href="#" class="mobile-menu__link">Menu</a>
+      </nav>
+    </div>
+
+    <script>
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('is-open')
+        document.body.style.overflow = 'hidden'
+      }
+
+      function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('is-open')
+        document.body.style.overflow = ''
+      }
+
+      // Header scroll effect
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header')
+        if (window.scrollY > 50) {
+          header.classList.add('is-scrolled')
+        } else {
+          header.classList.remove('is-scrolled')
+        }
+      })
+    </script>
+
+    <!-- ========================================================================
+       HERO SECTION
+       To change: Update hero image src, title text, button text
+       ======================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__banner">
+          <!-- Hero Image - Change src to swap banner -->
+          <img
+            src="img/west/hero.png"
+            alt="Welcome Banner"
+            class="hero__image"
+          />
+
+          <div class="hero__content">
+            <h1 class="hero__title">Welcome to The World of Ozwin</h1>
+            <a href="#" class="btn btn--secondary">Registration</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       MOBILE BUTTONS - Shown only on mobile below hero
+       ======================================================================== -->
+    <div class="mobile-actions">
+      <div class="container">
+        <div class="mobile-actions__buttons">
+          <a href="#" class="btn btn--secondary">Registration</a>
+          <a href="#" class="btn btn--primary">Log In</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       CONTENT BLOCK 1 - Navigation to Card Icons
+       ======================================================================== -->
+    <div class="content-block">
+      <!-- Sub-Navigation -->
+      <nav class="subnav">
+        <div class="container">
+          <h2 class="subnav__title">Navigation</h2>
+
+          <div class="subnav__content">
+            <button class="btn btn--ghost">Close</button>
+
+            <ul class="subnav__menu">
+              <li><a href="#" class="subnav__link">Menu</a></li>
+              <li><a href="#" class="subnav__link">Menu</a></li>
+              <li><a href="#" class="subnav__link">Menu</a></li>
+              <li><a href="#" class="subnav__link">Menu</a></li>
+              <li><a href="#" class="subnav__link">Menu</a></li>
+              <li><a href="#" class="subnav__link">Menu</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Section: Title H1 -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title section__title--h1">Title H1</h2>
+          <p class="section__text">
+            Welcome to The World of Ozwin, a magical realm that evolves as you
+            play. Here, your adventure is shaped by Seasons: time-limited
+            journeys filled with milestones, surprises, and exclusive rewards.
+          </p>
+          <p class="section__text">
+            Every Season runs for roughly three months and comes with its own
+            theme, storyline, and atmosphere. During that time, you can
+            complete missions, level up, collect points, and unlock powerful
+            Seasonal rewards that are yours to keep. The more you play, the
+            more you progress, and the brighter your spot in our journey
+            becomes.
+          </p>
+          <p class="section__text">
+            But the magic doesn't stop there. Throughout each Season, special
+            limited-time events pop up, themed around holidays, seasonal fun,
+            or brand-new game releases. These events bring bonus missions,
+            unique challenges, and extra rewards, giving you even more chances
+            to win big.
+          </p>
+          <p class="section__text">
+            So go on - only, make every spin count, and watch your legacy grow
+            with each Season.<br />
+            The world of Ozwin isn't just a game. It's a living saga and every
+            Season tells a new tale. Could this be you?
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Title H2 with Table and Icons -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title section__title--h2">Title H2</h2>
+          <p class="section__text">
+            Welcome to The World of Ozwin, a magical realm that evolves as you
+            play. Here, your adventure is shaped by Seasons: time-limited
+            journeys filled with milestones, surprises, and exclusive rewards.
+          </p>
+          <p class="section__text">
+            Every Season runs for roughly three months and comes with its own
+            theme, storyline, and atmosphere. During that time, you can
+            complete missions, level up, collect points, and unlock powerful
+            Seasonal rewards that are yours to keep. The more you play, the
+            more you progress, and the brighter your spot in our journey
+            becomes.
+          </p>
+          <p class="section__text">
+            But the magic doesn't stop there. Throughout each Season, special
+            limited-time events pop up, themed around holidays, seasonal fun,
+            or brand-new game releases. These events bring bonus missions,
+            unique challenges, and extra rewards, giving you even more chances
+            to win big.
+          </p>
+          <p class="section__text">
+            So go on - only, make every spin count, and watch your legacy grow
+            with each Season.<br />
+            The world of Ozwin isn't just a game. It's a living saga and every
+            Season tells a new tale. Could this be you?
+          </p>
+
+          <!-- Table -->
+          <div class="table-wrapper">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Cell</td>
+                  <td>Welcome to The World of Ozwin</td>
+                </tr>
+                <tr>
+                  <td>Cell</td>
+                  <td>Welcome to The World of Ozwin</td>
+                </tr>
+                <tr>
+                  <td>Cell</td>
+                  <td>Welcome to The World of Ozwin</td>
+                </tr>
+                <tr>
+                  <td>Cell</td>
+                  <td>Welcome to The World of Ozwin</td>
+                </tr>
+                <tr>
+                  <td>Cell</td>
+                  <td>Welcome to The World of Ozwin</td>
+                </tr>
+                <tr>
+                  <td>Cell</td>
+                  <td>Welcome to The World of Ozwin</td>
+                </tr>
+                <tr>
+                  <td>Cell</td>
+                  <td>Welcome to The World of Ozwin</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Icon Buttons Grid -->
+          <div class="icon-grid">
+            <button class="icon-btn" aria-label="Club">
+              <img src="img/ozwin/club.svg" alt="Club" />
+            </button>
+            <button class="icon-btn" aria-label="Diamond">
+              <img src="img/ozwin/diamond.svg" alt="Diamond" />
+            </button>
+            <button class="icon-btn" aria-label="Ace">
+              <img src="img/ozwin/ace.svg" alt="Ace" />
+            </button>
+            <button class="icon-btn" aria-label="Heart">
+              <img src="img/ozwin/heart.svg" alt="Heart" />
+            </button>
+            <button class="icon-btn" aria-label="Poker">
+              <img src="img/ozwin/poker.svg" alt="Poker" />
+            </button>
+            <button class="icon-btn" aria-label="Dice">
+              <img src="img/ozwin/dice.svg" alt="Dice" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End Content Block 1 -->
+
+    <!-- ========================================================================
+       PROMOBOX IMAGE - Separate block
+       ======================================================================== -->
+    <div class="promobox-block">
+      <div class="container">
+        <div class="content-image">
+          <img src="img/west/promobox.png" alt="Featured Content" />
+        </div>
+      </div>
+    </div>
+    <!-- End Promobox Block -->
+
+    <!-- ========================================================================
+       CONTENT BLOCK 2 - Title H3 to Partners
+       ======================================================================== -->
+    <div class="content-block">
+      <!-- Section: Title H3 -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title section__title--h3">Title H3</h2>
+          <p class="section__text">
+            Welcome to The World of Ozwin, a magical realm that evolves as you
+            play. Here, your adventure is shaped by Seasons: time-limited
+            journeys filled with milestones, surprises, and exclusive rewards.
+          </p>
+          <p class="section__text">
+            Every Season runs for roughly three months and comes with its own
+            theme, storyline, and atmosphere. During that time, you can
+            complete missions, level up, collect points, and unlock powerful
+            Seasonal rewards that are yours to keep. The more you play, the
+            more you progress, and the brighter your spot in our journey
+            becomes.
+          </p>
+          <p class="section__text">
+            But the magic doesn't stop there. Throughout each Season, special
+            limited-time events pop up, themed around holidays, seasonal fun,
+            or brand-new game releases. These events bring bonus missions,
+            unique challenges, and extra rewards, giving you even more chances
+            to win big.
+          </p>
+          <p class="section__text">
+            So go on - only, make every spin count, and watch your legacy grow
+            with each Season.<br />
+            The world of Ozwin isn't just a game. It's a living saga and every
+            Season tells a new tale. Could this be you?
+          </p>
+        </div>
+      </section>
+
+      <!-- Partners -->
+      <section class="partners">
+        <div class="container">
+          <div class="partners__grid">
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo.svg" alt="Partner 1" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo2.svg" alt="Partner 2" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo3.svg" alt="Partner 3" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo4.svg" alt="Partner 4" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo5.svg" alt="Partner 5" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo6.svg" alt="Partner 6" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo7.svg" alt="Partner 7" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo8.svg" alt="Partner 8" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End Content Block 2 -->
+
+    <!-- ========================================================================
+       FOOTER - No margin, no background
+       ======================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="#" class="footer__logo">
+            <img src="img/west/west.png" alt="West Logo" />
+          </a>
+          <nav class="footer__links">
+            <a href="#" class="footer__link">Terms and Conditions</a>
+            <a href="#" class="footer__link">Privacy Policy</a>
+          </nav>
+        </div>
+        <p class="footer__copyright">
+          Copyright © 2026 Ozwin Casino. All rights reserved. You must be at
+          least 18 years of age to play.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

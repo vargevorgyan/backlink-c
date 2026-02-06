@@ -1,0 +1,502 @@
+/* ==========================================================================
+   CUNT THEME - Override styles for Cunt brand
+   ========================================================================== */
+
+/* ==========================================================================
+   THEME COLORS - Pink/Magenta theme
+   ========================================================================== */
+:root {
+  /* Primary Colors - Pink/Magenta */
+  --color-primary: #e91e8c;
+  --color-primary-hover: #d4197f;
+  --color-primary-dark: #b31570;
+  --color-primary-darker: #8c1058;
+
+  /* Secondary Colors */
+  --color-secondary: #e91e8c;
+  --color-secondary-hover: #d4197f;
+
+  /* Background Colors */
+  --color-background: #1a0a14;
+  --color-surface: #2a1020;
+  --color-surface-light: #3a1530;
+
+  /* Border Colors */
+  --color-border: #ffffff99;
+  --color-border-light: #ffffff33;
+
+  /* Typography */
+  --font-family: Arial, sans-serif;
+}
+
+/* ==========================================================================
+   BODY - No background image
+   ========================================================================== */
+body {
+  background-color: #1a0a14;
+  background-image: none;
+  padding-top: 0;
+}
+
+/* ==========================================================================
+   BUTTONS - Cunt style (pink theme)
+   ========================================================================== */
+.btn {
+  border-radius: var(--radius-full);
+  padding: 10px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+/* Secondary Button - Pink fill (Registration) */
+.btn--secondary {
+  background-color: transparent;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  border: 2px solid #ff00c0;
+}
+
+.btn--secondary:hover {
+  background-color: transparent;
+  background: transparent;
+  color: #ffffff;
+  transform: none;
+  border: 2px solid #e91e8c;
+  box-shadow: none;
+}
+
+.btn--secondary:active {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Primary Button - Pink outline (Log In) */
+.btn--primary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ff00c0;
+}
+
+.btn--primary:hover {
+  background-color: rgba(233, 30, 140, 0.1);
+  color: #ffffff;
+  border: 2px solid #e91e8c;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--primary:active {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Ghost Button */
+.btn--ghost {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--ghost:hover {
+  background: rgba(233, 30, 140, 0.1);
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   HEADER - With border and background
+   ========================================================================== */
+.header {
+  background-color: transparent;
+  border-bottom: none;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 16px 0;
+  transition: background-color 0.3s ease;
+}
+
+.header .container {
+  max-width: 840px;
+}
+
+.header__inner {
+  background-color: #3e1a35;
+  border: 1px solid #ff00c0;
+  border-radius: var(--radius-full);
+  padding: 8px 8px 8px 24px;
+  gap: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__nav {
+  margin-right: var(--spacing-md);
+}
+
+.header__nav-list {
+  gap: 20px;
+}
+
+.header__nav-link {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.header__nav-link:hover {
+  color: #e91e8c;
+}
+
+.header__nav-link--active {
+  color: #ffffff;
+}
+
+.header__actions {
+  gap: 8px;
+}
+
+.header__nav-link {
+  padding: 0;
+}
+.header__logo img {
+  margin-right: 24px;
+  width: 167px;
+}
+
+.header__actions .btn {
+  padding: 9px 24px;
+  font-size: 12px;
+}
+
+.header.is-scrolled {
+  background-color: rgba(26, 10, 20, 0.95);
+}
+
+/* ==========================================================================
+   HERO - Paramax style (full width)
+   ========================================================================== */
+.hero {
+  margin: 0;
+  padding: 0;
+}
+
+.hero > .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.hero__banner {
+  border: none;
+  border-radius: 0;
+  min-height: 617px;
+  position: relative;
+}
+
+.hero__banner .hero__image {
+  object-position: center;
+}
+
+.hero__content {
+  background-color: rgba(26, 10, 20, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  max-width: 400px;
+  z-index: 2;
+}
+
+.hero__title {
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   CONTENT WRAPPER - Paramax style
+   ========================================================================== */
+.content-wrapper {
+  background-color: #1a0a14;
+  max-width: 840px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 20px;
+  padding-top: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.content-wrapper .container {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.content-wrapper .subnav,
+.content-wrapper .section,
+.content-wrapper .footer-wrapper,
+.content-wrapper .partners,
+.content-wrapper .footer {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ==========================================================================
+   SUB-NAVIGATION
+   ========================================================================== */
+.subnav__title {
+  border-bottom-color: var(--color-border-light);
+}
+
+.subnav__link:hover {
+  color: #e91e8c;
+}
+
+/* ==========================================================================
+   TABLE
+   ========================================================================== */
+.table {
+  border-color: var(--color-border);
+}
+
+.table td:nth-child(2) {
+  border-left-color: var(--color-border);
+}
+
+/* ==========================================================================
+   ICON BUTTONS
+   ========================================================================== */
+.icon-btn {
+  background-color: rgba(42, 16, 32, 0.8);
+  border: none;
+  min-height: 156px;
+  aspect-ratio: unset;
+}
+
+.icon-btn:hover {
+  border-color: #e91e8c;
+  background-color: rgba(233, 30, 140, 0.1);
+}
+
+/* ==========================================================================
+   CONTENT IMAGE
+   ========================================================================== */
+.content-image {
+  border-radius: 48px;
+}
+
+.content-image img {
+  object-position: top;
+}
+
+/* ==========================================================================
+   PARTNERS - Horizontal list with overflow hidden
+   ========================================================================== */
+.partners {
+  background-color: transparent;
+  border: none;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+.partners__grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--spacing-xl);
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.partners__logo {
+  flex-shrink: 0;
+}
+
+.partners__logo img {
+  height: 30px;
+  width: auto;
+  opacity: 0.7;
+}
+
+.partners__logo:hover img {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   FOOTER WRAPPER
+   ========================================================================== */
+.footer-wrapper {
+  background-color: transparent;
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.footer-wrapper .container {
+  padding: 0;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  background-color: transparent;
+  padding: var(--spacing-lg) 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.footer__inner {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__link:hover {
+  color: #e91e8c;
+}
+
+/* ==========================================================================
+   MOBILE MENU
+   ========================================================================== */
+.mobile-menu {
+  background-color: #1a0a14;
+}
+
+.mobile-menu__link:hover {
+  color: #e91e8c;
+}
+
+/* ==========================================================================
+   SCROLLBAR - Pink theme
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e91e8c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4197f;
+}
+
+/* Hide mobile actions on desktop */
+.mobile-actions {
+  display: none;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #1a0a14;
+  }
+
+  .header__inner {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .content-wrapper {
+    margin: 0;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .header__menu-toggle span,
+  .header__menu-toggle span::before,
+  .header__menu-toggle span::after {
+    background-color: #e91e8c;
+  }
+
+  .mobile-menu {
+    background-color: #1a0a14;
+    padding: 20px;
+  }
+
+  .mobile-menu__header {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .mobile-menu__actions {
+    padding: 0;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .mobile-menu__actions .btn {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 14px;
+    min-width: 0;
+  }
+
+  .mobile-menu__nav {
+    padding: 0;
+  }
+
+  .mobile-actions {
+    display: block;
+    padding: 20px 16px;
+    background-color: #1a0a14;
+  }
+
+  .mobile-actions__buttons {
+    gap: var(--spacing-sm);
+  }
+
+  .mobile-actions__buttons .btn {
+    padding: 10px 24px;
+    font-size: var(--font-size-base);
+  }
+
+  .hero__banner {
+    min-height: 350px;
+  }
+
+  .hero__content {
+    padding: var(--spacing-md) var(--spacing-lg);
+    max-width: 280px;
+  }
+
+  .partners__grid {
+    gap: var(--spacing-lg);
+    overflow-x: hidden;
+    padding-bottom: 10px;
+  }
+
+  .subnav {
+    padding-top: 10px;
+  }
+
+  .content-image img {
+    object-position: right;
+  }
+
+  .hero__content {
+    margin-top: 100px;
+  }
+}
