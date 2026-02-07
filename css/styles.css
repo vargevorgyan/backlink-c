@@ -493,6 +493,23 @@ button {
   margin-bottom: var(--spacing-md);
 }
 
+.section__list {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-md);
+  list-style: disc;
+}
+
+.section__list li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.section__list li:last-child {
+  margin-bottom: 0;
+}
+
 /* ==========================================================================
    TABLE - Left border style
    ========================================================================== */
@@ -506,6 +523,7 @@ button {
   border-collapse: collapse;
   font-size: var(--font-size-sm);
   border: 1px solid var(--color-border-light);
+  table-layout: fixed;
 }
 
 .table tr {
@@ -516,19 +534,53 @@ button {
   border-bottom: none;
 }
 
+/* Table Header */
+.table th {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  color: var(--color-text);
+  font-weight: 600;
+  background-color: var(--color-surface-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.table th:not(:first-child) {
+  border-left: 1px solid var(--color-border);
+}
+
 .table td {
   padding: var(--spacing-sm) var(--spacing-md);
   text-align: left;
   color: var(--color-text-muted);
+  vertical-align: top;
 }
 
-.table td:first-child {
-  width: 150px;
-  padding-left: var(--spacing-lg);
-}
-
-.table td:nth-child(2) {
+.table td:not(:first-child) {
   border-left: 1px solid var(--color-border);
+}
+
+/* 2-column table - equal 50/50 split */
+.table th:first-child,
+.table td:first-child {
+  width: 50%;
+}
+
+/* 3-column table - equal distribution */
+.table tr:has(th:nth-child(3)) th,
+.table tr:has(td:nth-child(3)) td {
+  width: 33.33%;
+}
+
+.table tr:has(th:nth-child(3)) th:first-child,
+.table tr:has(td:nth-child(3)) td:first-child {
+  width: 25%;
+}
+
+.table tr:has(th:nth-child(3)) th:nth-child(2),
+.table tr:has(td:nth-child(3)) td:nth-child(2),
+.table tr:has(th:nth-child(3)) th:nth-child(3),
+.table tr:has(td:nth-child(3)) td:nth-child(3) {
+  width: 37.5%;
 }
 
 /* ==========================================================================
@@ -846,14 +898,31 @@ button {
   }
 
   /* Table - Mobile */
-  .table td:first-child {
-    width: 80px;
-    padding-left: var(--spacing-sm);
+  .table {
+    table-layout: auto;
   }
 
+  .table th,
   .table td {
     padding: var(--spacing-sm);
     font-size: var(--font-size-xs);
+  }
+
+  .table th:first-child,
+  .table td:first-child {
+    width: auto;
+    min-width: 100px;
+  }
+
+  .table tr:has(th:nth-child(3)) th,
+  .table tr:has(td:nth-child(3)) td {
+    width: auto;
+  }
+
+  .table tr:has(th:nth-child(3)) th:first-child,
+  .table tr:has(td:nth-child(3)) td:first-child {
+    width: auto;
+    min-width: 80px;
   }
 
   /* Icon Grid - Mobile: 3 columns */
