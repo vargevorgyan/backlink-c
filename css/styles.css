@@ -446,8 +446,9 @@ button {
 
 .subnav__menu {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-sm) var(--spacing-lg);
   padding: 0;
 }
 
@@ -475,11 +476,11 @@ button {
 }
 
 .section__title--h1 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
 }
 
 .section__title--h2 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
 }
 
 .section__title--h3 {
@@ -882,11 +883,11 @@ button {
   }
 
   .section__title--h1 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-2xl);
   }
 
   .section__title--h2 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
   }
 
   .section__title--h3 {
