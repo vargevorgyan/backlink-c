@@ -31,12 +31,9 @@
         <!-- Navigation - Edit links and text as needed -->
         <nav class="header__nav">
           <ul class="header__nav-list">
-            <li><a href="#" class="header__nav-link header__nav-link--active">Home</a></li>
-            <li><a href="#" class="header__nav-link">Menu</a></li>
-            <li><a href="#" class="header__nav-link">Menu</a></li>
-            <li><a href="#" class="header__nav-link">Menu</a></li>
-            <li><a href="#" class="header__nav-link">Menu</a></li>
-            <li><a href="#" class="header__nav-link">Menu</a></li>
+            <li><a href="ozwin.html" class="header__nav-link header__nav-link--active">Ozwin Casino</a></li>
+            <li><a href="ozwin-download.html" class="header__nav-link">Download</a></li>
+            <li><a href="ozwin-login.html" class="header__nav-link">Login</a></li>
           </ul>
         </nav>
 
@@ -75,11 +72,9 @@
     </div>
     
     <nav class="mobile-menu__nav">
-      <a href="#" class="mobile-menu__link">Menu</a>
-      <a href="#" class="mobile-menu__link">Menu</a>
-      <a href="#" class="mobile-menu__link">Menu</a>
-      <a href="#" class="mobile-menu__link">Menu</a>
-      <a href="#" class="mobile-menu__link">Menu</a>
+      <a href="ozwin.html" class="mobile-menu__link">Ozwin Casino</a>
+      <a href="ozwin-download.html" class="mobile-menu__link">Download</a>
+      <a href="ozwin-login.html" class="mobile-menu__link">Login</a>
     </nav>
   </div>
 
@@ -133,20 +128,32 @@
     <div class="container">
       <h2 class="subnav__title">Navigation</h2>
       
-      <div class="subnav__content">
-        <button class="btn btn--ghost">Close</button>
+      <div class="subnav__content" id="subnavContent">
+        <button class="btn btn--ghost" id="subnavToggle" onclick="toggleSubnav()">Close</button>
         
-        <ul class="subnav__menu">
-          <li><a href="#" class="subnav__link">Menu</a></li>
-          <li><a href="#" class="subnav__link">Menu</a></li>
-          <li><a href="#" class="subnav__link">Menu</a></li>
-          <li><a href="#" class="subnav__link">Menu</a></li>
-          <li><a href="#" class="subnav__link">Menu</a></li>
-          <li><a href="#" class="subnav__link">Menu</a></li>
+        <ul class="subnav__menu" id="subnavMenu">
+          <li><a href="ozwin.html" class="subnav__link">Ozwin Casino</a></li>
+          <li><a href="ozwin-download.html" class="subnav__link">Download</a></li>
+          <li><a href="ozwin-login.html" class="subnav__link">Login</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <script>
+    function toggleSubnav() {
+      const menu = document.getElementById('subnavMenu');
+      const toggle = document.getElementById('subnavToggle');
+      
+      if (menu.style.display === 'none') {
+        menu.style.display = 'flex';
+        toggle.textContent = 'Close';
+      } else {
+        menu.style.display = 'none';
+        toggle.textContent = 'Open';
+      }
+    }
+  </script>
 
   <!-- ========================================================================
        MAIN CONTENT
@@ -407,6 +414,15 @@
         <p class="section__text">
           If you plan to play Ozwin casino in short breaks, instant play is the right format. Confirm limits in A$ and read the coupon rules before you activate anything.
         </p>
+      </div>
+    </section>
+
+    <!-- Promobox Image 2 -->
+    <section class="section">
+      <div class="container">
+        <div class="content-image">
+          <img src="img/ozwin/5.webp" alt="Ozwin Casino Mobile">
+        </div>
       </div>
     </section>
 

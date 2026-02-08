@@ -155,10 +155,10 @@
         <div class="container">
           <h2 class="subnav__title">Navigation</h2>
 
-          <div class="subnav__content">
-            <button class="btn btn--ghost">Close</button>
+          <div class="subnav__content" id="subnavContent">
+            <button class="btn btn--ghost" id="subnavToggle" onclick="toggleSubnav()">Close</button>
 
-            <ul class="subnav__menu">
+            <ul class="subnav__menu" id="subnavMenu">
               <li><a href="#" class="subnav__link">Menu</a></li>
               <li><a href="#" class="subnav__link">Menu</a></li>
               <li><a href="#" class="subnav__link">Menu</a></li>
@@ -169,6 +169,21 @@
           </div>
         </div>
       </nav>
+
+      <script>
+        function toggleSubnav() {
+          const menu = document.getElementById('subnavMenu');
+          const toggle = document.getElementById('subnavToggle');
+          
+          if (menu.style.display === 'none') {
+            menu.style.display = 'flex';
+            toggle.textContent = 'Close';
+          } else {
+            menu.style.display = 'none';
+            toggle.textContent = 'Open';
+          }
+        }
+      </script>
 
       <!-- Main Content -->
       <main>
