@@ -477,10 +477,12 @@ button {
 
 .section__title--h1 {
   font-size: var(--font-size-3xl);
+  scroll-margin-top: 100px;
 }
 
 .section__title--h2 {
   font-size: var(--font-size-2xl);
+  scroll-margin-top: 100px;
 }
 
 .section__title--h3 {
