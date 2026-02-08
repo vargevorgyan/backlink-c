@@ -1,354 +1,451 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozwin Login Casino – Secure Access in Australia</title>
-  <meta name="description" content="Log in to Ozwin Casino for secure access and smooth gameplay. Explore casino games and member offers designed for Australian players.">
-  
-  <!-- Google Fonts - Rubik -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ozwin Login Casino – Secure Access in Australia</title>
+    <meta
+      name="description"
+      content="Log in to Ozwin Casino for secure access and smooth gameplay. Explore casino games and member offers designed for Australian players."
+    />
 
-  <!-- ========================================================================
+    <!-- Google Fonts - Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
        HEADER
        ======================================================================== -->
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="#" class="header__logo">
-          <img src="img/ozwin/logo.png" alt="Ozwin Logo">
-        </a>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="#" class="header__logo">
+            <img src="img/ozwin/logo.png" alt="Ozwin Logo" />
+          </a>
 
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li><a href="ozwin.html" class="header__nav-link">Ozwin Casino</a></li>
-            <li><a href="ozwin-download.html" class="header__nav-link">Download</a></li>
-            <li><a href="ozwin-login.html" class="header__nav-link header__nav-link--active">Login</a></li>
-          </ul>
-        </nav>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a href="ozwin.html" class="header__nav-link">Ozwin Casino</a>
+              </li>
+              <li>
+                <a href="ozwin-download.html" class="header__nav-link"
+                  >Download</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ozwin-login.html"
+                  class="header__nav-link header__nav-link--active"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </nav>
 
-        <div class="header__actions">
-          <a href="#" class="btn btn--secondary">Registration</a>
-          <a href="#" class="btn btn--primary">Log In</a>
+          <div class="header__actions">
+            <a href="#" class="btn btn--secondary">Registration</a>
+            <a href="ozwin-login.html" class="btn btn--primary">Log In</a>
+          </div>
+
+          <button
+            class="header__menu-toggle"
+            aria-label="Open menu"
+            onclick="openMobileMenu()"
+          >
+            <span></span>
+          </button>
         </div>
-
-        <button class="header__menu-toggle" aria-label="Open menu" onclick="openMobileMenu()">
-          <span></span>
-        </button>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- ========================================================================
+    <!-- ========================================================================
        MOBILE MENU OVERLAY
        ======================================================================== -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu__header">
-      <a href="#" class="mobile-menu__logo">
-        <img src="img/ozwin/logo.png" alt="Ozwin Logo">
-      </a>
-      <button class="mobile-menu__close" aria-label="Close menu" onclick="closeMobileMenu()">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-    
-    <div class="mobile-menu__actions">
-      <a href="#" class="btn btn--secondary">Registration</a>
-      <a href="#" class="btn btn--primary">Log In</a>
-    </div>
-    
-    <nav class="mobile-menu__nav">
-      <a href="ozwin.html" class="mobile-menu__link">Ozwin Casino</a>
-      <a href="ozwin-download.html" class="mobile-menu__link">Download</a>
-      <a href="ozwin-login.html" class="mobile-menu__link">Login</a>
-    </nav>
-  </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__header">
+        <a href="#" class="mobile-menu__logo">
+          <img src="img/ozwin/logo.png" alt="Ozwin Logo" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
 
-  <script>
-    function openMobileMenu() {
-      document.getElementById('mobileMenu').classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    }
-    
-    function closeMobileMenu() {
-      document.getElementById('mobileMenu').classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
-  </script>
+      <div class="mobile-menu__actions">
+        <a href="#" class="btn btn--secondary">Registration</a>
+        <a href="ozwin-login.html" class="btn btn--primary">Log In</a>
+      </div>
 
-  <!-- ========================================================================
+      <nav class="mobile-menu__nav">
+        <a href="ozwin.html" class="mobile-menu__link">Ozwin Casino</a>
+        <a href="ozwin-download.html" class="mobile-menu__link">Download</a>
+        <a href="ozwin-login.html" class="mobile-menu__link">Login</a>
+      </nav>
+    </div>
+
+    <script>
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('is-open')
+        document.body.style.overflow = 'hidden'
+      }
+
+      function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('is-open')
+        document.body.style.overflow = ''
+      }
+    </script>
+
+    <!-- ========================================================================
        MOBILE BUTTONS
        ======================================================================== -->
-  <div class="mobile-actions">
-    <div class="container">
-      <div class="mobile-actions__buttons">
-        <a href="#" class="btn btn--secondary">Registration</a>
-        <a href="#" class="btn btn--primary">Log In</a>
+    <div class="mobile-actions">
+      <div class="container">
+        <div class="mobile-actions__buttons">
+          <a href="#" class="btn btn--secondary">Registration</a>
+          <a href="ozwin-login.html" class="btn btn--primary">Log In</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ========================================================================
+    <!-- ========================================================================
        HERO SECTION
        ======================================================================== -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero__banner">
-        <img src="img/ozwin/6.webp" alt="Ozwin Casino Login" class="hero__image">
-        
-        <div class="hero__content">
-          <h1 class="hero__title">Ozwin Casino Login</h1>
-          <a href="#" class="btn btn--secondary">Registration</a>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__banner">
+          <img
+            src="img/ozwin/6.webp"
+            alt="Ozwin Casino Login"
+            class="hero__image"
+          />
+
+          <div class="hero__content">
+            <h1 class="hero__title">Ozwin Casino Login</h1>
+            <a href="#" class="btn btn--primary">Log In</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========================================================================
+    <!-- ========================================================================
        SUB-NAVIGATION
        ======================================================================== -->
-  <nav class="subnav">
-    <div class="container">
-      <h2 class="subnav__title">Navigation</h2>
-      
-      <div class="subnav__content" id="subnavContent">
-        <button class="btn btn--ghost" id="subnavToggle" onclick="toggleSubnav()">Open</button>
-        
-        <ul class="subnav__menu" id="subnavMenu" style="display: none;">
-          <li><a href="ozwin.html" class="subnav__link">Ozwin Casino</a></li>
-          <li><a href="ozwin-download.html" class="subnav__link">Download</a></li>
-          <li><a href="ozwin-login.html" class="subnav__link">Login</a></li>
-        </ul>
+    <nav class="subnav">
+      <div class="container">
+        <h2 class="subnav__title">Navigation</h2>
+
+        <div class="subnav__content" id="subnavContent">
+          <button
+            class="btn btn--ghost"
+            id="subnavToggle"
+            onclick="toggleSubnav()"
+          >
+            Open
+          </button>
+
+          <ul class="subnav__menu" id="subnavMenu" style="display: none">
+            <li><a href="ozwin.html" class="subnav__link">Ozwin Casino</a></li>
+            <li>
+              <a href="ozwin-download.html" class="subnav__link">Download</a>
+            </li>
+            <li><a href="ozwin-login.html" class="subnav__link">Login</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <script>
-    function toggleSubnav() {
-      const menu = document.getElementById('subnavMenu');
-      const toggle = document.getElementById('subnavToggle');
-      
-      if (menu.style.display === 'none') {
-        menu.style.display = 'flex';
-        toggle.textContent = 'Close';
-      } else {
-        menu.style.display = 'none';
-        toggle.textContent = 'Open';
+    <script>
+      function toggleSubnav() {
+        const menu = document.getElementById('subnavMenu')
+        const toggle = document.getElementById('subnavToggle')
+
+        if (menu.style.display === 'none') {
+          menu.style.display = 'flex'
+          toggle.textContent = 'Close'
+        } else {
+          menu.style.display = 'none'
+          toggle.textContent = 'Open'
+        }
       }
-    }
-  </script>
+    </script>
 
-  <!-- ========================================================================
+    <!-- ========================================================================
        MAIN CONTENT
        ======================================================================== -->
-  <main>
-    <!-- Section: Introduction -->
-    <section class="section">
-      <div class="container">
-        <h1 class="section__title section__title--h1">Ozwin Casino Login</h1>
-        <p class="section__text">
-          Ozwin Casino is built around speed and control. Login must be predictable: one route, one account, one secure session. Ozwin Casino access is built around a single goal: predictable entry. When login fails, the cause is usually one of a few variables—credentials, session data, device, or network. Fix one factor at a time, then retry. After you enter, verify offers inside the account area and the promotions/cashier pages, including no deposit bonus eligibility and sign-up incentives.
-        </p>
-      </div>
-    </section>
-
-    <!-- Section: Guide to Accessing Your Account -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title section__title--h2">Guide to Accessing Your Account</h2>
-        <p class="section__text">
-          Ozwin login Casino should take seconds when the basics are correct: credentials, session integrity, and stable connectivity. Most problems come from small errors repeated too quickly. Treat login like a system: change one variable, retest once, move on.
-        </p>
-
-        <!-- Login Issues Table -->
-        <div class="table-wrapper">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Issue</th>
-                <th>What it usually means</th>
-                <th>What to do</th>
-                <th>What to avoid</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Password rejected</td>
-                <td>Saved password mismatch, keyboard layout issue</td>
-                <td>Reset password, type manually, confirm email/username</td>
-                <td>Rapid repeated attempts</td>
-              </tr>
-              <tr>
-                <td>Code not received</td>
-                <td>Delivery delay or filtering</td>
-                <td>Check spam/junk, wait a few minutes, resend once</td>
-                <td>Spamming resend</td>
-              </tr>
-              <tr>
-                <td>Page loops</td>
-                <td>Cookie/session conflict</td>
-                <td>Clear site cookies, reopen browser, try again</td>
-                <td>Multiple tabs and auto-refresh</td>
-              </tr>
-              <tr>
-                <td>Mobile page fails</td>
-                <td>Cache, outdated app/browser, unstable network</td>
-                <td>Update app/browser, clear cache, switch network</td>
-                <td>Weak Wi-Fi during login</td>
-              </tr>
-            </tbody>
-          </table>
+    <main>
+      <!-- Section: Introduction -->
+      <section class="section">
+        <div class="container">
+          <h1 class="section__title section__title--h1">Ozwin Casino Login</h1>
+          <p class="section__text">
+            Ozwin Casino is built around speed and control. Login must be
+            predictable: one route, one account, one secure session. Ozwin
+            Casino access is built around a single goal: predictable entry. When
+            login fails, the cause is usually one of a few
+            variables—credentials, session data, device, or network. Fix one
+            factor at a time, then retry. After you enter, verify offers inside
+            the account area and the promotions/cashier pages, including no
+            deposit bonus eligibility and sign-up incentives.
+          </p>
         </div>
+      </section>
 
-        <p class="section__text">
-          Ozwin Casino access failures are usually session or cache conflicts, not account bans. Clear site cookies/cache, close extra tabs, restart the browser or app, then try Ozwin Casino log in once with manual input. For Ozwin Casino login Australia on mobile, keep the OS and browser updated and use a stable network to avoid redirect loops and broken verification prompts.
-        </p>
+      <!-- Section: Guide to Accessing Your Account -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title section__title--h2">
+            Guide to Accessing Your Account
+          </h2>
+          <p class="section__text">
+            Ozwin login Casino should take seconds when the basics are correct:
+            credentials, session integrity, and stable connectivity. Most
+            problems come from small errors repeated too quickly. Treat login
+            like a system: change one variable, retest once, move on.
+          </p>
 
-        <!-- Icon Buttons Grid -->
-        <div class="icon-grid">
-          <button class="icon-btn" aria-label="Club">
-            <img src="img/ozwin/club.svg" alt="Club">
-          </button>
-          <button class="icon-btn" aria-label="Diamond">
-            <img src="img/ozwin/diamond.svg" alt="Diamond">
-          </button>
-          <button class="icon-btn" aria-label="Ace">
-            <img src="img/ozwin/ace.svg" alt="Ace">
-          </button>
-          <button class="icon-btn" aria-label="Heart">
-            <img src="img/ozwin/heart.svg" alt="Heart">
-          </button>
-          <button class="icon-btn" aria-label="Poker">
-            <img src="img/ozwin/poker.svg" alt="Poker">
-          </button>
-          <button class="icon-btn" aria-label="Dice">
-            <img src="img/ozwin/dice.svg" alt="Dice">
-          </button>
+          <!-- Login Issues Table -->
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Issue</th>
+                  <th>What it usually means</th>
+                  <th>What to do</th>
+                  <th>What to avoid</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Password rejected</td>
+                  <td>Saved password mismatch, keyboard layout issue</td>
+                  <td>Reset password, type manually, confirm email/username</td>
+                  <td>Rapid repeated attempts</td>
+                </tr>
+                <tr>
+                  <td>Code not received</td>
+                  <td>Delivery delay or filtering</td>
+                  <td>Check spam/junk, wait a few minutes, resend once</td>
+                  <td>Spamming resend</td>
+                </tr>
+                <tr>
+                  <td>Page loops</td>
+                  <td>Cookie/session conflict</td>
+                  <td>Clear site cookies, reopen browser, try again</td>
+                  <td>Multiple tabs and auto-refresh</td>
+                </tr>
+                <tr>
+                  <td>Mobile page fails</td>
+                  <td>Cache, outdated app/browser, unstable network</td>
+                  <td>Update app/browser, clear cache, switch network</td>
+                  <td>Weak Wi-Fi during login</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="section__text">
+            Ozwin Casino access failures are usually session or cache conflicts,
+            not account bans. Clear site cookies/cache, close extra tabs,
+            restart the browser or app, then try Ozwin Casino log in once with
+            manual input. For Ozwin Casino login Australia on mobile, keep the
+            OS and browser updated and use a stable network to avoid redirect
+            loops and broken verification prompts.
+          </p>
+
+          <!-- Icon Buttons Grid -->
+          <div class="icon-grid">
+            <button class="icon-btn" aria-label="Club">
+              <img src="img/ozwin/club.svg" alt="Club" />
+            </button>
+            <button class="icon-btn" aria-label="Diamond">
+              <img src="img/ozwin/diamond.svg" alt="Diamond" />
+            </button>
+            <button class="icon-btn" aria-label="Ace">
+              <img src="img/ozwin/ace.svg" alt="Ace" />
+            </button>
+            <button class="icon-btn" aria-label="Heart">
+              <img src="img/ozwin/heart.svg" alt="Heart" />
+            </button>
+            <button class="icon-btn" aria-label="Poker">
+              <img src="img/ozwin/poker.svg" alt="Poker" />
+            </button>
+            <button class="icon-btn" aria-label="Dice">
+              <img src="img/ozwin/dice.svg" alt="Dice" />
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Promobox Image -->
-    <section class="section">
-      <div class="container">
-        <div class="content-image">
-          <img src="img/ozwin/7.webp" alt="Ozwin Casino Perks">
+      <!-- Promobox Image -->
+      <section class="section">
+        <div class="container">
+          <div class="content-image">
+            <img src="img/ozwin/7.webp" alt="Ozwin Casino Perks" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section: Unlock Exclusive Perks with Registration -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title section__title--h2">Unlock Exclusive Perks with Registration</h2>
-        <p class="section__text">
-          When you complete your Ozwin Casino login, you gain access to member-exclusive features and promotional offers. Registration unlocks the full casino experience, including access to bonuses, cashier functions, and account management tools. Australian players can take advantage of tailored promotions and secure payment options designed specifically for the local market.
-        </p>
-        <p class="section__text">
-          After successful login, check the promotions page for current offers including welcome bonuses, reload deals, and free spins. Verify your account details in the settings area and ensure your payment methods are configured correctly for seamless deposits and withdrawals.
-        </p>
-      </div>
-    </section>
+      <!-- Section: Unlock Exclusive Perks with Registration -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title section__title--h2">
+            Unlock Exclusive Perks with Registration
+          </h2>
+          <p class="section__text">
+            When you complete your Ozwin Casino login, you gain access to
+            member-exclusive features and promotional offers. Registration
+            unlocks the full casino experience, including access to bonuses,
+            cashier functions, and account management tools. Australian players
+            can take advantage of tailored promotions and secure payment options
+            designed specifically for the local market.
+          </p>
+          <p class="section__text">
+            After successful login, check the promotions page for current offers
+            including welcome bonuses, reload deals, and free spins. Verify your
+            account details in the settings area and ensure your payment methods
+            are configured correctly for seamless deposits and withdrawals.
+          </p>
+        </div>
+      </section>
 
-    <!-- Section: Conclusion -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title section__title--h2">Conclusion</h2>
-        <p class="section__text">
-          Ozwin Casino login is designed for speed and reliability. When issues occur, approach them systematically: check credentials, clear cache, use a stable connection, and avoid rapid repeated attempts. Once logged in, explore the promotions and cashier sections to make the most of your gaming session. Keep your browser updated and your login credentials secure for the best experience.
-        </p>
-      </div>
-    </section>
+      <!-- Section: Conclusion -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title section__title--h2">Conclusion</h2>
+          <p class="section__text">
+            Ozwin Casino login is designed for speed and reliability. When
+            issues occur, approach them systematically: check credentials, clear
+            cache, use a stable connection, and avoid rapid repeated attempts.
+            Once logged in, explore the promotions and cashier sections to make
+            the most of your gaming session. Keep your browser updated and your
+            login credentials secure for the best experience.
+          </p>
+        </div>
+      </section>
 
-    <!-- Section: FAQ -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title section__title--h2">FAQ</h2>
+      <!-- Section: FAQ -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title section__title--h2">FAQ</h2>
 
-        <h3 class="section__title section__title--h3">Why is my Ozwin Casino login not working?</h3>
-        <p class="section__text">
-          Common causes include incorrect credentials, cached session data, or network issues. Try clearing your browser cache, resetting your password, and ensuring you're using a stable internet connection.
-        </p>
+          <h3 class="section__title section__title--h3">
+            Why is my Ozwin Casino login not working?
+          </h3>
+          <p class="section__text">
+            Common causes include incorrect credentials, cached session data, or
+            network issues. Try clearing your browser cache, resetting your
+            password, and ensuring you're using a stable internet connection.
+          </p>
 
-        <h3 class="section__title section__title--h3">How do I reset my Ozwin Casino password?</h3>
-        <p class="section__text">
-          Use the "Forgot Password" link on the login page. Enter your registered email address and follow the instructions sent to your inbox. Check spam/junk folders if you don't receive the email within a few minutes.
-        </p>
+          <h3 class="section__title section__title--h3">
+            How do I reset my Ozwin Casino password?
+          </h3>
+          <p class="section__text">
+            Use the "Forgot Password" link on the login page. Enter your
+            registered email address and follow the instructions sent to your
+            inbox. Check spam/junk folders if you don't receive the email within
+            a few minutes.
+          </p>
 
-        <h3 class="section__title section__title--h3">Can I log in to Ozwin Casino on mobile?</h3>
-        <p class="section__text">
-          Yes, Ozwin Casino supports mobile browser access on both Android and iOS devices. Keep your browser and operating system updated for the best login experience.
-        </p>
+          <h3 class="section__title section__title--h3">
+            Can I log in to Ozwin Casino on mobile?
+          </h3>
+          <p class="section__text">
+            Yes, Ozwin Casino supports mobile browser access on both Android and
+            iOS devices. Keep your browser and operating system updated for the
+            best login experience.
+          </p>
 
-        <h3 class="section__title section__title--h3">What should I do if the login page keeps looping?</h3>
-        <p class="section__text">
-          Clear your site cookies and cache, close all browser tabs, restart the browser, and try again. Avoid using multiple tabs or auto-refresh extensions during the login process.
-        </p>
-      </div>
-    </section>
+          <h3 class="section__title section__title--h3">
+            What should I do if the login page keeps looping?
+          </h3>
+          <p class="section__text">
+            Clear your site cookies and cache, close all browser tabs, restart
+            the browser, and try again. Avoid using multiple tabs or
+            auto-refresh extensions during the login process.
+          </p>
+        </div>
+      </section>
+    </main>
 
-  </main>
-
-  <!-- ========================================================================
+    <!-- ========================================================================
        PARTNERS / LOGO RUNNER
        ======================================================================== -->
-  <section class="partners">
-    <div class="partners__grid">
-      <a href="#" class="partners__logo">
-        <img src="img/ozwin/runner/logo.svg" alt="Partner 1">
-      </a>
-      <a href="#" class="partners__logo">
-        <img src="img/ozwin/runner/logo2.svg" alt="Partner 2">
-      </a>
-      <a href="#" class="partners__logo">
-        <img src="img/ozwin/runner/logo3.svg" alt="Partner 3">
-      </a>
-      <a href="#" class="partners__logo">
-        <img src="img/ozwin/runner/logo4.svg" alt="Partner 4">
-      </a>
-      <a href="#" class="partners__logo">
-        <img src="img/ozwin/runner/logo5.svg" alt="Partner 5">
-      </a>
-      <a href="#" class="partners__logo">
-        <img src="img/ozwin/runner/logo6.svg" alt="Partner 6">
-      </a>
-      <a href="#" class="partners__logo">
-        <img src="img/ozwin/runner/logo7.svg" alt="Partner 7">
-      </a>
-      <a href="#" class="partners__logo">
-        <img src="img/ozwin/runner/logo8.svg" alt="Partner 8">
-      </a>
-    </div>
-  </section>
+    <section class="partners">
+      <div class="partners__grid">
+        <a href="#" class="partners__logo">
+          <img src="img/ozwin/runner/logo.svg" alt="Partner 1" />
+        </a>
+        <a href="#" class="partners__logo">
+          <img src="img/ozwin/runner/logo2.svg" alt="Partner 2" />
+        </a>
+        <a href="#" class="partners__logo">
+          <img src="img/ozwin/runner/logo3.svg" alt="Partner 3" />
+        </a>
+        <a href="#" class="partners__logo">
+          <img src="img/ozwin/runner/logo4.svg" alt="Partner 4" />
+        </a>
+        <a href="#" class="partners__logo">
+          <img src="img/ozwin/runner/logo5.svg" alt="Partner 5" />
+        </a>
+        <a href="#" class="partners__logo">
+          <img src="img/ozwin/runner/logo6.svg" alt="Partner 6" />
+        </a>
+        <a href="#" class="partners__logo">
+          <img src="img/ozwin/runner/logo7.svg" alt="Partner 7" />
+        </a>
+        <a href="#" class="partners__logo">
+          <img src="img/ozwin/runner/logo8.svg" alt="Partner 8" />
+        </a>
+      </div>
+    </section>
 
-  <!-- ========================================================================
+    <!-- ========================================================================
        FOOTER
        ======================================================================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <a href="#" class="footer__logo">
-          <img src="img/ozwin/logo.png" alt="Ozwin Logo">
-        </a>
-        <nav class="footer__links">
-          <a href="#" class="footer__link">Terms and Conditions</a>
-          <a href="#" class="footer__link">Privacy Policy</a>
-        </nav>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="#" class="footer__logo">
+            <img src="img/ozwin/logo.png" alt="Ozwin Logo" />
+          </a>
+          <nav class="footer__links">
+            <a href="#" class="footer__link">Terms and Conditions</a>
+            <a href="#" class="footer__link">Privacy Policy</a>
+          </nav>
+        </div>
+        <p class="footer__copyright">
+          Copyright © 2026 Ozwin Casino. All rights reserved. You must be at
+          least 18 years of age to play.
+        </p>
       </div>
-      <p class="footer__copyright">
-        Copyright © 2026 Ozwin Casino. All rights reserved. You must be at least 18 years of age to play.
-      </p>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
