@@ -625,6 +625,34 @@ button {
 }
 
 /* ==========================================================================
+   SLOTS GRID
+   ========================================================================== */
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg) 0;
+}
+
+.slot-card {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.slot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.slot-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
    CONTENT IMAGE - Full width promo box
    ========================================================================== */
 .content-image {
@@ -942,6 +970,13 @@ button {
   .icon-btn img {
     width: 32px;
     height: 32px;
+  }
+
+  /* Slots Grid - Mobile: 2 columns */
+  .slots-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md) 0;
   }
 
   /* Content Image - Mobile */
