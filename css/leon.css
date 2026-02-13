@@ -1,4 +1,146 @@
-/* Leon Casino - Custom Button Styles (Black-Gray) */
+/* Leon Casino - Custom Theme */
+
+/* ==========================================================================
+   COLOR SCHEME - Dark Gray/Black
+   ========================================================================== */
+
+:root {
+  --leon-bg-dark: #0a0e0e;
+  --leon-bg-light: #22262a;
+  --leon-text: #ffffff;
+  --leon-border: #3a3e42;
+}
+
+/* Body & Background */
+body {
+  background: linear-gradient(180deg, #22262a 0%, #0a0e0e 100%);
+  background-color: #0a0e0e;
+  color: #ffffff;
+}
+
+/* Remove background image from content blocks */
+.content-block {
+  background-image: none;
+  background: #0a0e0e;
+}
+
+.promobox-block {
+  background-image: none;
+  background: transparent;
+}
+
+/* Header */
+.header {
+  background: rgba(10, 14, 14, 0.95);
+  border-bottom: 1px solid #3a3e42;
+}
+
+.header.is-scrolled {
+  background: rgba(10, 14, 14, 0.98);
+}
+
+/* Hero */
+.hero {
+  background: transparent;
+}
+
+.hero__banner {
+  background: linear-gradient(180deg, #22262a 0%, #0a0e0e 100%);
+}
+
+/* Sections */
+.section {
+  color: #ffffff;
+}
+
+.section__title {
+  color: #ffffff;
+}
+
+.section__text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section__list li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Tables */
+.table {
+  background: rgba(34, 38, 42, 0.5);
+  border-color: #3a3e42;
+}
+
+.table th,
+.table td {
+  border-color: #3a3e42;
+  color: #ffffff;
+}
+
+.table th {
+  background: rgba(34, 38, 42, 0.8);
+}
+
+/* Subnav */
+.subnav {
+  background: rgba(34, 38, 42, 0.5);
+  border-color: #3a3e42;
+}
+
+.subnav__title {
+  color: #ffffff;
+}
+
+.subnav__link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.subnav__link:hover {
+  color: #ffffff;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  background: #0a0e0e;
+}
+
+.mobile-menu__link {
+  color: #ffffff;
+  border-color: #3a3e42;
+}
+
+/* Footer */
+.footer {
+  background: #0a0e0e;
+  border-top: 1px solid #3a3e42;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Slots Grid */
+.slot-card {
+  background: rgba(34, 38, 42, 0.5);
+  border-color: #3a3e42;
+}
+
+.slot-card:hover {
+  border-color: #888888;
+}
+
+/* Content Image */
+.content-image {
+  border-color: #3a3e42;
+}
+
+/* ==========================================================================
+   BUTTONS - Gray/Black Style
+   ========================================================================== */
 
 /* Secondary Button - Gray outline */
 .btn--secondary {
@@ -21,17 +163,17 @@
   box-shadow: none;
 }
 
-/* Primary Button - Black/Dark gray */
+/* Primary Button - Dark gray filled */
 .btn--primary {
-  background-color: #333333;
+  background-color: #3a3e42;
   color: #ffffff;
-  border: 2px solid #333333;
+  border: 2px solid #3a3e42;
 }
 
 .btn--primary:hover {
-  background-color: #444444;
+  background-color: #4a4e52;
   color: #ffffff;
-  border: 2px solid #444444;
+  border: 2px solid #4a4e52;
   transform: none;
   box-shadow: none;
 }
@@ -45,11 +187,11 @@
 .btn--ghost {
   background: transparent;
   border: 1px solid #666666;
-  color: var(--color-text);
+  color: #ffffff;
 }
 
 .btn--ghost:hover {
   background: rgba(136, 136, 136, 0.15);
   border: 1px solid #888888;
-  color: var(--color-text);
+  color: #ffffff;
 }

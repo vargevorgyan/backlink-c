@@ -1,19 +1,202 @@
-/* Bizzo Casino - Custom Button Styles (Pink like cunt.css) */
+/* Bizzo Casino - Custom Theme */
 
-/* Secondary Button - Pink outline */
+/* ==========================================================================
+   COLOR SCHEME - Purple/Gold
+   ========================================================================== */
+
+:root {
+  --bizzo-bg: #2b1234;
+  --bizzo-bg-dark: #1a0b20;
+  --bizzo-gold: #fecd0c;
+  --bizzo-text: #ffffff;
+  --bizzo-border: #4a2555;
+}
+
+/* Body & Background */
+body {
+  background: linear-gradient(180deg, #2b1234 0%, #1a0b20 100%);
+  background-color: #2b1234;
+  color: #ffffff;
+}
+
+/* Remove background image from content blocks */
+.content-block {
+  background-image: none;
+  background: #2b1234;
+}
+
+.promobox-block {
+  background-image: none;
+  background: transparent;
+}
+
+/* Header */
+.header {
+  background: rgba(43, 18, 52, 0.95);
+  border-bottom: 1px solid #4a2555;
+}
+
+.header.is-scrolled {
+  background: rgba(43, 18, 52, 0.98);
+}
+
+/* Navigation */
+.header__nav-link {
+  color: #ffffff;
+}
+
+.header__nav-link:hover,
+.header__nav-link--active {
+  color: #fecd0c;
+}
+
+/* Hero */
+.hero {
+  background: transparent;
+}
+
+.hero__banner {
+  background: linear-gradient(180deg, #2b1234 0%, #1a0b20 100%);
+}
+
+.hero__title {
+  color: #fecd0c;
+}
+
+/* Sections */
+.section {
+  color: #ffffff;
+}
+
+.section__title {
+  color: #fecd0c;
+}
+
+.section__title--h1 {
+  color: #fecd0c;
+}
+
+.section__title--h2 {
+  color: #fecd0c;
+}
+
+.section__title--h3 {
+  color: #fecd0c;
+}
+
+.section__text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section__list li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Tables */
+.table {
+  background: rgba(43, 18, 52, 0.5);
+  border-color: #4a2555;
+}
+
+.table th,
+.table td {
+  border-color: #4a2555;
+  color: #ffffff;
+}
+
+.table th {
+  background: rgba(43, 18, 52, 0.8);
+  color: #fecd0c;
+}
+
+/* Subnav */
+.subnav {
+  background: rgba(43, 18, 52, 0.5);
+  border-color: #4a2555;
+}
+
+.subnav__title {
+  color: #fecd0c;
+}
+
+.subnav__link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.subnav__link:hover {
+  color: #fecd0c;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  background: #2b1234;
+}
+
+.mobile-menu__link {
+  color: #ffffff;
+  border-color: #4a2555;
+}
+
+.mobile-menu__link:hover {
+  color: #fecd0c;
+}
+
+/* Footer */
+.footer {
+  background: #1a0b20;
+  border-top: 1px solid #4a2555;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__link:hover {
+  color: #fecd0c;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Partners */
+.partners {
+  background: rgba(43, 18, 52, 0.3);
+}
+
+/* Slots Grid */
+.slot-card {
+  background: rgba(43, 18, 52, 0.5);
+  border-color: #4a2555;
+}
+
+.slot-card:hover {
+  border-color: #fecd0c;
+}
+
+/* Content Image */
+.content-image {
+  border-color: #4a2555;
+}
+
+/* ==========================================================================
+   BUTTONS - Gold/Yellow Style
+   ========================================================================== */
+
+/* Secondary Button - Gold outline */
 .btn--secondary {
   background-color: transparent;
   background: transparent;
-  color: #ffffff;
-  border: 2px solid #ff00c0;
+  color: #fecd0c;
+  border: 2px solid #fecd0c;
 }
 
 .btn--secondary:hover {
-  background-color: transparent;
-  background: transparent;
-  color: #ffffff;
+  background-color: rgba(254, 205, 12, 0.15);
+  background: rgba(254, 205, 12, 0.15);
+  color: #fecd0c;
   transform: none;
-  border: 2px solid #e91e8c;
+  border: 2px solid #fecd0c;
 }
 
 .btn--secondary:active {
@@ -21,17 +204,17 @@
   box-shadow: none;
 }
 
-/* Primary Button - Pink outline */
+/* Primary Button - Gold filled */
 .btn--primary {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ff00c0;
+  background-color: #fecd0c;
+  color: #2b1234;
+  border: 2px solid #fecd0c;
 }
 
 .btn--primary:hover {
-  background-color: rgba(233, 30, 140, 0.1);
-  color: #ffffff;
-  border: 2px solid #e91e8c;
+  background-color: #ffe04a;
+  color: #2b1234;
+  border: 2px solid #ffe04a;
   transform: none;
   box-shadow: none;
 }
@@ -44,11 +227,12 @@
 /* Ghost Button */
 .btn--ghost {
   background: transparent;
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
+  border: 1px solid #4a2555;
+  color: #ffffff;
 }
 
 .btn--ghost:hover {
-  background: rgba(233, 30, 140, 0.1);
-  color: var(--color-text);
+  background: rgba(254, 205, 12, 0.1);
+  border: 1px solid #fecd0c;
+  color: #fecd0c;
 }
