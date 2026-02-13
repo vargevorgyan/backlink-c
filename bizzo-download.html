@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bizzo Casino App – Play Mobile Games Anywhere AU</title>
+    <meta name="description" content="Bizzo Casino App delivers smooth mobile gameplay, secure login, and full access to all casino games for players in Australia." />
+
+    <!-- Google Fonts - Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- West Theme Override -->
+    <link rel="stylesheet" href="css/west.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
+       HEADER
+       ======================================================================== -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- Logo -->
+          <a href="bizzo.html" class="header__logo">
+            <img src="img/bizzo/logo.svg" alt="Bizzo Casino Logo" style="margin-right: 20px;" />
+          </a>
+
+          <!-- Navigation -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a href="bizzo.html" class="header__nav-link">Bizzo Casino</a>
+              </li>
+              <li><a href="bizzo-login.html" class="header__nav-link">Login</a></li>
+              <li><a href="bizzo-download.html" class="header__nav-link header__nav-link--active">Download</a></li>
+            </ul>
+          </nav>
+
+          <!-- Action Buttons -->
+          <div class="header__actions">
+            <a href="#" class="btn btn--secondary">Registration</a>
+            <a href="#" class="btn btn--primary">Log In</a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="header__menu-toggle"
+            aria-label="Open menu"
+            onclick="openMobileMenu()"
+          >
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE MENU OVERLAY
+       ======================================================================== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__header">
+        <a href="bizzo.html" class="mobile-menu__logo">
+          <img src="img/bizzo/logo.svg" alt="Bizzo Casino Logo" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="#" class="btn btn--secondary">Registration</a>
+        <a href="#" class="btn btn--primary">Log In</a>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="bizzo.html" class="mobile-menu__link">Bizzo Casino</a>
+        <a href="bizzo-login.html" class="mobile-menu__link">Login</a>
+        <a href="bizzo-download.html" class="mobile-menu__link">Download</a>
+      </nav>
+    </div>
+
+    <script>
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('is-open')
+        document.body.style.overflow = 'hidden'
+      }
+
+      function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('is-open')
+        document.body.style.overflow = ''
+      }
+
+      // Header scroll effect
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header')
+        if (window.scrollY > 50) {
+          header.classList.add('is-scrolled')
+        } else {
+          header.classList.remove('is-scrolled')
+        }
+      })
+    </script>
+
+    <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__banner">
+          <img
+            src="img/bizzo/5.webp"
+            alt="Bizzo Casino Download"
+            class="hero__image"
+          />
+
+          <div class="hero__content">
+            <h1 class="hero__title">Bizzo Casino App</h1>
+            <a href="#" class="btn btn--secondary">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       MOBILE BUTTONS
+       ======================================================================== -->
+    <div class="mobile-actions">
+      <div class="container">
+        <div class="mobile-actions__buttons">
+          <a href="#" class="btn btn--secondary">Registration</a>
+          <a href="#" class="btn btn--primary">Log In</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       CONTENT BLOCK 1
+       ======================================================================== -->
+    <div class="content-block">
+      <!-- Sub-Navigation -->
+      <nav class="subnav">
+        <div class="container">
+          <h2 class="subnav__title">Navigation</h2>
+
+          <div class="subnav__content" id="subnavContent">
+            <button class="btn btn--ghost" id="subnavToggle" onclick="toggleSubnav()">Open</button>
+
+            <ul class="subnav__menu" id="subnavMenu" style="display: none;">
+              <li><a href="#bizzo-app" class="subnav__link">Bizzo Casino App</a></li>
+              <li><a href="#overview" class="subnav__link">Overview Of Mobile Experience</a></li>
+              <li><a href="#features" class="subnav__link">Key Features And Advantages</a></li>
+              <li><a href="#devices" class="subnav__link">Supported Devices</a></li>
+              <li><a href="#browser" class="subnav__link">Mobile Browser Vs App</a></li>
+              <li><a href="#conclusion" class="subnav__link">Final Thoughts</a></li>
+              <li><a href="#faq" class="subnav__link">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        function toggleSubnav() {
+          const menu = document.getElementById('subnavMenu');
+          const toggle = document.getElementById('subnavToggle');
+          
+          if (menu.style.display === 'none') {
+            menu.style.display = 'flex';
+            toggle.textContent = 'Close';
+          } else {
+            menu.style.display = 'none';
+            toggle.textContent = 'Open';
+          }
+        }
+      </script>
+
+      <!-- Section: Bizzo Casino App Introduction -->
+      <section class="section">
+        <div class="container">
+          <h1 id="bizzo-app" class="section__title section__title--h1">Bizzo Casino App</h1>
+          <p class="section__text">
+            Bizzo Casino App provides controlled mobile access to the platform: account entry, lobby navigation, promotions visibility, and cashier actions. We keep mobile sessions stable through clear interface logic and predictable confirmations. Bizzo Casino Mobile use stays consistent when you keep one trusted entry path and one primary device for verification and cashier actions.
+          </p>
+          <p class="section__text">
+            Bizzo Casino App should be completed only through approved sources. Confirm the installed version after installation and keep updates current. If any rule is unclear, Confirm in the Legal Page / Cashier Screen / Promo Terms.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Overview Of Mobile Experience -->
+      <section class="section">
+        <div class="container">
+          <h2 id="overview" class="section__title section__title--h2">Overview Of The Bizzo Casino Mobile Experience</h2>
+          <p class="section__text">
+            Our mobile experience is built for short sessions and clear actions on small screens. We keep essential tools close to the account area: profile, verification status, transaction history, and support access. This reduces friction when you switch between gameplay and the cashier.
+          </p>
+          <p class="section__text">
+            Bizzo Casino Mobile stability depends on device health and network quality. Keep OS updates current, keep free storage available, and use a stable connection for cashier actions. Avoid repeated retries when a page fails to load. Change one variable and test once.
+          </p>
+          <p class="section__text">
+            Mobile control points:
+          </p>
+          <ul class="section__list">
+            <li>Use one primary device for verification and withdrawals.</li>
+            <li>Keep OS and browser engine updated.</li>
+            <li>Use a stable connection for deposits and withdrawals.</li>
+            <li>Stop repeated attempts after one failure.</li>
+            <li>Track transaction IDs and timestamps in history.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section: Key Features And Advantages -->
+      <section class="section">
+        <div class="container">
+          <h2 id="features" class="section__title section__title--h2">Key Features And Advantages Of The App</h2>
+          <p class="section__text">
+            Bizzo Casino App keeps daily operations predictable. We keep the lobby readable, we keep promotions visible with terms at activation, and we keep cashier steps explicit before submission. We reduce hidden flows that cause user errors.
+          </p>
+          <p class="section__text">
+            Key advantages in the app:
+          </p>
+          <ul class="section__list">
+            <li>Fast access to game categories with stable return navigation.</li>
+            <li>Centralized account tools for status checks and history.</li>
+            <li>Promotions shown with terms at the activation point.</li>
+            <li>Cashier screens that display method notes before submission.</li>
+            <li>Support access placed near account and cashier areas.</li>
+            <li>Responsible gaming tools available in account settings.</li>
+          </ul>
+
+          <!-- App Details Table -->
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>App Access</td>
+                  <td>Bizzo App On Mobile Devices</td>
+                </tr>
+                <tr>
+                  <td>Download Source</td>
+                  <td>Install Only From The Official App Store Listing</td>
+                </tr>
+                <tr>
+                  <td>Android Install</td>
+                  <td>Only If Platform Provides Approved Route</td>
+                </tr>
+                <tr>
+                  <td>Install Check</td>
+                  <td>Confirm Free Storage + Minimum OS</td>
+                </tr>
+                <tr>
+                  <td>Update Method</td>
+                  <td>Update Through Store; Enable Auto-Updates</td>
+                </tr>
+                <tr>
+                  <td>Cashier Use</td>
+                  <td>Confirm Methods, Limits, Status In Cashier Screen</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="section__text">
+            Bizzo Casino Download flows should remain simple. Install once, confirm the version, then maintain updates through the approved channel. Keep device security enabled and avoid shared devices.
+          </p>
+        </div>
+      </section>
+    </div>
+    <!-- End Content Block 1 -->
+
+    <!-- ========================================================================
+       PROMOBOX IMAGE
+       ======================================================================== -->
+    <div class="promobox-block">
+      <div class="container">
+        <div class="content-image">
+          <img src="img/bizzo/6.webp" alt="Bizzo Casino Mobile Download" style="object-position: center;" />
+          <a href="#" class="btn btn--secondary">Download</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Promobox Block -->
+
+    <!-- ========================================================================
+       CONTENT BLOCK 2
+       ======================================================================== -->
+    <div class="content-block">
+      <!-- Section: Supported Devices -->
+      <section class="section">
+        <div class="container">
+          <h2 id="devices" class="section__title section__title--h2">Supported Devices And Platforms</h2>
+          <p class="section__text">
+            Bizzo App supports common smartphones and tablets that meet current OS requirements. Compatibility depends on OS version, security policy settings, and available storage. Older devices may run basic navigation but can struggle with heavier graphics and long sessions.
+          </p>
+          <p class="section__text">
+            Device readiness checklist:
+          </p>
+          <ul class="section__list">
+            <li>OS updated to a supported version.</li>
+            <li>Free storage available for updates and cache growth.</li>
+            <li>Stable network for login and cashier actions.</li>
+            <li>Screen lock enabled and device not shared.</li>
+            <li>One primary device used for verification and withdrawals.</li>
+            <li>Time and date set correctly to avoid authentication errors.</li>
+          </ul>
+          <p class="section__text">
+            Device-side controls that improve stability:
+          </p>
+          <ul class="section__list">
+            <li>Keep background app limits relaxed for the app during active sessions.</li>
+            <li>Avoid switching between Wi-Fi and mobile data during cashier actions.</li>
+            <li>Close heavy background apps before live content and withdrawals.</li>
+            <li>Confirm the installed version number in app settings after an update.</li>
+          </ul>
+          <p class="section__text">
+            Bizzo Casino should be installed only through an approved route shown by the platform. Avoid third-party packages and modified builds. They can break updates and create security risk.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Mobile Browser Vs App -->
+      <section class="section">
+        <div class="container">
+          <h2 id="browser" class="section__title section__title--h2">Playing Via Mobile Browser Vs App</h2>
+          <p class="section__text">
+            Both access methods can work. The app keeps sessions more contained. The mobile browser version reduces storage use but depends more on browser settings and background limits.
+          </p>
+          <p class="section__text">
+            Operational differences:
+          </p>
+          <ul class="section__list">
+            <li>App sessions are usually more consistent when the device stays stable.</li>
+            <li>Browser sessions can fail due to cookies, extensions, or background tab limits.</li>
+            <li>App updates are controlled through the approved install channel.</li>
+            <li>Browser stability depends on browser updates and site cookie rules.</li>
+          </ul>
+          <p class="section__text">
+            Browser access requires stricter environment control. Allow essential cookies for login and cashier pages. Disable script-blocking extensions for the domain. Keep one browser profile for the account and avoid multiple active sessions across devices at the same time.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Final Thoughts -->
+      <section class="section">
+        <div class="container">
+          <h2 id="conclusion" class="section__title section__title--h2">Final Thoughts</h2>
+          <p class="section__text">
+            Bizzo App is built for controlled mobile play with stable navigation, clear terms at activation, and structured cashier confirmations. Bizzo Casino App should be completed through approved sources only. Keep the app updated, keep device security enabled, and keep one primary device for account-critical actions.
+          </p>
+          <p class="section__text">
+            Bizzo Casino Download decisions should be based on what is confirmed inside the platform. Confirm in the Legal Page / Cashier Screen / Promo Terms when rules, limits, or eligibility are unclear.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: FAQ -->
+      <section class="section">
+        <div class="container">
+          <h2 id="faq" class="section__title section__title--h2">FAQ</h2>
+
+          <h3 class="section__title section__title--h3">Is Bizzo Mobile available for all devices?</h3>
+          <p class="section__text">
+            Availability depends on OS requirements and region rules. Confirm supported devices and current requirements on the store page or inside Help/FAQ.
+          </p>
+
+          <h3 class="section__title section__title--h3">How do we handle Bizzo Casino App Download safely?</h3>
+          <p class="section__text">
+            Use an approved store or platform-provided route. Confirm the installed version and keep updates current.
+          </p>
+
+          <h3 class="section__title section__title--h3">What should we do if Bizzo Download completes but the app fails to open?</h3>
+          <p class="section__text">
+            Restart the device, confirm OS updates, free storage space, and update the app to the latest version. If the issue repeats, contact support with device model, OS version, and app version.
+          </p>
+
+          <h3 class="section__title section__title--h3">Can we install Bizzo Casino Apk on Android?</h3>
+          <p class="section__text">
+            Yes, when delivered through an approved route shown by the platform. Avoid third-party APK sources and modified packages.
+          </p>
+
+          <h3 class="section__title section__title--h3">Is the mobile browser version a safe alternative?</h3>
+          <p class="section__text">
+            Yes, when you use a modern browser, keep it updated, and allow essential cookies. Keep cashier actions on a stable network and avoid rapid retries.
+          </p>
+        </div>
+      </section>
+
+      <!-- Partners -->
+      <section class="partners">
+        <div class="container">
+          <div class="partners__grid">
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo.svg" alt="Partner 1" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo2.svg" alt="Partner 2" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo3.svg" alt="Partner 3" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo4.svg" alt="Partner 4" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo5.svg" alt="Partner 5" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo6.svg" alt="Partner 6" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo7.svg" alt="Partner 7" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo8.svg" alt="Partner 8" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End Content Block 2 -->
+
+    <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="bizzo.html" class="footer__logo">
+            <img src="img/bizzo/logo.svg" alt="Bizzo Casino Logo" />
+          </a>
+          <nav class="footer__links">
+            <a href="#" class="footer__link">Terms and Conditions</a>
+            <a href="#" class="footer__link">Privacy Policy</a>
+          </nav>
+        </div>
+        <p class="footer__copyright">
+          Copyright © 2026 Bizzo Casino. All rights reserved. You must be at
+          least 18 years of age to play.
+        </p>
+      </div>
+    </footer>
+    <!-- Analytics -->
+    <script src="js/protection.js"></script>
+  </body>
+</html>

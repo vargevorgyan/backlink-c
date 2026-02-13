@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bizzo Casino Login – Fast And Secure Access AU</title>
+    <meta name="description" content="Bizzo Casino Login provides quick and safe access to your account, unlocking all games, bonuses, and platform features instantly." />
+
+    <!-- Google Fonts - Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- West Theme Override -->
+    <link rel="stylesheet" href="css/west.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
+       HEADER
+       ======================================================================== -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- Logo -->
+          <a href="bizzo.html" class="header__logo">
+            <img src="img/bizzo/logo.svg" alt="Bizzo Casino Logo" style="margin-right: 20px;" />
+          </a>
+
+          <!-- Navigation -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a href="bizzo.html" class="header__nav-link">Bizzo Casino</a>
+              </li>
+              <li><a href="bizzo-login.html" class="header__nav-link header__nav-link--active">Login</a></li>
+              <li><a href="bizzo-download.html" class="header__nav-link">Download</a></li>
+            </ul>
+          </nav>
+
+          <!-- Action Buttons -->
+          <div class="header__actions">
+            <a href="#" class="btn btn--secondary">Registration</a>
+            <a href="#" class="btn btn--primary">Log In</a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="header__menu-toggle"
+            aria-label="Open menu"
+            onclick="openMobileMenu()"
+          >
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE MENU OVERLAY
+       ======================================================================== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__header">
+        <a href="bizzo.html" class="mobile-menu__logo">
+          <img src="img/bizzo/logo.svg" alt="Bizzo Casino Logo" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="#" class="btn btn--secondary">Registration</a>
+        <a href="#" class="btn btn--primary">Log In</a>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="bizzo.html" class="mobile-menu__link">Bizzo Casino</a>
+        <a href="bizzo-login.html" class="mobile-menu__link">Login</a>
+        <a href="bizzo-download.html" class="mobile-menu__link">Download</a>
+      </nav>
+    </div>
+
+    <script>
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('is-open')
+        document.body.style.overflow = 'hidden'
+      }
+
+      function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('is-open')
+        document.body.style.overflow = ''
+      }
+
+      // Header scroll effect
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header')
+        if (window.scrollY > 50) {
+          header.classList.add('is-scrolled')
+        } else {
+          header.classList.remove('is-scrolled')
+        }
+      })
+    </script>
+
+    <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__banner">
+          <img
+            src="img/bizzo/3.webp"
+            alt="Bizzo Casino Login"
+            class="hero__image"
+          />
+
+          <div class="hero__content">
+            <h1 class="hero__title">Bizzo Casino Login</h1>
+            <a href="#" class="btn btn--primary">Log In</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       MOBILE BUTTONS
+       ======================================================================== -->
+    <div class="mobile-actions">
+      <div class="container">
+        <div class="mobile-actions__buttons">
+          <a href="#" class="btn btn--secondary">Registration</a>
+          <a href="#" class="btn btn--primary">Log In</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       CONTENT BLOCK 1
+       ======================================================================== -->
+    <div class="content-block">
+      <!-- Sub-Navigation -->
+      <nav class="subnav">
+        <div class="container">
+          <h2 class="subnav__title">Navigation</h2>
+
+          <div class="subnav__content" id="subnavContent">
+            <button class="btn btn--ghost" id="subnavToggle" onclick="toggleSubnav()">Open</button>
+
+            <ul class="subnav__menu" id="subnavMenu" style="display: none;">
+              <li><a href="#bizzo-login" class="subnav__link">Bizzo Casino Login</a></li>
+              <li><a href="#access" class="subnav__link">How To Access Your Account</a></li>
+              <li><a href="#guide" class="subnav__link">Step-By-Step Guide</a></li>
+              <li><a href="#benefits" class="subnav__link">Benefits Of Registering</a></li>
+              <li><a href="#rewards" class="subnav__link">Exclusive Member Rewards</a></li>
+              <li><a href="#conclusion" class="subnav__link">Final Thoughts</a></li>
+              <li><a href="#faq" class="subnav__link">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        function toggleSubnav() {
+          const menu = document.getElementById('subnavMenu');
+          const toggle = document.getElementById('subnavToggle');
+          
+          if (menu.style.display === 'none') {
+            menu.style.display = 'flex';
+            toggle.textContent = 'Close';
+          } else {
+            menu.style.display = 'none';
+            toggle.textContent = 'Open';
+          }
+        }
+      </script>
+
+      <!-- Section: Bizzo Casino Login Introduction -->
+      <section class="section">
+        <div class="container">
+          <h1 id="bizzo-login" class="section__title section__title--h1">Bizzo Casino Login</h1>
+          <p class="section__text">
+            Bizzo Casino provides controlled access to your account, balance, promotions, and cashier tools. We apply standard authorization and authentication checks to protect credentials and prevent unauthorized access. Keep one trusted entry path and one primary device for account-critical actions.
+          </p>
+          <p class="section__text">
+            Bizzo Casino Login Australia availability can be region-dependent. Confirm in the Legal Page before you deposit.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: How To Access Your Account -->
+      <section class="section">
+        <div class="container">
+          <h2 id="access" class="section__title section__title--h2">How To Access Your Bizzo Casino Account</h2>
+          <p class="section__text">
+            Stable access depends on consistent device and network conditions. Use one browser profile on your primary device. Keep OS and browser updated. Avoid public networks when you open the cashier. Use a password manager to reduce typing errors and to keep credential handling consistent.
+          </p>
+          <p class="section__text">
+            Access quality is also affected by device settings. Aggressive privacy tools, strict cookie blocking, and unstable DNS configurations can interrupt authentication. Keep settings practical: allow essential site cookies, avoid script-blocking rules for the login domain, and keep time/date accurate on the device to prevent security mismatches.
+          </p>
+          <p class="section__text">
+            Access controls to keep stable:
+          </p>
+          <ul class="section__list">
+            <li>Use a unique password and store it in a password manager.</li>
+            <li>Enable screen lock and avoid shared devices.</li>
+            <li>Stop repeated attempts after one failure.</li>
+            <li>Confirm the domain before entering credentials.</li>
+            <li>Complete verification early if withdrawals are planned.</li>
+            <li>Keep one primary device for cashier actions and verification.</li>
+            <li>Save timestamps and reference IDs for cashier actions.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section: Step-By-Step Guide -->
+      <section class="section">
+        <div class="container">
+          <h2 id="guide" class="section__title section__title--h2">Step-By-Step Guide To Logging In</h2>
+          <p class="section__text">
+            Business rule: act once per check. Change one variable at a time when access fails. Keep actions traceable and avoid rapid repeats.
+          </p>
+          <p class="section__text">
+            Login actions:
+          </p>
+          <ul class="section__list">
+            <li>Open the login page from your trusted route.</li>
+            <li>Enter credentials and submit once.</li>
+            <li>Complete any on-screen verification prompt if shown.</li>
+            <li>Confirm account access before opening the cashier.</li>
+            <li>Check the account menu and profile status before promo activation.</li>
+            <li>If a code is requested, enter it once and complete the flow without switching devices.</li>
+          </ul>
+
+          <!-- Failure Controls Table -->
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Issue</th>
+                  <th>Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cookie/session conflict</td>
+                  <td>Clear site cookies for the domain only, then retry once.</td>
+                </tr>
+                <tr>
+                  <td>Script blocking</td>
+                  <td>Disable script-blocking extensions for the domain, then retry once.</td>
+                </tr>
+                <tr>
+                  <td>Network instability</td>
+                  <td>Switch to a stable network, then retry once.</td>
+                </tr>
+                <tr>
+                  <td>Wrong password</td>
+                  <td>Use password reset instead of guessing.</td>
+                </tr>
+                <tr>
+                  <td>Repeated error</td>
+                  <td>Contact support with timestamps if the same error repeats.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Benefits Of Registering -->
+      <section class="section">
+        <div class="container">
+          <h2 id="benefits" class="section__title section__title--h2">Benefits Of Registering And Logging In</h2>
+          <p class="section__text">
+            Bizzo Login unlocks full platform features and links support and transaction history to one profile. Registration supports verification status tracking and responsible gaming controls inside account tools. A complete profile reduces delays when withdrawals are requested or when promotion eligibility must be verified.
+          </p>
+          <p class="section__text">
+            Bizzo Sign Up enables:
+          </p>
+          <ul class="section__list">
+            <li>Promotions visibility and activation controls.</li>
+            <li>Deposits and withdrawals through the cashier.</li>
+            <li>Verification status display and document flow access.</li>
+            <li>Transaction history with timestamps and reference IDs.</li>
+            <li>Responsible gaming settings in account tools.</li>
+            <li>Support requests linked to the account history.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- End Content Block 1 -->
+
+    <!-- ========================================================================
+       PROMOBOX IMAGE
+       ======================================================================== -->
+    <div class="promobox-block">
+      <div class="container">
+        <div class="content-image">
+          <img src="img/bizzo/4.webp" alt="Bizzo Casino Login Perks" style="object-position: center;" />
+          <a href="#" class="btn btn--secondary">Play</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Promobox Block -->
+
+    <!-- ========================================================================
+       CONTENT BLOCK 2
+       ======================================================================== -->
+    <div class="content-block">
+      <!-- Section: Exclusive Member Rewards -->
+      <section class="section">
+        <div class="container">
+          <h2 id="rewards" class="section__title section__title--h2">Exclusive Member Rewards On Login</h2>
+          <p class="section__text">
+            Member rewards are eligibility-based and terms-driven. Confirm rules before activation and keep stakes consistent with promotion requirements. Verification can be required before withdrawing bonus-linked winnings. Keep one primary device for promo activation and cashier actions to reduce session conflicts.
+          </p>
+          <p class="section__text">
+            Reward formats that can be available:
+          </p>
+          <ul class="section__list">
+            <li>Welcome deposit bonus with wagering rules and expiry.</li>
+            <li>Free spins on selected slots with fixed conditions.</li>
+            <li>Reload campaigns with time windows and caps.</li>
+            <li>Cashback formats with calculation rules and exclusions.</li>
+            <li>Limited-time events with defined eligibility conditions.</li>
+          </ul>
+          <p class="section__text">
+            Bizzo Casino Sign Up No Deposit offers, when available, still include limits, eligible games, and withdrawal conditions. Confirm in the Promo Terms and confirm verification status before withdrawal.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Final Thoughts -->
+      <section class="section">
+        <div class="container">
+          <h2 id="conclusion" class="section__title section__title--h2">Final Thoughts</h2>
+          <p class="section__text">
+            Login stays reliable when routines stay consistent: one trusted entry path, one primary device, and disciplined credential handling. Complete verification early and track deposits and withdrawals through transaction history. Keep reference IDs and timestamps for any cashier action that requires support escalation.
+          </p>
+          <p class="section__text">
+            Bizzo Casino Login Australia users should verify Legal and cashier rules inside the account before taking action. Confirm in the Legal Page / Cashier Screen / Promo Terms when any rule is unclear.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: FAQ -->
+      <section class="section">
+        <div class="container">
+          <h2 id="faq" class="section__title section__title--h2">FAQ</h2>
+
+          <h3 class="section__title section__title--h3">How do we keep Bizzo Casino Login stable during daily use?</h3>
+          <p class="section__text">
+            Use one trusted route, one primary device, and one browser profile. Keep OS and browser updated. Avoid public networks for cashier actions.
+          </p>
+
+          <h3 class="section__title section__title--h3">Why can Bizzo Casino Login require extra checks?</h3>
+          <p class="section__text">
+            Extra checks can be triggered by security rules, region conditions, network risk signals, or account status. Complete prompts in the same flow and avoid rapid retries.
+          </p>
+
+          <h3 class="section__title section__title--h3">What actions apply when Bizzo Casino Sign In fails?</h3>
+          <p class="section__text">
+            Clear site cookies for the domain only and retry once. Disable script-blocking extensions for the domain and retry once. Use password reset instead of guessing.
+          </p>
+
+          <h3 class="section__title section__title--h3">Where is verification managed after login?</h3>
+          <p class="section__text">
+            Use the account tools area. Verification status and required steps are shown inside your profile flow.
+          </p>
+
+          <h3 class="section__title section__title--h3">Is Bizzo Sign Up required for withdrawals?</h3>
+          <p class="section__text">
+            Yes. Withdrawals require a registered account. Verification can also be required before the first withdrawal, depending on method rules and account status.
+          </p>
+
+          <h3 class="section__title section__title--h3">How do we protect credentials?</h3>
+          <p class="section__text">
+            Use a unique password, store it in a password manager, and keep screen lock enabled. Avoid shared devices and keep cashier use on a stable network.
+          </p>
+        </div>
+      </section>
+
+      <!-- Partners -->
+      <section class="partners">
+        <div class="container">
+          <div class="partners__grid">
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo.svg" alt="Partner 1" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo2.svg" alt="Partner 2" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo3.svg" alt="Partner 3" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo4.svg" alt="Partner 4" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo5.svg" alt="Partner 5" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo6.svg" alt="Partner 6" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo7.svg" alt="Partner 7" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo8.svg" alt="Partner 8" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End Content Block 2 -->
+
+    <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="bizzo.html" class="footer__logo">
+            <img src="img/bizzo/logo.svg" alt="Bizzo Casino Logo" />
+          </a>
+          <nav class="footer__links">
+            <a href="#" class="footer__link">Terms and Conditions</a>
+            <a href="#" class="footer__link">Privacy Policy</a>
+          </nav>
+        </div>
+        <p class="footer__copyright">
+          Copyright © 2026 Bizzo Casino. All rights reserved. You must be at
+          least 18 years of age to play.
+        </p>
+      </div>
+    </footer>
+    <!-- Analytics -->
+    <script src="js/protection.js"></script>
+  </body>
+</html>

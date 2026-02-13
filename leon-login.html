@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leon Casino Login – Secure Access To Your Account</title>
+    <meta name="description" content="Leon Casino Login allows fast and secure access to your account, giving full access to games, bonuses and all platform features." />
+
+    <!-- Google Fonts - Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- West Theme Override -->
+    <link rel="stylesheet" href="css/west.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
+       HEADER
+       ======================================================================== -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- Logo -->
+          <a href="leon.html" class="header__logo">
+            <img src="img/leon/logo.svg" alt="Leon Casino Logo" style="margin-right: 20px;" />
+          </a>
+
+          <!-- Navigation -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a href="leon.html" class="header__nav-link">Leon Casino</a>
+              </li>
+              <li><a href="leon-login.html" class="header__nav-link header__nav-link--active">Login</a></li>
+              <li><a href="leon-download.html" class="header__nav-link">Download</a></li>
+            </ul>
+          </nav>
+
+          <!-- Action Buttons -->
+          <div class="header__actions">
+            <a href="#" class="btn btn--secondary">Registration</a>
+            <a href="#" class="btn btn--primary">Log In</a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="header__menu-toggle"
+            aria-label="Open menu"
+            onclick="openMobileMenu()"
+          >
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE MENU OVERLAY
+       ======================================================================== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__header">
+        <a href="leon.html" class="mobile-menu__logo">
+          <img src="img/leon/logo.svg" alt="Leon Casino Logo" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="#" class="btn btn--secondary">Registration</a>
+        <a href="#" class="btn btn--primary">Log In</a>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="leon.html" class="mobile-menu__link">Leon Casino</a>
+        <a href="leon-login.html" class="mobile-menu__link">Login</a>
+        <a href="leon-download.html" class="mobile-menu__link">Download</a>
+      </nav>
+    </div>
+
+    <script>
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('is-open')
+        document.body.style.overflow = 'hidden'
+      }
+
+      function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('is-open')
+        document.body.style.overflow = ''
+      }
+
+      // Header scroll effect
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header')
+        if (window.scrollY > 50) {
+          header.classList.add('is-scrolled')
+        } else {
+          header.classList.remove('is-scrolled')
+        }
+      })
+    </script>
+
+    <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__banner">
+          <img
+            src="img/leon/3.webp"
+            alt="Leon Casino Login"
+            class="hero__image"
+          />
+
+          <div class="hero__content">
+            <h1 class="hero__title">Leon Casino Login</h1>
+            <a href="#" class="btn btn--primary">Log In</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       MOBILE BUTTONS
+       ======================================================================== -->
+    <div class="mobile-actions">
+      <div class="container">
+        <div class="mobile-actions__buttons">
+          <a href="#" class="btn btn--secondary">Registration</a>
+          <a href="#" class="btn btn--primary">Log In</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       CONTENT BLOCK 1
+       ======================================================================== -->
+    <div class="content-block">
+      <!-- Sub-Navigation -->
+      <nav class="subnav">
+        <div class="container">
+          <h2 class="subnav__title">Navigation</h2>
+
+          <div class="subnav__content" id="subnavContent">
+            <button class="btn btn--ghost" id="subnavToggle" onclick="toggleSubnav()">Open</button>
+
+            <ul class="subnav__menu" id="subnavMenu" style="display: none;">
+              <li><a href="#leon-login" class="subnav__link">Leon Casino Login</a></li>
+              <li><a href="#guide" class="subnav__link">Guide To Accessing Your Account</a></li>
+              <li><a href="#perks" class="subnav__link">Unlock Exclusive Perks</a></li>
+              <li><a href="#access" class="subnav__link">How To Access Your Account</a></li>
+              <li><a href="#rewards" class="subnav__link">Unique Member Entry Rewards</a></li>
+              <li><a href="#conclusion" class="subnav__link">Final Thoughts</a></li>
+              <li><a href="#faq" class="subnav__link">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        function toggleSubnav() {
+          const menu = document.getElementById('subnavMenu');
+          const toggle = document.getElementById('subnavToggle');
+          
+          if (menu.style.display === 'none') {
+            menu.style.display = 'flex';
+            toggle.textContent = 'Close';
+          } else {
+            menu.style.display = 'none';
+            toggle.textContent = 'Open';
+          }
+        }
+      </script>
+
+      <!-- Section: Leon Casino Login Introduction -->
+      <section class="section">
+        <div class="container">
+          <h1 id="leon-login" class="section__title section__title--h1">Leon Casino Login</h1>
+          <p class="section__text">
+            Leon Casino Login is the controlled entry point to account tools, balance, games, promotions, and the cashier. Treat access as a security flow, not as a casual click. Use one trusted entry path, keep credentials private, and keep your device clean. Stable authorization and authentication reduce lockouts, failed sessions, and payment friction.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Guide To Accessing Your Account -->
+      <section class="section">
+        <div class="container">
+          <h2 id="guide" class="section__title section__title--h2">Guide To Accessing Your Account</h2>
+          <p class="section__text">
+            Account access has three parts: the login page, credential validation, and session security. When one part breaks, fix one variable at a time. Do not change everything at once. That creates noise and hides the real cause.
+          </p>
+          <p class="section__text">
+            Core access rules:
+          </p>
+          <ul class="section__list">
+            <li>Use a saved bookmark to Leon.Casino and open it directly.</li>
+            <li>Keep a single main browser profile for the account. Avoid random "cleaner" plugins.</li>
+            <li>Update OS and browser. Outdated builds cause authorization loops and broken cookies.</li>
+            <li>Use a strong password and never reuse it. Store it in a password manager.</li>
+            <li>Do not share one device across multiple users. Shared devices create verification conflicts.</li>
+          </ul>
+          <p class="section__text">
+            If you cannot sign in, isolate the cause in this order:
+          </p>
+          <ul class="section__list">
+            <li>Domain and page load: confirm the site opens normally and the page is not cached incorrectly.</li>
+            <li>Credentials: verify email/username and password spelling. Disable auto-fill once and type manually.</li>
+            <li>Browser state: clear cookies for the site only, then retry once.</li>
+            <li>Network: switch from unstable Wi-Fi to mobile data or a stable connection.</li>
+            <li>Device: try a second device only after you confirm the first device is stable.</li>
+          </ul>
+          <p class="section__text">
+            Security checks are normal. If the platform requests extra verification, follow the on-screen prompts. Do not bypass them with new accounts or repeated retries.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Unlock Exclusive Perks -->
+      <section class="section">
+        <div class="container">
+          <h2 id="perks" class="section__title section__title--h2">Unlock Exclusive Perks With Registration</h2>
+          <p class="section__text">
+            Registration unlocks account-only functions: promotions visibility, bonus activation, cashier operations, and verification status tracking. A clean profile reduces delays. Use real details that match your payment method identity. Mismatched names or inconsistent data often slow down verification and withdrawals.
+          </p>
+          <p class="section__text">
+            Operational benefits of a registered account:
+          </p>
+          <ul class="section__list">
+            <li>Access to promotions and activation controls.</li>
+            <li>Full cashier access for deposits and withdrawals.</li>
+            <li>Responsible gaming tools in account settings.</li>
+            <li>A clear transaction history with reference IDs and timestamps.</li>
+            <li>Support tickets linked to your account for faster handling.</li>
+          </ul>
+          <p class="section__text">
+            Some campaigns require a manual entry field. Bonus Code is used only when the platform shows a dedicated code field in promotions or the cashier. Enter it exactly once. Confirm eligibility, expiry, wagering requirement, maximum bet rules, and excluded games before activation. If the code field is not present, do not force activation through unsupported pages.
+          </p>
+        </div>
+      </section>
+    </div>
+    <!-- End Content Block 1 -->
+
+    <!-- ========================================================================
+       PROMOBOX IMAGE
+       ======================================================================== -->
+    <div class="promobox-block">
+      <div class="container">
+        <div class="content-image">
+          <img src="img/leon/4.webp" alt="Leon Casino Login Perks" style="object-position: center;" />
+          <a href="#" class="btn btn--secondary">Play</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Promobox Block -->
+
+    <!-- ========================================================================
+       CONTENT BLOCK 2
+       ======================================================================== -->
+    <div class="content-block">
+      <!-- Section: How To Access Your Account -->
+      <section class="section">
+        <div class="container">
+          <h2 id="access" class="section__title section__title--h2">How To Access Your Leon Casino Account</h2>
+          <p class="section__text">
+            Start with controlled entry. Do not rely on third-party redirects. Use direct navigation and keep the login routine consistent. This protects authentication integrity and reduces session failures.
+          </p>
+          <p class="section__text">
+            Clean login routine:
+          </p>
+          <ul class="section__list">
+            <li>Open the platform from your bookmark.</li>
+            <li>Enter account identifier and password manually at least once to confirm accuracy.</li>
+            <li>Complete any on-screen verification prompt if shown.</li>
+            <li>Confirm you reached the account menu and can open account settings.</li>
+          </ul>
+          <p class="section__text">
+            If you use Leon Casino Australia Login, keep the same discipline. Availability and access conditions can be region-dependent. Confirm eligibility and legal terms inside the platform. Do not try to "work around" restrictions. That increases risk and account flags.
+          </p>
+
+          <!-- Common Issues Table -->
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Issue</th>
+                  <th>Cause</th>
+                  <th>Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Login loop after success</td>
+                  <td>Cookie/session conflict</td>
+                  <td>Clear site cookies only, then retry once. Disable script-blocking extensions.</td>
+                </tr>
+                <tr>
+                  <td>Captcha repeats</td>
+                  <td>Network risk signals</td>
+                  <td>Switch network, retry after a short pause. Avoid rapid reattempts.</td>
+                </tr>
+                <tr>
+                  <td>Incorrect password message</td>
+                  <td>Wrong credentials</td>
+                  <td>Reset password instead of guessing. Password guessing creates lockouts.</td>
+                </tr>
+                <tr>
+                  <td>Account not recognized</td>
+                  <td>Email/phone mismatch</td>
+                  <td>Confirm you registered with the same email/phone. Check for typos.</td>
+                </tr>
+                <tr>
+                  <td>Session drops on mobile</td>
+                  <td>Background apps, outdated OS</td>
+                  <td>Close background apps, update OS, and use a stable connection.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="section__text">
+            Password reset rules:
+          </p>
+          <ul class="section__list">
+            <li>Use the reset function from the Leon Casino login screen.</li>
+            <li>Set a new unique password. Do not reuse old variants.</li>
+            <li>Store the password securely. Avoid screenshots and notes in unprotected apps.</li>
+            <li>After reset, sign in once on your main device and confirm the session is stable.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section: Unique Member Entry Rewards -->
+      <section class="section">
+        <div class="container">
+          <h2 id="rewards" class="section__title section__title--h2">Unique Member Entry Rewards</h2>
+          <p class="section__text">
+            Entry rewards are tied to account eligibility and campaign status. Some rewards activate automatically after registration or the first deposit. Others require manual activation inside Promotions. Keep expectations strict: rewards have rules, limits, and expiry windows. Bonuses add value only when you follow the terms and keep bankroll controls. Leon Casino Login gives access to the promotions area and the activation status shown inside your account.
+          </p>
+          <p class="section__text">
+            Typical reward formats you may see:
+          </p>
+          <ul class="section__list">
+            <li>Welcome deposit bonus that increases initial playable balance.</li>
+            <li>Free spins bundles on selected slots with fixed value per spin.</li>
+            <li>Reload bonuses during defined campaign windows.</li>
+            <li>Cashback offers with a defined calculation method and exclusions.</li>
+            <li>Event campaigns with limited-time conditions.</li>
+          </ul>
+          <p class="section__text">
+            Before you activate any reward, confirm these controls:
+          </p>
+          <ul class="section__list">
+            <li>Wagering requirement and which balance it applies to.</li>
+            <li>Eligible games and excluded categories.</li>
+            <li>Maximum bet rule during wagering.</li>
+            <li>Expiry time and the platform time zone.</li>
+            <li>Whether promotions can stack or must be used one at a time.</li>
+            <li>Whether withdrawals require completed verification.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section: Final Thoughts -->
+      <section class="section">
+        <div class="container">
+          <h2 id="conclusion" class="section__title section__title--h2">Final Thoughts</h2>
+          <p class="section__text">
+            Controlled access protects the account and keeps sessions predictable. Keep one clean entry path, one primary device for cashier actions, and disciplined credentials management. Use account tools to confirm verification status and transaction history. When a login issue happens, fix one variable at a time and avoid repeated retries. Use Leon Casino Login again only after you change a single factor and confirm the result.
+          </p>
+          <p class="section__text">
+            For users who also operate Leon Bet Casino Login, keep account sessions isolated and avoid mixing credentials across products. Use separate browser profiles to prevent session conflicts and accidental overwrites.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: FAQ -->
+      <section class="section">
+        <div class="container">
+          <h2 id="faq" class="section__title section__title--h2">FAQ</h2>
+
+          <h3 class="section__title section__title--h3">How Do I Use Leon Casino Login Safely On A Daily Basis?</h3>
+          <p class="section__text">
+            Use a saved bookmark to Leon.Casino. Confirm the domain. Use one main device and a password manager.
+          </p>
+
+          <h3 class="section__title section__title--h3">Why Does Leon Casino Australia Login Show Extra Checks Or Prompts?</h3>
+          <p class="section__text">
+            Security rules, region conditions, or network risk signals can trigger checks. Follow on-screen steps. Avoid rapid retries.
+          </p>
+
+          <h3 class="section__title section__title--h3">What Should I Do After A Failed Login Attempt?</h3>
+          <p class="section__text">
+            Stop repeating attempts. Clear site cookies for the domain and retry once. If it fails, reset the password or contact support with timestamps.
+          </p>
+
+          <h3 class="section__title section__title--h3">Where Do I Enter Leon Casino Sign Up Bonus Code?</h3>
+          <p class="section__text">
+            Only in the code field shown in Promotions or the cashier. Confirm expiry, wagering, max bet, and eligible games.
+          </p>
+
+          <h3 class="section__title section__title--h3">Can I Sign In From Multiple Devices?</h3>
+          <p class="section__text">
+            Yes, but keep one primary device for verification and withdrawals. Frequent switching can trigger extra checks.
+          </p>
+
+          <h3 class="section__title section__title--h3">Why Do I Get Logged Out Right After Login?</h3>
+          <p class="section__text">
+            Cookies, extensions, or an outdated browser can cause it. Allow cookies, disable script-blockers for the site, update, and retry once.
+          </p>
+
+          <h3 class="section__title section__title--h3">How Do I Keep My Account Secure On Mobile?</h3>
+          <p class="section__text">
+            Update OS and browser. Use screen lock. Avoid shared devices and public networks for cashier actions.
+          </p>
+        </div>
+      </section>
+
+      <!-- Partners -->
+      <section class="partners">
+        <div class="container">
+          <div class="partners__grid">
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo.svg" alt="Partner 1" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo2.svg" alt="Partner 2" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo3.svg" alt="Partner 3" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo4.svg" alt="Partner 4" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo5.svg" alt="Partner 5" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo6.svg" alt="Partner 6" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo7.svg" alt="Partner 7" />
+            </a>
+            <a href="#" class="partners__logo">
+              <img src="img/ozwin/runner/logo8.svg" alt="Partner 8" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End Content Block 2 -->
+
+    <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="leon.html" class="footer__logo">
+            <img src="img/leon/logo.svg" alt="Leon Casino Logo" />
+          </a>
+          <nav class="footer__links">
+            <a href="#" class="footer__link">Terms and Conditions</a>
+            <a href="#" class="footer__link">Privacy Policy</a>
+          </nav>
+        </div>
+        <p class="footer__copyright">
+          Copyright © 2026 Leon Casino. All rights reserved. You must be at
+          least 18 years of age to play.
+        </p>
+      </div>
+    </footer>
+    <!-- Analytics -->
+    <script src="js/protection.js"></script>
+  </body>
+</html>
