@@ -1,0 +1,55 @@
+/* Leon Casino - Custom Button Styles (Black-Gray) */
+
+/* Secondary Button - Gray outline */
+.btn--secondary {
+  background-color: transparent;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #888888;
+}
+
+.btn--secondary:hover {
+  background-color: rgba(136, 136, 136, 0.15);
+  background: rgba(136, 136, 136, 0.15);
+  color: #ffffff;
+  transform: none;
+  border: 2px solid #aaaaaa;
+}
+
+.btn--secondary:active {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Primary Button - Black/Dark gray */
+.btn--primary {
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid #333333;
+}
+
+.btn--primary:hover {
+  background-color: #444444;
+  color: #ffffff;
+  border: 2px solid #444444;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--primary:active {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Ghost Button */
+.btn--ghost {
+  background: transparent;
+  border: 1px solid #666666;
+  color: var(--color-text);
+}
+
+.btn--ghost:hover {
+  background: rgba(136, 136, 136, 0.15);
+  border: 1px solid #888888;
+  color: var(--color-text);
+}
