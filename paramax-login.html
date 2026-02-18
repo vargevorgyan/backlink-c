@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paramax9 Casino Login – Secure Account Access AU</title>
+    <meta
+      name="description"
+      content="Paramax9 Casino Login provides fast and secure access to your account, allowing full control over games, bonuses and account settings."
+    />
+
+    <!-- Google Fonts - Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Paramax Theme Override -->
+    <link rel="stylesheet" href="css/paramax.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
+       HEADER
+       ======================================================================== -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="paramax.html" class="header__logo">
+            <img src="img/paramax/logo.png" alt="Paramax Logo" />
+          </a>
+
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a href="paramax.html" class="header__nav-link">Paramax9</a>
+              </li>
+              <li>
+                <a
+                  href="paramax-login.html"
+                  class="header__nav-link header__nav-link--active"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__actions">
+            <a href="#" class="btn btn--secondary">Registration</a>
+            <a href="#" class="btn btn--primary">Log In</a>
+          </div>
+
+          <button
+            class="header__menu-toggle"
+            aria-label="Open menu"
+            onclick="openMobileMenu()"
+          >
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE MENU OVERLAY
+       ======================================================================== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__header">
+        <a href="paramax.html" class="mobile-menu__logo">
+          <img src="img/paramax/logo.png" alt="Paramax Logo" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="#" class="btn btn--secondary">Registration</a>
+        <a href="#" class="btn btn--primary">Log In</a>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="paramax.html" class="mobile-menu__link">Paramax9</a>
+        <a href="paramax-login.html" class="mobile-menu__link">Login</a>
+      </nav>
+    </div>
+
+    <script>
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('is-open')
+        document.body.style.overflow = 'hidden'
+      }
+
+      function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('is-open')
+        document.body.style.overflow = ''
+      }
+    </script>
+
+    <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__banner">
+          <!-- Unused Image 3.webp -->
+          <img
+            src="img/paramax/3.webp"
+            alt="Paramax9 Login"
+            class="hero__image"
+          />
+
+          <div class="hero__content">
+            <h1 class="hero__title">Paramax9 Casino Login</h1>
+            <a href="#" class="btn btn--primary">Log In</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       MOBILE BUTTONS
+       ======================================================================== -->
+    <div class="mobile-actions">
+      <div class="container">
+        <div class="mobile-actions__buttons">
+          <a href="#" class="btn btn--secondary">Registration</a>
+          <a href="#" class="btn btn--primary">Log In</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       CONTENT WRAPPER
+       ======================================================================== -->
+    <div class="content-wrapper">
+      <!-- ========================================================================
+         SUB-NAVIGATION
+         ======================================================================== -->
+      <nav class="subnav">
+        <div class="container">
+          <h2 class="subnav__title">Navigation</h2>
+
+          <div class="subnav__content" id="subnavContent">
+            <button
+              class="btn btn--ghost"
+              id="subnavToggle"
+              onclick="toggleSubnav()"
+            >
+              Open
+            </button>
+
+            <ul class="subnav__menu" id="subnavMenu" style="display: none">
+              <li>
+                <a href="#intro" class="subnav__link">Paramax9 Login</a>
+              </li>
+              <li>
+                <a href="#faq" class="subnav__link">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        function toggleSubnav() {
+          const menu = document.getElementById('subnavMenu')
+          const toggle = document.getElementById('subnavToggle')
+
+          if (menu.style.display === 'none') {
+            menu.style.display = 'flex'
+            toggle.textContent = 'Close'
+          } else {
+            menu.style.display = 'none'
+            toggle.textContent = 'Open'
+          }
+        }
+      </script>
+
+      <!-- ========================================================================
+       MAIN CONTENT
+       ======================================================================== -->
+      <main>
+        <!-- Section: Intro -->
+        <section class="section">
+          <div class="container">
+            <h2 id="intro" class="section__title section__title--h1">
+              Paramax9 Casino Login
+            </h2>
+            <p class="section__text">
+              Paramax9 Casino provides secure access to your account and direct
+              control over gameplay, bonuses, payments, and profile settings.
+              Use one account only. Keep identity details consistent across
+              profile, payment methods, and verification documents. Sign in
+              through the official platform entry points and avoid mirrored
+              pages or unofficial installers.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: How to Log In -->
+        <section class="section">
+          <div class="container">
+            <h2 id="how-to" class="section__title section__title--h2">
+              How to Log In to Your Paramax9 Account
+            </h2>
+            <p class="section__text">
+              Open the official site and select Log In. Enter the email and
+              password used during registration. Complete any authorization
+              prompt shown on screen. If a verification code is required,
+              confirm access through the chosen channel and finish
+              authentication without switching devices.
+            </p>
+            <p class="section__text">
+              Keep sign-in stable. Use a private network. Disable VPN and proxy
+              tools during login. Confirm automatic time and date sync on your
+              device. Incorrect time settings can block authentication and cause
+              repeated logouts.
+            </p>
+            <p class="section__text">
+              For Paramax9 Casino Login access, confirm the correct country and
+              currency settings after the first successful sign-in. Keep the
+              same device for cashier and verification actions to reduce
+              security checks.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Step-by-Step Guide -->
+        <section class="section">
+          <div class="container">
+            <h2 id="step-by-step" class="section__title section__title--h2">
+              Step-by-Step Guide to Paramax9 Casino Login
+            </h2>
+            <p class="section__text">
+              Use this sequence for Paramax9 with predictable results:
+            </p>
+            <ul class="section__list">
+              <li>
+                Open the official platform and tap Log In from the header.
+              </li>
+              <li>
+                Enter your email and password. Check keyboard layout and caps
+                lock.
+              </li>
+              <li>
+                Complete on-screen authorization prompts if displayed. Avoid
+                multiple tabs.
+              </li>
+              <li>
+                Enter the verification code immediately if requested. Request a
+                new code once if it expires.
+              </li>
+              <li>
+                Confirm access to the account area. Check that the session stays
+                active.
+              </li>
+              <li>
+                Review account status. Confirm no restrictions are shown in
+                profile or cashier.
+              </li>
+              <li>
+                Keep one primary device for repeated sign-ins, deposits, and
+                withdrawals.
+              </li>
+            </ul>
+            <p class="section__text">
+              For Paramax 9 Casino Login on shared devices, log out after each
+              session and clear saved credentials. Do not store passwords in
+              unsecured notes.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Common Problems -->
+        <section class="section">
+          <div class="container">
+            <h2 id="problems" class="section__title section__title--h2">
+              Common Login Problems and Quick Fixes
+            </h2>
+            <p class="section__text">
+              Most access issues come from credential errors, device settings,
+              or security blocks. Apply quick fixes before contacting support.
+              Use the exact error wording shown on screen and avoid repeated
+              attempts that can trigger a temporary lock.
+            </p>
+            <p class="section__text">Common issues and actions:</p>
+            <ul class="section__list">
+              <li>
+                <strong>Incorrect email or password:</strong> use password reset
+                and set a unique password. Stop guessing.
+              </li>
+              <li>
+                <strong>No verification code received:</strong> check spam and
+                filters, confirm phone or email details, request a new code
+                once.
+              </li>
+              <li>
+                <strong>Session loop or blank page:</strong> clear cache and
+                cookies for the platform domain, restart the browser, then
+                retry.
+              </li>
+              <li>
+                <strong>VPN or proxy detected:</strong> disable it, reload the
+                login page, sign in again on the same network.
+              </li>
+              <li>
+                <strong>Device time mismatch:</strong> enable automatic time
+                sync, restart the device, attempt sign-in once more.
+              </li>
+              <li>
+                <strong>Temporary lock:</strong> pause sign-in attempts and wait
+                for the lock window to pass, then use one clean attempt.
+              </li>
+            </ul>
+            <p class="section__text">
+              If Paramax9 Casino Login Australia fails after these actions,
+              contact support and provide account email, timestamp, device
+              model, OS version, browser version, and a screenshot of the error
+              screen.
+            </p>
+          </div>
+        </section>
+
+        <!-- Promobox 4.webp -->
+        <section class="section">
+          <div class="container">
+            <div class="content-image">
+              <img src="img/paramax/4.webp" alt="Paramax Account Access" />
+              <a href="#" class="btn btn--secondary">Log In</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Account Security -->
+        <section class="section">
+          <div class="container">
+            <h2 id="security" class="section__title section__title--h2">
+              Account Security and Safe Sign-In Tips
+            </h2>
+            <p class="section__text">
+              Treat account access as a security process, not a convenience
+              step. Use a strong password and protect the email linked to the
+              account, since recovery depends on it. Never share verification
+              codes. Do not reuse passwords from other services.
+            </p>
+            <p class="section__text">Apply safe sign-in controls:</p>
+            <ul class="section__list">
+              <li>Use a password manager and enable device lock.</li>
+              <li>
+                Keep one primary device for authentication and withdrawals.
+              </li>
+              <li>
+                Disable VPN during login and cashier activity to avoid location
+                mismatch checks.
+              </li>
+              <li>
+                Log out on shared devices and avoid saving credentials in the
+                browser.
+              </li>
+              <li>
+                Enable any available account security settings inside your
+                profile.
+              </li>
+            </ul>
+            <p class="section__text">
+              If you receive an unexpected login alert, change your password
+              immediately and contact support with the alert time and device
+              details.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Mobile Login -->
+        <section class="section">
+          <div class="container">
+            <h2 id="mobile" class="section__title section__title--h2">
+              Paramax9 Login on Mobile Devices
+            </h2>
+            <p class="section__text">
+              Paramax9 works on modern mobile browsers and supported devices.
+              Keep OS and browser updated. Maintain free storage for cache and
+              updates. Close background apps before long sessions, especially
+              live games. Avoid aggressive battery saving modes that suspend
+              sessions and cause logouts.
+            </p>
+            <p class="section__text">
+              Use mobile sign-in safely. Avoid public Wi-Fi for authentication.
+              Do not switch networks during verification. Keep automatic time
+              sync enabled. For Paramax9 Casino Login Australia on mobile, keep
+              one device as the primary for verification and cashier actions.
+              Switching devices during withdrawals often increases checks.
+            </p>
+            <p class="section__text">
+              If the mobile session drops, reopen the browser, sign in again
+              once, and confirm the session remains active before entering the
+              cashier.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Benefits -->
+        <section class="section">
+          <div class="container">
+            <h2 id="benefits" class="section__title section__title--h2">
+              Benefits of Accessing Your Paramax9 Casino Account
+            </h2>
+            <p class="section__text">
+              Accessing your Paramax9 account provides direct control over core
+              platform functions. It enables full visibility of balances,
+              transaction history, bonus eligibility, and verification status.
+              It also keeps account actions traceable through your profile
+              history and support references.
+            </p>
+            <p class="section__text">
+              Key benefits of an authorized account session:
+            </p>
+            <ul class="section__list">
+              <li>Faster access to games and saved favourites.</li>
+              <li>Full visibility of promotions, terms, and opt-in status.</li>
+              <li>
+                Cashier access for deposits and withdrawals, subject to regional
+                availability.
+              </li>
+              <li>
+                Verification status tracking and document submission when
+                required.
+              </li>
+              <li>Support access with account-linked case references.</li>
+            </ul>
+            <p class="section__text">
+              For Paramax 9 Login, consistent account access reduces friction
+              during payment processing and verification reviews.
+            </p>
+          </div>
+        </section>
+
+        <!-- Promobox 5.webp -->
+        <section class="section">
+          <div class="container">
+            <div class="content-image">
+              <img src="img/paramax/5.webp" alt="Paramax Benefits" />
+              <a href="#" class="btn btn--secondary">Play Now</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Final Thoughts -->
+        <section class="section">
+          <div class="container">
+            <h2 id="conclusion" class="section__title section__title--h2">
+              Final Thoughts
+            </h2>
+            <p class="section__text">
+              Paramax9 Casino Login remains stable when credentials are correct,
+              device time is synced, and authentication is completed in one
+              session on one device. Keep security settings active. Use official
+              access routes only. Maintain consistent profile and payment
+              ownership to reduce review delays during withdrawals.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: FAQ -->
+        <section class="section">
+          <div class="container">
+            <h2 id="faq" class="section__title section__title--h2">FAQ</h2>
+            <h3 class="section__title section__title--h3">
+              Paramax9 Casino Login Australia: why is the account blocked after
+              entering the correct password?
+            </h3>
+            <p class="section__text">
+              Disable VPN and retry once. Confirm automatic time sync. Clear
+              cache and cookies for the platform domain. Stop repeated attempts
+              if a lock appears. Use password reset if needed.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Paramax9 Login: how to avoid repeated verification prompts?
+            </h3>
+            <p class="section__text">
+              Use one primary device and one browser. Keep email and phone
+              details current. Avoid switching networks during authorization.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Paramax 9 Casino Login: what details speed up support resolution?
+            </h3>
+            <p class="section__text">
+              Send account email, exact error text, timestamp, device model, OS
+              version, browser version, and a screenshot of the error screen.
+              Mention whether VPN, proxy, or ad blockers were active.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Is it safe to save credentials on mobile?
+            </h3>
+            <p class="section__text">
+              Use a password manager with device lock. Avoid saving passwords in
+              unsecured notes. Protect email access because recovery depends on
+              it.
+            </p>
+            <h3 class="section__title section__title--h3">
+              What to do if the verification code does not arrive?
+            </h3>
+            <p class="section__text">
+              Check spam and mail filters. Confirm the address or phone number
+              in your profile. Request a new code once. Contact support if
+              delivery fails repeatedly.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- ========================================================================
+       FOOTER WRAPPER
+       ======================================================================== -->
+      <div class="footer-wrapper">
+        <div class="container">
+          <!-- Partners / Logo Runner -->
+          <section class="partners">
+            <div class="partners__grid">
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo.svg" alt="Partner 1" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo2.svg" alt="Partner 2" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo3.svg" alt="Partner 3" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo4.svg" alt="Partner 4" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo5.svg" alt="Partner 5" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo6.svg" alt="Partner 6" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo7.svg" alt="Partner 7" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo8.svg" alt="Partner 8" />
+              </a>
+            </div>
+          </section>
+
+          <!-- Footer -->
+          <footer class="footer">
+            <div class="footer__inner">
+              <a href="paramax.html" class="footer__logo">
+                <img src="img/paramax/logo.png" alt="Paramax Logo" />
+              </a>
+              <nav class="footer__links">
+                <a href="#" class="footer__link">Terms and Conditions</a>
+                <a href="#" class="footer__link">Privacy Policy</a>
+              </nav>
+            </div>
+            <p class="footer__copyright">
+              Copyright © 2026 Paramax9 Casino. All rights reserved. You must be
+              at least 18 years of age to play.
+            </p>
+          </footer>
+        </div>
+      </div>
+      <!-- End content-wrapper -->
+    </div>
+  </body>
+</html>

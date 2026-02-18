@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ricky Casino App – Play Mobile Games Anytime in AU</title>
+    <meta
+      name="description"
+      content="Ricky Casino App provides smooth mobile gameplay, secure login and full access to the complete range of casino games on mobile devices."
+    />
+
+    <!-- Google Fonts - Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Paramax Theme Override (Structure Base) -->
+    <link rel="stylesheet" href="css/paramax.css" />
+    <!-- Ricky Theme Override -->
+    <link rel="stylesheet" href="css/ricky.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
+       HEADER
+       ======================================================================== -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- Logo -->
+          <a href="ricky.html" class="header__logo">
+            <img src="img/ricky/logo.svg" alt="Ricky Casino Logo" />
+          </a>
+
+          <!-- Navigation -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a href="ricky.html" class="header__nav-link">Ricky Casino</a>
+              </li>
+              <li>
+                <a href="ricky-login.html" class="header__nav-link">Login</a>
+              </li>
+              <li>
+                <a
+                  href="ricky-download.html"
+                  class="header__nav-link header__nav-link--active"
+                  >Download</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Action Buttons -->
+          <div class="header__actions">
+            <a href="#" class="btn btn--secondary">Registration</a>
+            <a href="ricky-login.html" class="btn btn--primary">Log In</a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="header__menu-toggle"
+            aria-label="Open menu"
+            onclick="openMobileMenu()"
+          >
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE ACTIONS (Moved here)
+       ======================================================================== -->
+    <div class="mobile-actions">
+      <div class="container">
+        <div class="mobile-actions__buttons">
+          <a href="#" class="btn btn--secondary">Registration</a>
+          <a href="ricky-login.html" class="btn btn--primary">Log In</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       MOBILE MENU OVERLAY
+       ======================================================================== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__header">
+        <a href="ricky.html" class="mobile-menu__logo">
+          <img src="img/ricky/logo.svg" alt="Ricky Casino Logo" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="#" class="btn btn--secondary">Registration</a>
+        <a href="ricky-login.html" class="btn btn--primary">Log In</a>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="ricky.html" class="mobile-menu__link">Ricky Casino</a>
+        <a href="ricky-login.html" class="mobile-menu__link">Login</a>
+        <a href="ricky-download.html" class="mobile-menu__link">Download</a>
+      </nav>
+    </div>
+
+    <script>
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('is-open')
+        document.body.style.overflow = 'hidden'
+      }
+
+      function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('is-open')
+        document.body.style.overflow = ''
+      }
+    </script>
+
+    <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__banner">
+          <!-- Random Hero Image from 1-7 folder (Using 6.jpg) -->
+          <img
+            src="img/ricky/6.jpg"
+            alt="Ricky Casino App"
+            class="hero__image"
+          />
+
+          <div class="hero__content">
+            <h1 class="hero__title">Ricky Casino App</h1>
+            <a href="#" class="btn btn--secondary">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile Actions Moved -->
+
+    <!-- ========================================================================
+       CONTENT WRAPPER
+       ======================================================================== -->
+    <div class="content-wrapper">
+      <!-- ========================================================================
+         SUB-NAVIGATION
+         ======================================================================== -->
+      <nav class="subnav">
+        <div class="container">
+          <h2 class="subnav__title">Navigation</h2>
+
+          <div class="subnav__content" id="subnavContent">
+            <button
+              class="btn btn--ghost"
+              id="subnavToggle"
+              onclick="toggleSubnav()"
+            >
+              Open
+            </button>
+
+            <ul class="subnav__menu" id="subnavMenu" style="display: none">
+              <li>
+                <a href="#ricky-app" class="subnav__link">Ricky Casino App</a>
+              </li>
+              <li>
+                <a href="#mobile-experience" class="subnav__link"
+                  >Mobile Experience</a
+                >
+              </li>
+              <li>
+                <a href="#how-to-download" class="subnav__link"
+                  >How To Download</a
+                >
+              </li>
+              <li>
+                <a href="#browser-vs-app" class="subnav__link"
+                  >Browser vs App</a
+                >
+              </li>
+              <li>
+                <a href="#features" class="subnav__link">App Features</a>
+              </li>
+              <li>
+                <a href="#security" class="subnav__link"
+                  >Security & Performance</a
+                >
+              </li>
+              <li>
+                <a href="#conclusion" class="subnav__link">Final Thoughts</a>
+              </li>
+              <li><a href="#faq" class="subnav__link">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        function toggleSubnav() {
+          const menu = document.getElementById('subnavMenu')
+          const toggle = document.getElementById('subnavToggle')
+
+          if (menu.style.display === 'none') {
+            menu.style.display = 'flex'
+            toggle.textContent = 'Close'
+          } else {
+            menu.style.display = 'none'
+            toggle.textContent = 'Open'
+          }
+        }
+      </script>
+
+      <!-- ========================================================================
+       MAIN CONTENT
+       ======================================================================== -->
+      <main>
+        <!-- Section: Ricky Casino App -->
+        <section class="section">
+          <div class="container">
+            <h2 id="ricky-app" class="section__title section__title--h1">
+              Ricky Casino App
+            </h2>
+            <p class="section__text">
+              Ricky Casino App delivers full mobile access with consistent
+              navigation, secure authorization, and stable cashier actions. Use
+              only official access paths shown on the platform. Keep one
+              verified account. Keep profile data consistent across login,
+              payments, and verification. Use one primary device for
+              withdrawals.
+            </p>
+            <p class="section__text">
+              Ricky Casino Mobile play stays stable when the OS is current,
+              storage is available, and network conditions do not change
+              mid-session. Enable automatic time sync. Incorrect device time
+              increases authentication errors and repeated logouts. Avoid public
+              Wi-Fi during login, deposits, withdrawals, and document upload.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Mobile Gaming Experience -->
+        <section class="section">
+          <div class="container">
+            <h2
+              id="mobile-experience"
+              class="section__title section__title--h2"
+            >
+              Mobile Gaming Experience at Ricky Casino
+            </h2>
+            <p class="section__text">
+              Mobile sessions are built for fast lobby loading and reliable game
+              launch. Performance depends on device resources and background
+              limits. Close high-load apps before long sessions, especially live
+              tables. Keep free storage for cache growth and updates. Use Wi-Fi
+              or strong mobile data to prevent stream drops and delayed
+              confirmations.
+            </p>
+            <p class="section__text">
+              When a session ends unexpectedly, check battery saving mode and
+              background app restrictions. Some devices suspend active sessions
+              aggressively. Allow the app and the browser to run normally during
+              play. Keep one access method per session. Switching between app
+              and browser during cashier actions can trigger extra checks.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: How to Download -->
+        <section class="section">
+          <div class="container">
+            <h2 id="how-to-download" class="section__title section__title--h2">
+              How to Download and Use the Ricky Casino App
+            </h2>
+            <p class="section__text">
+              Download ricky casino only through the official install route
+              visible on the platform. Avoid third-party files, cloned pages,
+              and forwarded installers. Unofficial packages can break updates
+              and trigger security reviews.
+            </p>
+            <p class="section__text">
+              Ricky Casino Apk may be offered on Android through an approved
+              distribution route. Use only the version presented inside the
+              platform flow. Keep system protections enabled. Re-enable any
+              temporary install permission immediately after setup.
+            </p>
+            <p class="section__text">
+              Using this setup sequence before funding:
+            </p>
+            <ul class="section__list">
+              <li>
+                Open the official site on mobile and use the in-platform install
+                prompt when available.
+              </li>
+              <li>
+                Install the current version and complete Ricky Casino App using
+                your registered credentials.
+              </li>
+              <li>
+                Open the cashier and confirm available deposit methods for your
+                country and currency.
+              </li>
+              <li>
+                Check profile fields and verification status, then correct
+                missing details.
+              </li>
+              <li>
+                After installation, keep updates enabled where supported. Do not
+                keep multiple builds. Do not use modified “lite” versions.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Promobox Image (Random from 1-7, used 7.jpg) -->
+        <section class="section">
+          <div class="container">
+            <div class="content-image">
+              <img src="img/ricky/7.jpg" alt="Featured Content" />
+              <a href="#" class="btn btn--secondary">Download</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Playing on Mobile Browser vs App -->
+        <section class="section">
+          <div class="container">
+            <h2 id="browser-vs-app" class="section__title section__title--h2">
+              Playing on Mobile Browser vs App
+            </h2>
+            <p class="section__text">
+              Both options support real play, deposits, withdrawals, and account
+              management. Use one primary method for cashier actions until the
+              transaction cycle is complete.
+            </p>
+
+            <div class="table-wrapper">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Area</th>
+                    <th>Mobile Browser</th>
+                    <th>Ricky Casino App</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Setup</td>
+                    <td>No install required</td>
+                    <td>Install required through official route</td>
+                  </tr>
+                  <tr>
+                    <td>Session Stability</td>
+                    <td>Depends on cookies and background tab limits</td>
+                    <td>Less dependent on browser storage behavior</td>
+                  </tr>
+                  <tr>
+                    <td>Updates</td>
+                    <td>Browser updates control performance</td>
+                    <td>App updates control performance</td>
+                  </tr>
+                  <tr>
+                    <td>Cashier Flow</td>
+                    <td>Stable with correct browser settings</td>
+                    <td>Stable when device remains consistent</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="section__text">
+              Operational differences that matter during payments and
+              verification:
+            </p>
+            <ul class="section__list">
+              <li>
+                Browser sessions can fail after cookie cleanup, strict privacy
+                settings, or background tab suspension.
+              </li>
+              <li>
+                App sessions can fail when storage is low, updates are blocked,
+                or the OS restricts background activity.
+              </li>
+              <li>
+                Switching between browser and app during withdrawal review can
+                increase manual checks.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section: Features Available -->
+        <section class="section">
+          <div class="container">
+            <h2 id="features" class="section__title section__title--h2">
+              Features Available in the Ricky Casino App
+            </h2>
+            <p class="section__text">
+              Ricky Casino App provides the same core platform functions
+              available on desktop, subject to regional and provider rules. Use
+              lobby filters to confirm active availability in your account.
+            </p>
+            <p class="section__text">Key features available on mobile:</p>
+            <ul class="section__list">
+              <li>
+                Full games lobby with category navigation and provider filters.
+              </li>
+              <li>
+                Slots, table games, and live casino where available in your
+                region.
+              </li>
+              <li>
+                Account area for profile data, verification status, and
+                transaction history.
+              </li>
+              <li>
+                Cashier for deposits and withdrawals with method visibility
+                based on country and currency.
+              </li>
+              <li>Bonus and promotions area with opt-in and rules display.</li>
+            </ul>
+            <p class="section__text">
+              If a game appears only in demo mode, confirm real-money
+              availability inside the lobby and check region restrictions. Do
+              not change country or currency after funding unless support
+              confirms eligibility.
+            </p>
+          </div>
+        </section>
+
+        <!-- Extra Promobox Image (6.jpg) -->
+        <section class="section">
+          <div class="container">
+            <div class="content-image">
+              <img src="img/ricky/6.jpg" alt="Featured Content" />
+              <a href="#" class="btn btn--secondary">Download</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Security and Performance -->
+        <section class="section">
+          <div class="container">
+            <h2 id="security" class="section__title section__title--h2">
+              Security and Performance on Mobile
+            </h2>
+            <p class="section__text">
+              Secure access depends on controlled device use and clean
+              authentication. Use a unique password. Protect the email linked to
+              the account. Email access controls recovery. Do not share
+              credentials. Do not share the device used for verification.
+              Disable VPN and proxy tools during authorization and cashier
+              actions to prevent location mismatch checks.
+            </p>
+            <p class="section__text">
+              Apply these controls to reduce risk and delays:
+            </p>
+            <ul class="section__list">
+              <li>Use one primary device for verification and withdrawals.</li>
+              <li>
+                Keep OS and app version updated and maintain free storage.
+              </li>
+              <li>
+                Avoid repeated login attempts after a failed prompt; use reset
+                options instead.
+              </li>
+              <li>
+                Keep the same payment method ownership and matching account
+                details.
+              </li>
+              <li>
+                If the app becomes slow, restart the device and retry once on a
+                stable network. If the issue persists, contact support with
+                device model, OS version, app version, error text, and
+                timestamps.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section: Final Thoughts -->
+        <section class="section">
+          <div class="container">
+            <h2 id="conclusion" class="section__title section__title--h2">
+              Final Thoughts
+            </h2>
+            <p class="section__text">
+              Ricky Casino App supports controlled mobile play with secure
+              login, full account access, and consistent navigation. Use
+              official installation only. Keep the device updated. Maintain
+              account consistency. Use one primary cashier route until deposits
+              and withdrawals are completed.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: FAQ -->
+        <section class="section">
+          <div class="container">
+            <h2 id="faq" class="section__title section__title--h2">FAQ</h2>
+            <h3 class="section__title section__title--h3">
+              Is the Ricky Casino App available in AU?
+            </h3>
+            <p class="section__text">
+              Availability depends on region and device environment. Check the
+              official mobile site flow to confirm whether the app install
+              option is available for AU. If the install option is not shown,
+              use the mobile browser version and keep it updated. Keep country
+              and currency consistent with your account profile. Avoid VPN
+              during access, because location mismatch can hide mobile options
+              and trigger extra checks.
+            </p>
+            <h3 class="section__title section__title--h3">
+              How to install Ricky Casino Mobile safely?
+            </h3>
+            <p class="section__text">
+              Use only the approved route shown on the platform. Avoid
+              third-party installers and modified packages. Before installing,
+              confirm you are on the official domain and the install prompt is
+              displayed inside the platform flow. Keep device protections
+              enabled. Grant install permission only for the duration of setup,
+              then disable it again. After installation, verify the app opens to
+              the standard lobby and the cashier loads without redirects before
+              making a deposit.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Why does Ricky Casino Mobile log out during play?
+            </h3>
+            <p class="section__text">
+              Most mobile logouts are caused by background limits, unstable
+              networks, or authentication refresh failure. Disable aggressive
+              battery saving mode and allow the app to run normally. Avoid
+              switching between Wi-Fi and mobile data mid-session. Enable
+              automatic time and date sync. Update the OS and the app version.
+              If the issue happens in the browser, clear site cache for the
+              platform domain and retry once, then keep cookies enabled for
+              stable sessions.
+            </p>
+            <h3 class="section__title section__title--h3">
+              How to update to the latest version?
+            </h3>
+            <p class="section__text">
+              Use the official update route supported by your device and the
+              platform. Keep auto-updates enabled where available. Maintain free
+              storage for update packages and cache. Update on a stable network
+              and do not interrupt the process. If the update fails, restart the
+              device, free storage, and retry once. After updating, log in and
+              confirm cashier access and verification status before starting
+              real-money play.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- ========================================================================
+       FOOTER WRAPPER
+       ======================================================================== -->
+      <div class="footer-wrapper">
+        <div class="container">
+          <!-- Partners / Logo Runner -->
+          <section class="partners">
+            <div class="partners__grid">
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo.svg" alt="Partner 1" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo2.svg" alt="Partner 2" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo3.svg" alt="Partner 3" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo4.svg" alt="Partner 4" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo5.svg" alt="Partner 5" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo6.svg" alt="Partner 6" />
+              </a>
+            </div>
+          </section>
+
+          <!-- Footer -->
+          <footer class="footer">
+            <div class="footer__inner">
+              <a href="ricky.html" class="footer__logo">
+                <img src="img/ricky/logo.svg" alt="Ricky Casino Logo" />
+              </a>
+              <nav class="footer__links">
+                <a href="#" class="footer__link">Terms and Conditions</a>
+                <a href="#" class="footer__link">Privacy Policy</a>
+              </nav>
+            </div>
+            <p class="footer__copyright">
+              Copyright © 2026 Ricky Casino. All rights reserved. You must be at
+              least 18 years of age to play.
+            </p>
+          </footer>
+        </div>
+      </div>
+      <!-- End content-wrapper -->
+    </div>
+  </body>
+</html>

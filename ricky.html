@@ -1,0 +1,1037 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ricky Casino – Official Site Online Casino Australian</title>
+    <meta
+      name="description"
+      content="Ricky Casino is a modern online casino platform offering a selection of games, secure payment options, stable performance and clear terms."
+    />
+
+    <!-- Google Fonts - Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Paramax Theme Override (Structure Base) -->
+    <link rel="stylesheet" href="css/paramax.css" />
+    <!-- Ricky Theme Override -->
+    <link rel="stylesheet" href="css/ricky.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
+       HEADER
+       ======================================================================== -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- Logo -->
+          <a href="ricky.html" class="header__logo">
+            <img src="img/ricky/logo.svg" alt="Ricky Casino Logo" />
+          </a>
+
+          <!-- Navigation -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a
+                  href="ricky.html"
+                  class="header__nav-link header__nav-link--active"
+                  >Ricky Casino</a
+                >
+              </li>
+              <li>
+                <a href="ricky-login.html" class="header__nav-link">Login</a>
+              </li>
+              <li>
+                <a href="ricky-download.html" class="header__nav-link"
+                  >Download</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Action Buttons -->
+          <div class="header__actions">
+            <a href="#" class="btn btn--secondary">Registration</a>
+            <a href="ricky-login.html" class="btn btn--primary">Log In</a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="header__menu-toggle"
+            aria-label="Open menu"
+            onclick="openMobileMenu()"
+          >
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE ACTIONS (Moved here)
+       ======================================================================== -->
+    <div class="mobile-actions">
+      <div class="container">
+        <div class="mobile-actions__buttons">
+          <a href="#" class="btn btn--secondary">Registration</a>
+          <a href="ricky-login.html" class="btn btn--primary">Log In</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       MOBILE MENU OVERLAY
+       ======================================================================== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__header">
+        <a href="ricky.html" class="mobile-menu__logo">
+          <img src="img/ricky/logo.svg" alt="Ricky Casino Logo" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="#" class="btn btn--secondary">Registration</a>
+        <a href="ricky-login.html" class="btn btn--primary">Log In</a>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="ricky.html" class="mobile-menu__link">Ricky Casino</a>
+        <a href="ricky-login.html" class="mobile-menu__link">Login</a>
+        <a href="ricky-download.html" class="mobile-menu__link">Download</a>
+      </nav>
+    </div>
+
+    <script>
+      function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('is-open')
+        document.body.style.overflow = 'hidden'
+      }
+
+      function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('is-open')
+        document.body.style.overflow = ''
+      }
+    </script>
+
+    <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__banner">
+          <!-- Random Hero Image (using 1.jpg from ricky folder range 1-7 as default for main, or specific if prompted, prompting said login/download use 1-7, structure exactly paramax) -->
+          <!-- Paramax structure has image inside banner. Required for main page: "structure look like exactly paramax". Paramax uses img/paramax/hero.png. I will use a nice image for main. Let's use 1.jpg for main as well or another one. Prompt said 1-7 for login/download mainly but implied assets are there. I'll pick 3.jpg for main Hero. -->
+          <img
+            src="img/ricky/hero.png"
+            alt="Ricky Casino Welcome"
+            class="hero__image"
+          />
+
+          <div class="hero__content">
+            <h1 class="hero__title">Ricky Casino Australia</h1>
+            <a href="#" class="btn btn--secondary">Registration</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       MOBILE BUTTONS
+       ======================================================================== -->
+    <!-- Mobile Actions Moved -->
+
+    <!-- ========================================================================
+       CONTENT WRAPPER
+       ======================================================================== -->
+    <div class="content-wrapper">
+      <!-- ========================================================================
+         SUB-NAVIGATION
+         ======================================================================== -->
+      <nav class="subnav">
+        <div class="container">
+          <h2 class="subnav__title">Navigation</h2>
+
+          <div class="subnav__content" id="subnavContent">
+            <button
+              class="btn btn--ghost"
+              id="subnavToggle"
+              onclick="toggleSubnav()"
+            >
+              Open
+            </button>
+
+            <ul class="subnav__menu" id="subnavMenu" style="display: none">
+              <li>
+                <a href="#ricky-casino" class="subnav__link">Ricky Casino</a>
+              </li>
+              <li>
+                <a href="#company" class="subnav__link"
+                  >Company Characteristic</a
+                >
+              </li>
+              <li><a href="#games" class="subnav__link">Game Selection</a></li>
+              <li>
+                <a href="#bonuses" class="subnav__link"
+                  >Bonuses and Promotions</a
+                >
+              </li>
+              <li><a href="#payments" class="subnav__link">Payments</a></li>
+              <li><a href="#security" class="subnav__link">Security</a></li>
+              <li><a href="#mobile" class="subnav__link">Mobile</a></li>
+              <li><a href="#support" class="subnav__link">Support</a></li>
+              <li><a href="#faq" class="subnav__link">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        function toggleSubnav() {
+          const menu = document.getElementById('subnavMenu')
+          const toggle = document.getElementById('subnavToggle')
+
+          if (menu.style.display === 'none') {
+            menu.style.display = 'flex'
+            toggle.textContent = 'Close'
+          } else {
+            menu.style.display = 'none'
+            toggle.textContent = 'Open'
+          }
+        }
+      </script>
+
+      <!-- ========================================================================
+       MAIN CONTENT
+       ======================================================================== -->
+      <main>
+        <!-- Section: Ricky Casino -->
+        <section class="section">
+          <div class="container">
+            <h2 id="ricky-casino" class="section__title section__title--h1">
+              Ricky Casino
+            </h2>
+            <p class="section__text">
+              Ricky Casino Australia operates as a full-scale casino platform
+              with a focused lobby, clear navigation, and performance tuned for
+              fast game loading. Use verified account details, keep one primary
+              device, and maintain consistent payment method ownership for
+              smoother transactions. Ricky Casino Australia players should
+              review local rules and the platform’s Terms before depositing.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Playing at Rickys Casino
+            </h3>
+            <p class="section__text">
+              Create one account and keep profile data consistent across login,
+              payments, and verification. Use a strong password and enable
+              available security controls. Confirm currency and country settings
+              before the first deposit. Avoid duplicated accounts. They create
+              payment holds and withdrawal delays.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Company Characteristic (Table) -->
+        <section class="section">
+          <div class="container">
+            <h2 id="company" class="section__title section__title--h2">
+              Company Characteristic
+            </h2>
+            <div class="table-wrapper">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Value</td>
+                    <td>Brand</td>
+                  </tr>
+                  <tr>
+                    <td>Website Brand Name</td>
+                    <td>Ricky Casino</td>
+                  </tr>
+                  <tr>
+                    <td>Operating Company</td>
+                    <td>Dama N.V.</td>
+                  </tr>
+                  <tr>
+                    <td>Company Registration Number</td>
+                    <td>152125</td>
+                  </tr>
+                  <tr>
+                    <td>Registered Address</td>
+                    <td>Scharlooweg 39, Willemstad, Curaçao</td>
+                  </tr>
+                  <tr>
+                    <td>Regulator</td>
+                    <td>Curaçao Gaming Control Board</td>
+                  </tr>
+                  <tr>
+                    <td>License Number</td>
+                    <td>OGL/2023/174/0082</td>
+                  </tr>
+                  <tr>
+                    <td>Support Email</td>
+                    <td>support@rickycasino.com</td>
+                  </tr>
+                  <tr>
+                    <td>Data Protection Contact</td>
+                    <td>dpo@damacasino.com</td>
+                  </tr>
+                  <tr>
+                    <td>Terms Last Updated Date</td>
+                    <td>17 March 2025</td>
+                  </tr>
+                  <tr>
+                    <td>Max Withdrawal Limit (Standard)</td>
+                    <td>€7,500 per week</td>
+                  </tr>
+                  <tr>
+                    <td>Max Withdrawal Limit (Standard)</td>
+                    <td>€15,000 per month</td>
+                  </tr>
+                  <tr>
+                    <td>Bank Transfer Payout Processing</td>
+                    <td>Up to 3 banking days</td>
+                  </tr>
+                  <tr>
+                    <td>Claims Limitation Period</td>
+                    <td>1 year from the cause of action</td>
+                  </tr>
+                  <tr>
+                    <td>Paysafe Processing Note</td>
+                    <td>Paysafe payments are processed via Dama N.V.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="section__text">
+              For Ricky Casino Online access, keep browser and OS updated. Allow
+              cookies for session stability. Use a private network for cashier
+              actions. Avoid public Wi-Fi during deposits, withdrawals, or
+              document upload.
+            </p>
+            <p class="section__text">
+              Play Ricky Casino Australia with controlled session timing. Set
+              limits before long sessions. Stop play when limits are reached.
+              Track deposits and withdrawals in the account history. Use one
+              primary method for deposits and cashouts. Switching methods
+              mid-cycle increases checks.
+            </p>
+            <p class="section__text">
+              Ricky Online Casino sessions run best when the device time and
+              date are correct. Fix time sync issues to reduce login errors.
+            </p>
+
+            <!-- Slots Grid (Random selection from slots folder 1-20) -->
+            <div class="slots-grid">
+              <div class="slot-card">
+                <img src="img/slots/слот-1.webp" alt="Slot Game" />
+                <a href="#" class="btn btn--secondary">Play</a>
+              </div>
+              <div class="slot-card">
+                <img src="img/slots/слот-5.webp" alt="Slot Game" />
+                <a href="#" class="btn btn--secondary">Play</a>
+              </div>
+              <div class="slot-card">
+                <img src="img/slots/слот-10.webp" alt="Slot Game" />
+                <a href="#" class="btn btn--secondary">Play</a>
+              </div>
+              <div class="slot-card">
+                <img src="img/slots/слот-14_4.webp" alt="Slot Game" />
+                <a href="#" class="btn btn--secondary">Play</a>
+              </div>
+              <div class="slot-card">
+                <img src="img/slots/слот-17_7.webp" alt="Slot Game" />
+                <a href="#" class="btn btn--secondary">Play</a>
+              </div>
+              <div class="slot-card">
+                <img src="img/slots/слот-19_9.webp" alt="Slot Game" />
+                <a href="#" class="btn btn--secondary">Play</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Promobox Image -->
+        <section class="section">
+          <div class="container">
+            <div class="content-image">
+              <img src="img/ricky/promobox.png" alt="Featured Content" />
+              <a href="#" class="btn btn--secondary">Play</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Game Selection -->
+        <section class="section">
+          <div class="container">
+            <h2 id="games" class="section__title section__title--h2">
+              Game Selection at Ricky Online Casino
+            </h2>
+            <p class="section__text">
+              Ricky Casino Games are organized by category, provider, and
+              feature tags. Use filters to reach the right volatility and pace.
+              Save favorites to reduce lobby time. Keep autoplay settings
+              aligned with your budget and limits.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Online Slots and Featured Games
+            </h3>
+            <p class="section__text">
+              Slots remain the core format. Expect a mix of classic reels,
+              modern video slots, and feature-heavy releases. Use game info
+              panels to review RTP and rules before staking. Test mechanics in
+              demo mode when available, then move to real play only after
+              confirming the payout structure.
+            </p>
+            <p class="section__text">
+              <strong>Best Slots On Ricky Casino</strong> depend on session
+              goals. Choose higher volatility for lower hit frequency and larger
+              swings. Choose lower volatility for steadier pacing. Keep stake
+              sizing consistent. Avoid rapid increases after losses.
+            </p>
+            <p class="section__text">
+              <strong>Best Games On Ricky Casino</strong> include titles with
+              clear paytables, stable math models, and transparent feature
+              triggers. Focus on games with readable bonus rules and predictable
+              stake impact.
+            </p>
+
+            <h3 class="section__title section__title--h3">
+              Table Games and Classic Casino Titles
+            </h3>
+            <p class="section__text">
+              Table games cover common formats such as blackjack variants,
+              roulette types, baccarat, and card classics. Read table limits
+              before joining. Confirm side bet rules and payout odds. Use
+              consistent bet sizing to control variance. Avoid changing
+              strategies mid-session based on short streaks.
+            </p>
+            <p class="section__text">
+              For players who prefer traditional pace, classic titles provide
+              direct gameplay without complex feature layers. Use lower table
+              limits to test rule differences.
+            </p>
+
+            <h3 class="section__title section__title--h3">
+              Live Casino Experience
+            </h3>
+            <p class="section__text">
+              Live tables add real-time dealing and a studio workflow. Use a
+              stable connection and keep background apps closed. Choose tables
+              with clear limits and visible rules. Confirm dealer language and
+              table speed before placing repeated bets. Live sessions can
+              consume more data. Use Wi-Fi or an adequate mobile plan.
+            </p>
+          </div>
+        </section>
+
+        <!-- Extra Promobox Image (1.jpg) -->
+        <section class="section">
+          <div class="container">
+            <div class="content-image">
+              <img src="img/ricky/1.jpg" alt="Featured Content" />
+              <a href="#" class="btn btn--secondary">Play</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Bonuses -->
+        <section class="section">
+          <div class="container">
+            <h2 id="bonuses" class="section__title section__title--h2">
+              Ricky Casino Bonuses and Promotions
+            </h2>
+            <p class="section__text">
+              Bonuses and promotions affect wagering, withdrawal limits, and
+              eligible games. Read terms before opt-in. Track deadlines. Avoid
+              mixing multiple promos in a single play cycle unless terms allow
+              it. Promotions work best when the wagering plan matches the games
+              you prefer.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Offers for New Players
+            </h3>
+            <p class="section__text">
+              New-player offers typically include a deposit bonus, free spins,
+              or a mix package. Confirm minimum deposit, wagering multiplier,
+              contribution rates, and max cashout rules. Keep stake size within
+              promo limits to avoid bonus cancellation. Use eligible games only.
+              Ineligible play can void bonus winnings.
+            </p>
+            <p class="section__text">
+              Ricky Casino Australia users should confirm availability of offers
+              by region. Promo access can vary by country and payment route.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Ongoing Promotions for Regular Users
+            </h3>
+            <p class="section__text">
+              Ongoing promotions can include reload bonuses, weekend offers,
+              cashback, and leaderboard events. Use promos that fit your usual
+              stake level. Avoid high wagering multipliers if you prefer short
+              sessions. Track promo progress in the account dashboard when
+              available. Contact support before play if any term is unclear.
+              Ricky Casino Australia promotions may also include
+              provider-specific campaigns. Confirm eligible titles and time
+              windows.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Payments -->
+        <section class="section">
+          <div class="container">
+            <h2 id="payments" class="section__title section__title--h2">
+              Payments and Transaction Options
+            </h2>
+            <p class="section__text">
+              Use payment methods in your legal name. Match the cashier name,
+              bank holder name, and verification profile. Avoid third-party
+              deposits and shared wallets. They trigger compliance holds and
+              payout reversals. Keep one primary deposit method and one primary
+              withdrawal method. Reduce switching during active withdrawals.
+            </p>
+            <p class="section__text">Keep records for each transaction:</p>
+            <ul class="section__list">
+              <li>Date and time</li>
+              <li>Amount and currency</li>
+              <li>Method used</li>
+              <li>Transaction reference or ID</li>
+              <li>Screenshot of the confirmation screen</li>
+            </ul>
+            <p class="section__text">
+              Ricky Casino Online Australia access can show different cashier
+              routes by region. Select the correct country and currency during
+              registration. Do not change them after the first deposit unless
+              support confirms eligibility.
+            </p>
+
+            <h3 class="section__title section__title--h3">
+              Available Deposit Methods
+            </h3>
+            <p class="section__text">
+              Deposit availability depends on region, currency, and bank policy.
+              Use a method that supports both deposits and withdrawals when
+              possible. Avoid mixing payment types in the same bankroll cycle.
+            </p>
+
+            <!-- Deposit Methods Table -->
+            <div class="table-wrapper">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th>Deposit Method Type</th>
+                    <th>What It Fits</th>
+                    <th>Common Notes</th>
+                  </tr>
+                  <tr>
+                    <td>Bank Cards</td>
+                    <td>Fast deposits, broad coverage</td>
+                    <td>
+                      Bank declines possible; 3D Secure may apply; card
+                      ownership must match account
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Bank Transfer</td>
+                    <td>Higher amounts, fewer card limits</td>
+                    <td>
+                      Slower confirmation; bank fees possible; reference fields
+                      must be correct
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>E-Wallets</td>
+                    <td>Speed and account separation</td>
+                    <td>
+                      Wallet must be verified; name match required; some wallets
+                      are deposit-only in some regions
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Instant Banking</td>
+                    <td>Direct bank approval flow</td>
+                    <td>
+                      Bank app approval required; sessions can expire; limits
+                      vary by bank
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Crypto</td>
+                    <td>Network-based deposits</td>
+                    <td>
+                      Confirm network and address; wrong network can lose funds;
+                      confirmations required
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="section__text">
+              Deposit controls to apply before funding:
+            </p>
+            <ul class="section__list">
+              <li>Confirm minimum and maximum limits inside the cashier.</li>
+              <li>Check method-specific fees before confirming.</li>
+              <li>Confirm whether the method supports withdrawals.</li>
+              <li>
+                Avoid repeated failed attempts. They can trigger bank risk
+                controls.
+              </li>
+              <li>Keep one primary method for repeated deposits.</li>
+              <li>
+                Ricky Casino Au users should keep the same device and browser
+                for cashier actions. Disable VPN during payments. It can block
+                methods or flag location mismatch.
+              </li>
+            </ul>
+
+            <h3 class="section__title section__title--h3">
+              Withdrawal Process and Timeframes
+            </h3>
+            <p class="section__text">
+              Withdrawals require verification. Complete verification before
+              requesting the first cashout. Upload clear, unedited images. Use
+              full-page photos. Ensure four corners are visible. Use consistent
+              formatting across documents.
+            </p>
+            <p class="section__text">Core verification set:</p>
+            <ul class="section__list">
+              <li>Proof of identity (valid ID)</li>
+              <li>Proof of address (recent document)</li>
+              <li>Payment method proof (method-specific, as requested)</li>
+            </ul>
+            <p class="section__text">Standard withdrawal flow:</p>
+            <ul class="section__list">
+              <li>
+                Confirm verification status is approved or pending with no
+                missing items.
+              </li>
+              <li>
+                Select an eligible withdrawal method that matches deposit
+                history where policy requires it.
+              </li>
+              <li>Enter the amount within method limits.</li>
+              <li>Confirm details and submit.</li>
+              <li>Track status in transaction history until completed.</li>
+            </ul>
+            <!-- Withdrawal Methods Table -->
+            <div class="table-wrapper">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th>Withdrawal Method Type</th>
+                    <th>Internal Review Stage</th>
+                    <th>Payout Delivery Stage</th>
+                  </tr>
+                  <tr>
+                    <td>Bank Cards</td>
+                    <td>Compliance review may apply</td>
+                    <td>Bank posting time depends on issuer</td>
+                  </tr>
+                  <tr>
+                    <td>Bank Transfer</td>
+                    <td>Compliance review may apply</td>
+                    <td>Banking days depend on receiving bank</td>
+                  </tr>
+                  <tr>
+                    <td>E-Wallets</td>
+                    <td>Usually faster after approval</td>
+                    <td>Delivery depends on wallet provider</td>
+                  </tr>
+                  <tr>
+                    <td>Crypto</td>
+                    <td>Network confirmation required</td>
+                    <td>Delivery depends on network load</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="section__text">Actions that reduce delays:</p>
+            <ul class="section__list">
+              <li>Use one withdrawal method per cycle.</li>
+              <li>
+                Avoid cancelling and resubmitting. It can reset the queue
+                position.
+              </li>
+              <li>
+                Keep deposit and withdrawal methods consistent where policy
+                requires a match.
+              </li>
+              <li>
+                Keep transaction amounts within normal patterns. Sudden changes
+                can trigger manual review.
+              </li>
+              <li>
+                Respond to document requests once, with complete files. Do not
+                send partial sets.
+              </li>
+              <li>
+                For Casino Ricky payouts, keep deposit history clean and method
+                ownership clear. Use the same payment route family when allowed
+                by policy. Avoid chargebacks. They can lock withdrawals and
+                restrict the account.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section: Security -->
+        <section class="section">
+          <div class="container">
+            <h2 id="security" class="section__title section__title--h2">
+              Security, Licensing and Player Protection
+            </h2>
+            <p class="section__text">
+              Use the licensing and policy pages shown on the platform footer
+              and in Terms. Verify the operator entity, jurisdiction, and
+              contact details provided there. Check the responsible gambling
+              section for limit tools and self-exclusion options.
+            </p>
+            <p class="section__text">Player protection actions:</p>
+            <ul class="section__list">
+              <li>Enable available account security controls.</li>
+              <li>Use unique credentials and a password manager.</li>
+              <li>Keep one device for verification and cashier actions.</li>
+              <li>Log out after play on shared hardware.</li>
+              <li>Report suspicious activity immediately.</li>
+            </ul>
+            <p class="section__text">
+              For users asking <strong>Is Ricky Casino Safe</strong>, the core
+              checks are operational: secure login, controlled payments,
+              transparent terms, and documented dispute channels through
+              support. Keep records of deposits, bonus opt-ins, and withdrawal
+              requests.
+            </p>
+            <p class="section__text">
+              For users asking <strong>Is Ricky Casino Legit</strong>, validate
+              operator details, licensing disclosures, and ownership information
+              shown on the official pages. Avoid third-party mirrors and
+              unofficial apps.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Mobile -->
+        <section class="section">
+          <div class="container">
+            <h2 id="mobile" class="section__title section__title--h2">
+              Ricky Casino on Mobile Devices
+            </h2>
+            <p class="section__text">
+              Ricky Casino runs on modern mobile browsers and supports common
+              device types. Keep OS updated. Keep storage free for cache and
+              updates. Close background apps during play for better stability.
+              Use the same device for verification and withdrawals to reduce
+              risk flags.
+            </p>
+            <p class="section__text">Mobile usage rules:</p>
+            <ul class="section__list">
+              <li>Use the official site only.</li>
+              <li>Avoid modified apps and third-party installers.</li>
+              <li>Keep browser permissions standard.</li>
+              <li>Do not bypass security prompts.</li>
+            </ul>
+            <p class="section__text">
+              Ricky Casino Australia mobile sessions benefit from stable
+              connectivity. Use Wi-Fi for live games and large downloads. If an
+              app is offered in your region, install it only from the official
+              channel displayed on the platform. Rickys Casino Online access on
+              mobile should prioritize cashier reliability. Complete deposits
+              and withdrawals on a stable connection. Avoid switching between
+              networks mid-transaction.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Support -->
+        <section class="section">
+          <div class="container">
+            <h2 id="support" class="section__title section__title--h2">
+              Customer Support and Contact Options
+            </h2>
+            <p class="section__text">
+              Support typically covers account access, payments, verification,
+              bonuses, and technical issues. Use live chat for urgent cases such
+              as login blocks, failed deposits, pending withdrawals, or game
+              interruptions during a real-money round. Use email for
+              document-based cases, formal confirmations, complaints, and any
+              request that needs a written record with attachments. Provide
+              precise details in the first message: account email, transaction
+              ID, timestamps, and screenshots where relevant. Add country,
+              currency, device model, OS version, and browser or app version
+              when the case is technical or payment-related. Use the exact
+              wording shown in the cashier or account history. Do not paraphrase
+              status labels. Disable VPN, proxy, and aggressive ad blockers
+              before retrying. Report the result.
+            </p>
+            <p class="section__text">Support best practices:</p>
+            <ul class="section__list">
+              <li>Keep communication factual and short.</li>
+              <li>Send one ticket per issue.</li>
+              <li>Do not open multiple tickets for the same case.</li>
+              <li>Ask for a case reference number.</li>
+              <li>
+                Use one thread until the case is closed. Duplicated chats or
+                parallel tickets can slow resolution and create conflicting
+                instructions. For payment cases, include the method type, exact
+                amount, and the time window when the issue occurred. Attach the
+                cashier status screen and the provider confirmation screen. For
+                verification, send full-page files with readable text and
+                visible corners. Do not edit images. Edited files can be
+                rejected. If support requests additional proof, send the full
+                set in one reply.
+              </li>
+            </ul>
+            <p class="section__text">
+              Rickys Casino support can resolve region-specific cashier
+              availability faster when you provide your country, currency, and
+              method type. State whether the method is missing, blocked, or
+              visible but failing. Mention whether the issue happens on mobile,
+              desktop, or both. Keep account identity consistent across profile,
+              payment ownership, and documents to reduce manual checks.
+            </p>
+
+            <h3 class="section__title section__title--h3">
+              Advantages and Possible Limitations
+            </h3>
+            <div class="table-wrapper">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th>Advantages</th>
+                    <th>Possible Limitations</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      Clean casino platform layout with fast access to core
+                      categories.
+                    </td>
+                    <td>Payment options vary by region and currency.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Broad games coverage across slots, tables, and live
+                      options.
+                    </td>
+                    <td>
+                      Verification requirements can delay first-time
+                      withdrawals.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Promotions that can fit both short and extended play when
+                      terms align.
+                    </td>
+                    <td>
+                      Promo eligibility can exclude selected games or providers.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Multiple payment routes, subject to regional availability.
+                    </td>
+                    <td>
+                      Live casino performance depends on connection quality and
+                      device resources.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Structured support channels for account and cashier
+                      issues.
+                    </td>
+                    <td>
+                      Ricky Casino Australia users should prioritize method
+                      availability.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="section__title section__title--h3">
+              Final Thoughts on Ricky Casino
+            </h3>
+            <p class="section__text">
+              Rickys Casino focuses on stable access, practical cashier flows,
+              and a balanced catalog across slots, tables, and live games. Keep
+              account data consistent, use official access channels, and
+              complete verification early. Choose promotions that match your
+              session length and preferred titles. Use support with clear
+              transaction data when an issue appears. For players evaluating
+              <strong>Is Ricky Casino Real</strong>, confirm the operator
+              disclosures and policy pages on the official site, then align
+              payment ownership and verification documents before placing larger
+              withdrawals.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: FAQ -->
+        <section class="section">
+          <div class="container">
+            <h2 id="faq" class="section__title section__title--h2">FAQ</h2>
+            <h3 class="section__title section__title--h3">Is Ricky Legit?</h3>
+            <p class="section__text">
+              Confirm operator and licensing disclosures in the footer and
+              Terms. Verify the legal entity name and jurisdiction shown on the
+              platform pages. Use official site access only. Avoid third-party
+              mirrors, cloned domains, and unofficial installers. Keep a copy of
+              key account actions in your history: registration date, first
+              deposit confirmation, bonus opt-ins, and withdrawal requests. Use
+              support with a case reference number for any dispute trail.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Is Ricky Casino Safe?
+            </h3>
+            <p class="section__text">
+              Use strong credentials and enable any available account security
+              controls. Keep one primary device and a stable network for cashier
+              actions. Complete verification early and keep your profile data
+              consistent. Use payment methods in your own name and keep receipts
+              until withdrawals are completed. Do not share accounts or devices.
+              Disable VPN during deposits, withdrawals, and document uploads.
+              Report any unexpected login alerts or cashier anomalies to support
+              immediately.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Ricky Casino Online Australia: which games are available?
+            </h3>
+            <p class="section__text">
+              Game availability can vary by region and provider rules. Some
+              titles can be restricted by country, currency, or licensing terms,
+              even within the same platform. Use the lobby filters and provider
+              pages to confirm the live catalog in your account. Check whether a
+              game is available in real-money mode, not only in demo mode. If a
+              title disappears from the lobby, verify your country settings and
+              retry on a stable connection.
+            </p>
+            <h3 class="section__title section__title--h3">
+              Ricky Casino Australia: how to reduce withdrawal delays?
+            </h3>
+            <p class="section__text">
+              Verify identity before the first cashout and submit full-page,
+              unedited documents with readable details. Keep one payment method,
+              keep ownership consistent, and avoid method switching during a
+              withdrawal cycle. Use a deposit method that supports withdrawals
+              where possible. Avoid multiple withdrawal cancellations and
+              resubmissions, because they can reset review order. Keep your
+              transaction pattern stable and avoid third-party deposits to
+              reduce manual checks.
+            </p>
+            <h3 class="section__title section__title--h3">
+              What to do if a deposit is pending?
+            </h3>
+            <p class="section__text">
+              Check bank or wallet status first and confirm whether the payment
+              is captured, authorized, or reversed on the provider side. Confirm
+              processing time shown in the cashier for that method. Refresh the
+              cashier page, log out and log back in once, and avoid repeating
+              the same deposit attempt immediately. If the status does not
+              update within the method’s stated timeframe, contact support with
+              transaction ID, exact amount, method type, and timestamp. Attach
+              the provider confirmation screen and the cashier status screen.
+            </p>
+            <h3 class="section__title section__title--h3">
+              How to manage promotions correctly?
+            </h3>
+            <p class="section__text">
+              Opt in only when you accept the wagering terms. Confirm the
+              minimum deposit, wagering multiplier, validity period, stake
+              limits, and any max cashout rule before play. Keep stakes within
+              promo limits and use eligible games only. Avoid switching between
+              multiple promos in the same session unless terms allow it. Track
+              wagering progress in your account, stop bonus play when the
+              validity window is close, and contact support before wagering if
+              any term is unclear.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- ========================================================================
+       FOOTER WRAPPER
+       ======================================================================== -->
+      <div class="footer-wrapper">
+        <div class="container">
+          <!-- Partners / Logo Runner -->
+          <section class="partners">
+            <div class="partners__grid">
+              <!-- Using Ozwin partners as placeholders since not provided, can be removed or kept -->
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo.svg" alt="Partner 1" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo2.svg" alt="Partner 2" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo3.svg" alt="Partner 3" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo4.svg" alt="Partner 4" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo5.svg" alt="Partner 5" />
+              </a>
+              <a href="#" class="partners__logo">
+                <img src="img/ozwin/runner/logo6.svg" alt="Partner 6" />
+              </a>
+            </div>
+          </section>
+
+          <!-- Footer -->
+          <footer class="footer">
+            <div class="footer__inner">
+              <a href="ricky.html" class="footer__logo">
+                <img src="img/ricky/logo.svg" alt="Ricky Casino Logo" />
+              </a>
+              <nav class="footer__links">
+                <a href="#" class="footer__link">Terms and Conditions</a>
+                <a href="#" class="footer__link">Privacy Policy</a>
+              </nav>
+            </div>
+            <p class="footer__copyright">
+              Copyright © 2026 Ricky Casino. All rights reserved. You must be at
+              least 18 years of age to play.
+            </p>
+          </footer>
+        </div>
+      </div>
+      <!-- End content-wrapper -->
+    </div>
+  </body>
+</html>

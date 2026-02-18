@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found | Paramax</title>
+    <title>404 - Page Not Found | Ricky Casino</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,12 +17,14 @@
     <link rel="stylesheet" href="css/styles.css" />
     <!-- Paramax Theme -->
     <link rel="stylesheet" href="css/paramax.css" />
+    <!-- Ricky Theme -->
+    <link rel="stylesheet" href="css/ricky.css" />
 
     <style>
       /* 404 Page Specific Styles */
       body {
+        background-color: var(--color-background);
         background-image: none;
-        background-color: #001b39;
       }
 
       .error-page {
@@ -40,7 +42,8 @@
         font-weight: 400;
         line-height: 1;
         margin-bottom: 0;
-        background: linear-gradient(180deg, #2f94e7 0%, #1a5381 100%);
+        /* Orange gradient for Ricky */
+        background: linear-gradient(180deg, #ea9f32 0%, #d68b20 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -49,7 +52,7 @@
       .error-message {
         font-size: 30px;
         font-weight: 500;
-        color: var(--color-text);
+        color: #ffffff;
         margin-bottom: 20px;
       }
 
@@ -59,11 +62,20 @@
 
       .header {
         position: relative;
+        background-color: transparent;
+        border-bottom: none; /* Remove border if desired for cleaner look, but user said BG */
       }
 
       .footer {
         margin-top: auto;
-        background-color: #001b39;
+        background-color: transparent;
+        border-top: none; /* Remove border for cleaner look */
+      }
+
+      .footer-wrapper {
+        margin-top: auto;
+        width: 100%;
+        background-color: transparent; /* Ensure wrapper has no bg */
       }
     </style>
   </head>
@@ -72,28 +84,29 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <a href="#" class="header__logo">
-            <img src="img/paramax/logo.png" alt="Paramax Logo" />
+          <a href="ricky.html" class="header__logo">
+            <img src="img/ricky/logo.svg" alt="Ricky Casino Logo" />
           </a>
 
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li>
-                <a
-                  href="paramax.html"
-                  class="header__nav-link header__nav-link--active"
-                  >Paramax9</a
-                >
+                <a href="ricky.html" class="header__nav-link">Ricky Casino</a>
               </li>
               <li>
-                <a href="paramax-login.html" class="header__nav-link">Login</a>
+                <a href="ricky-login.html" class="header__nav-link">Login</a>
+              </li>
+              <li>
+                <a href="ricky-download.html" class="header__nav-link"
+                  >Download</a
+                >
               </li>
             </ul>
           </nav>
 
           <div class="header__actions">
             <a href="#" class="btn btn--secondary">Registration</a>
-            <a href="#" class="btn btn--primary">Log In</a>
+            <a href="ricky-login.html" class="btn btn--primary">Log In</a>
           </div>
 
           <button
@@ -110,8 +123,8 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
       <div class="mobile-menu__header">
-        <a href="#" class="mobile-menu__logo">
-          <img src="img/paramax/logo.png" alt="Paramax Logo" />
+        <a href="ricky.html" class="mobile-menu__logo">
+          <img src="img/ricky/logo.svg" alt="Ricky Casino Logo" />
         </a>
         <button
           class="mobile-menu__close"
@@ -137,11 +150,12 @@
       </div>
       <div class="mobile-menu__actions">
         <a href="#" class="btn btn--secondary">Registration</a>
-        <a href="#" class="btn btn--primary">Log In</a>
+        <a href="ricky-login.html" class="btn btn--primary">Log In</a>
       </div>
       <nav class="mobile-menu__nav">
-        <a href="paramax.html" class="mobile-menu__link">Paramax9</a>
-        <a href="paramax-login.html" class="mobile-menu__link">Login</a>
+        <a href="ricky.html" class="mobile-menu__link">Ricky Casino</a>
+        <a href="ricky-login.html" class="mobile-menu__link">Login</a>
+        <a href="ricky-download.html" class="mobile-menu__link">Download</a>
       </nav>
     </div>
 
@@ -160,26 +174,28 @@
     <main class="error-page">
       <h1 class="error-code">404</h1>
       <p class="error-message">Page not found</p>
-      <a href="#" class="btn btn--secondary">Return to Homepage</a>
+      <a href="ricky.html" class="btn btn--secondary">Return to Homepage</a>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <div class="footer-wrapper">
       <div class="container">
-        <div class="footer__inner">
-          <a href="#" class="footer__logo">
-            <img src="img/paramax/logo.png" alt="Paramax Logo" />
-          </a>
-          <nav class="footer__links">
-            <a href="#" class="footer__link">Terms and Conditions</a>
-            <a href="#" class="footer__link">Privacy Policy</a>
-          </nav>
-        </div>
-        <p class="footer__copyright">
-          Copyright © 2026 Ozwin Casino. All rights reserved. You must be at
-          least 18 years of age to play.
-        </p>
+        <footer class="footer">
+          <div class="footer__inner">
+            <a href="ricky.html" class="footer__logo">
+              <img src="img/ricky/logo.svg" alt="Ricky Casino Logo" />
+            </a>
+            <nav class="footer__links">
+              <a href="#" class="footer__link">Terms and Conditions</a>
+              <a href="#" class="footer__link">Privacy Policy</a>
+            </nav>
+          </div>
+          <p class="footer__copyright">
+            Copyright © 2026 Ricky Casino. All rights reserved. You must be at
+            least 18 years of age to play.
+          </p>
+        </footer>
       </div>
-    </footer>
+    </div>
   </body>
 </html>
